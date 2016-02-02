@@ -1,0 +1,24 @@
+[ 2016-01-26T14:20:37+08:00 ] ::1 /ec_website/Application/Shop/Resource/member.js
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+ERR: 无法加载模块:Application
+
+[ 2016-01-26T14:20:59+08:00 ] ::1 /ec_website/Application/Shop/Resource/member.js
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001001s ]
+ERR: 无法加载模块:Application
+
+[ 2016-01-26T14:22:19+08:00 ] ::1 /ec_website/Public/Shop/member.js
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+ERR: 无法加载模块:Public
+
+[ 2016-01-26T14:22:27+08:00 ] ::1 /ec_website/Public/Shop/member.js
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.001000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+ERR: 无法加载模块:Public
+
