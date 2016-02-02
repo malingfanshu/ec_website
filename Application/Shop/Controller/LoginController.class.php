@@ -3,7 +3,7 @@
 /**
  * 登录注册控制器
  * @author 陈培捷
- * @lastModifyTime 2016/02/01 10:43
+ * @lastModifyTime 2016/02/02 14:27
  */
 
 namespace Shop\Controller;
@@ -25,6 +25,9 @@ class LoginController extends CommonController{
         $this->display('login');
     }
     
+    /**
+     * 手机注册：第一步页面
+     */
     public function registerPhoneStep1(){
         // 页面信息
         $pageInfo['title'] = C("MALL_NAME").'-注册';
@@ -35,6 +38,9 @@ class LoginController extends CommonController{
         $this->display('register_phone_step1');
     }
     
+    /**
+     * 手机注册：第二步页面
+     */
     public function registerPhoneStep2(){
         if(!empty(session('cellPhoneCodeStatus'))){
            // 页面信息
@@ -46,10 +52,13 @@ class LoginController extends CommonController{
             $this->assign($pageInfo);
             $this->display('register_phone_step2'); 
         }else{
-            $this->error("超时/未知错误",U('/Shop/Login/registerPhoneStep1','','',true),3);
+            $this->error('超时/未知错误',U('/Shop/Login/registerPhoneStep1','','',true),3);
         }
     }
 
+    /**
+     * 邮箱注册：第一步页面
+     */
     public function registerEmailStep1(){
         // 页面信息
         $pageInfo['title'] = C("MALL_NAME").'-注册';
@@ -61,11 +70,54 @@ class LoginController extends CommonController{
     }
     
     /**
+     * 判断邮箱提交来的信息格式，OK的存入等待验证的会员准备表
+     */
+    public function registerEmailCheck(){
+        $Validate = new \Org\Validate\Validate;
+        
+        $email = (string)I('post.email');
+        $nickname = (string)I('post.nickname');
+        $password = (string)I('post.password');
+        $repassword = (string)I('post.repassword');
+        $payPassword = (string)I('post.pay_password');
+        $payRepassword = (string)I('post.pay_repassword');
+        $birthday = (string)I('post.birthday');
+        
+        if(empty($email) || empty($nickname) || empty($password) || empty($repassword) || empty($payPassword) || empty($payRepassword)){
+            $this->error("没有填完必填项"); 
+        }
+        
+        if($password != $repassword){
+           $this->error("两次登录密码不一致"); 
+        }
+        if($payPassword != $payRepassword){
+            $this->error("两次支付密码不一致");
+        }
+        if($password == $payPassword){
+            $this->error("登录密码不能和支付密码一样");
+        }
+        $arrValidate = array(
+            array($email,'email','邮箱格式不正确'),
+            array($nickname,'nickname','用户名格式不正确'),
+            array($password,'password','密码格式不正确'),
+            array($payPassword,'password','支付密码格式不正确'),
+        );
+        $result = $Validate->verifyMultiple($arrValidate);
+        if($result['status']){
+            $this->success("全部验证成功");
+        }else{
+           if(!$result['status']){
+               $this->error($result["info"]);
+           } 
+        }
+    }
+    
+    /**
      * 登录验证的处理
      */
     public function ajaxLoginCheck(){
         $Da = D('MemberAction');
-        if(!empty(I('post.user')) && !empty(I('post.pwd')) && !empty(I('post.verify')) ){
+        if(!empty(I('post.user')) || !empty(I('post.pwd')) || !empty(I('post.verify')) ){
             $verify = base64_decode(I('post.verify'));
             $Ver = new \Think\Verify();
             $result = $Ver->check($verify);
@@ -105,11 +157,11 @@ class LoginController extends CommonController{
     }
     
     /**
-     * ajax形式，请求获得验证码
+     * ajax形式，请求获得手机验证码
      */
     public function ajaxGetSendSmsCode(){
         $Validate = new \Org\Validate\Validate();
-        if(!empty(I('post.phone')) && $Validate->verify('cell_phone',I('post.phone'))){
+        if(!empty(I('post.phone')) || $Validate->verify('cell_phone',I('post.phone'))){
             $SendMessage = D('SendMessage');
             $result = $SendMessage->sendSms(I('post.phone'),'','捷商城的注册');
             if($result){
@@ -123,12 +175,12 @@ class LoginController extends CommonController{
     }
     
     /**
-     * ajax形式，判断短信验证码
+     * ajax形式，判断手机短信验证码
      */
     public function ajaxJudgeSmsCode(){
         $Validate = new \Org\Validate\Validate();
         $SendMessage = D('SendMessage');
-        if(!empty(I('post.phone')) &&!empty(I('post.code')) && $Validate->verify('cell_phone',I('post.phone'))){
+        if(!empty(I('post.phone')) ||!empty(I('post.code')) || $Validate->verify('cell_phone',I('post.phone'))){
             $lastSmsInfo = $SendMessage->getSmsLastInfo(I('post.phone'));
             $nowTime = time();
             $lastTime = $lastSmsInfo['send_time'];
@@ -148,11 +200,11 @@ class LoginController extends CommonController{
     }
     
     /**
-     * ajax形式，判断注册第二步的填写信息，通过后存进数据库
+     * ajax形式，判断手机注册第二步的填写信息，通过后存进数据库
      */
     public function ajaxRegisterPhoneStep2Check(){
-        if(session('?cellPhoneCodeStatus') && session('?cellPhone')){
-            if(!empty(I('post.nickname')) && !empty(I('post.password')) && !empty(I('post.repassword')) && !empty(I('post.verify')) && !empty(I('post.pay_password'))&& !empty(I('post.pay_repassword'))){
+        if(session('?cellPhoneCodeStatus') || session('?cellPhone')){
+            if(!empty(I('post.nickname')) || !empty(I('post.password')) || !empty(I('post.repassword')) || !empty(I('post.verify')) || !empty(I('post.pay_password'))|| !empty(I('post.pay_repassword'))){
                 $verify = base64_decode(I('post.verify'));
                 $Ver = new \Think\Verify();
                 $result = $Ver->check($verify);

@@ -5,7 +5,7 @@
     <title>跳转提示</title>
 </head>
 <body>
-    <h1>成功</h1>
+    <h1>成功页面</h1>
     <p><?php echo $message; ?></p>
     <script>
         setTimeout("window.location.href='<?php echo $jumpUrl; ?>'",<?php echo $waitSecond; ?>*1000);

@@ -78,7 +78,11 @@ $("#get_register_phone_code").on('click',function(e){
         data:{"phone":$("#register_phone_step1_phone").val()},
         dataType:"json",
         success:function(result){
-            console.log(result);
+            if(result.status == 'true'){
+                layer.msg("发送成功");
+            }else{
+                layer.msg("发送失败，受到限制");
+            }
         }
     });
 });

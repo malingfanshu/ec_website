@@ -1,0 +1,15 @@
+<div class="main">
+    <form id="register_email_step1_form" method="post" action="{:U('/Shop/Login/registerEmailCheck')}">
+        邮箱：<input id="register_email_step1_email" type="text" name="email" class="validate[required]" /><br />
+        用户昵称：<input type="text" name="nickname" class="validate[required]" /><br />
+        登录密码：<input type="password" name="password" class="validate[required]" /><br />
+        密码确认：<input type="password" name="repassword" class="validate[required]" /><br />
+        支付密码：<input type="password" name="pay_password" class="validate[required]" /><br />
+        支付密码确认：<input type="password" name="pay_repassword" class="validate[required]" /><br />
+        生日：<input id="register_email_step2_calendar" name="birthday" type="text"><br />
+        <input type="submit" name="submit" value="注册" />
+    </form>
+</div>
+<!--隐藏值-->
+<input type="hidden" id="hidden_value" value />
+<script src="__ROOT__/Public/Shop/js/member.js"></script>

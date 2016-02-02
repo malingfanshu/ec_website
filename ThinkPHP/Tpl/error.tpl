@@ -5,8 +5,8 @@
     <title>跳转提示</title>
 </head>
 <body>
-    <h1>错误</h1>
-    <p><?php echo $message; ?></p>
+    <h1>错误页面</h1>
+    <p><?php echo $error.",".$waitSecond."秒后跳转"; ?>,</p>
     <script>
         setTimeout("window.location.href='<?php echo $jumpUrl; ?>'",<?php echo $waitSecond; ?>*1000);
     </script>
