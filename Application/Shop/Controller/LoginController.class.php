@@ -3,7 +3,7 @@
 /**
  * 登录注册控制器
  * @author 陈培捷
- * @lastModifyTime 2016/02/02 14:27
+ * @lastModifyTime 2016/02/03 09:31
  */
 
 namespace Shop\Controller;
@@ -104,11 +104,78 @@ class LoginController extends CommonController{
         );
         $result = $Validate->verifyMultiple($arrValidate);
         if($result['status']){
-            $this->success("全部验证成功");
+            $MemberAction = D("MemberAction");
+            $result = $MemberAction->emailExist($email);
+            if($result['status'] && $result['data']['status'] == '1'){
+                $this->error("该账户已存在");
+            }else{
+                if($result['status'] && $result['data']['status'] == '6'){
+                    $nowTime = (int)time();
+                    $overTime = $nowTime - $result['data']['create_time'];
+                    $validTime = (int)C('MEMBER_ACTIVE_VALID_TIME')*60;
+                    if($overTime > $validTime){
+                        $where['email_address'] = array('EQ',$email);
+                        $result = $MemberAction->deleteMember($where);
+                    }else{
+                        $this->error("账户需要激活");
+                    }
+                }
+            }
+            
+            // 密码的加密处理
+            $password = $this->_getCompilePwd($password);
+            $payPassword = $this->_getCompilePwd($payPassword);
+            
+            $SendMessage = D("SendMessage");
+            $subject = "主题";
+            $identification = (string)session_id().$nowTime;
+            $content = "30分钟内，请到<font style='color:red'><a target='_blank' href=".U('/Shop/Login/registerEmailVerify',array('identification'=>$identification),'',true).">".U('/Shop/Login/registerEmailVerify',array('identification'=>$identification),'',true)."</a></font>完成注册";
+            $result = $SendMessage->sendEmail($email,$subject,$content,$identification);
+            if($result['status']){
+                
+                $insertData = array(
+                    'nickname' => $nickname,
+                    'email_address' => $email,
+                    'password' => $password,
+                    'pay_password' => $payPassword,
+                    'create_time' => (string)time(),
+                    'birthday' => $birthday,
+                    'identification' => $identification,
+                    'status' => '6',
+                );
+                $result = $MemberAction->insertNewUser($insertData);
+                $this->success("邮件发送成功，请到目标邮箱中激活用户");
+            }else{
+                $this->error("邮件发送失败");
+            }
+            ;
         }else{
            if(!$result['status']){
                $this->error($result["info"]);
            } 
+        }
+    }
+    
+    public function demo(){
+        $MemberAction = D("MemberAction");
+        $result = $MemberAction->emailExist('18378305258@163.com');
+        var_dump($result);
+    }
+    
+    /**
+     * 激活邮箱注册的账号
+     */
+    public function registerEmailVerify(){
+        if(!empty(I('get.identification'))){
+            $MemberAction = D('MemberAction');
+             $result = $MemberAction->activeMember(I('get.identification'));
+             if($result['status']){
+                 var_dump($result);
+             }else{
+                 var_dump('出现了不该出现的错误');
+             }
+        }else{
+            $this->error("这不是你该来的地方");
         }
     }
     
@@ -118,19 +185,23 @@ class LoginController extends CommonController{
     public function ajaxLoginCheck(){
         $Da = D('MemberAction');
         if(!empty(I('post.user')) || !empty(I('post.pwd')) || !empty(I('post.verify')) ){
-            $verify = base64_decode(I('post.verify'));
+            $verify = I('post.verify');
             $Ver = new \Think\Verify();
             $result = $Ver->check($verify);
             if(!$result){
-                $this->ajaxReturn(['status'=>'false','info'=>'验证码有误']);
+                $this->ajaxReturn(array('status'=>'false','info'=>'验证码有误'));
             }
-            $user = base64_decode(I('post.user'));
-            $pwd = $this->_getCompilePwd(base64_decode(I('post.pwd')));
+            $user = I('post.user');
+            $pwd = $this->_getCompilePwd(I('post.pwd'));
             $result = $Da->generalLoginCheck($user,$pwd);
-            if($result){
-                $this->ajaxReturn(['status'=>'true','info'=>'成功']);
+            if($result['status']){
+                $this->ajaxReturn(array('status'=>'true','info'=>'成功'));
             }else{
-                $this->ajaxReturn(['status'=>'false','info'=>'账户密码正确']);
+                if(!empty($result['code']) && $result['code'] == '6'){
+                    $this->ajaxReturn(array('status'=>'false','code'=>$result['code'],'info'=>'账户没有激活'));
+                }else{
+                    $this->ajaxReturn(array('status'=>'false','info'=>'账户密码不匹配','data'=>$user));
+                }
             }
         }else{
             $this->ajaxReturn(['status'=>'false','info'=>'没有接收到数据']);
@@ -145,7 +216,7 @@ class LoginController extends CommonController{
             $returnValue = [];
             $MemberAction = D('MemberAction');
             $result = $MemberAction->phoneNumberExist(I('post.phone'));
-            if($result){
+            if($result['status']){
                 $returnValue = ['status'=>false,'info'=>'手机号码已存在'];
             }else{
                 $returnValue = ['status'=>true,'info'=>'手机号码可使用'];
@@ -205,7 +276,7 @@ class LoginController extends CommonController{
     public function ajaxRegisterPhoneStep2Check(){
         if(session('?cellPhoneCodeStatus') || session('?cellPhone')){
             if(!empty(I('post.nickname')) || !empty(I('post.password')) || !empty(I('post.repassword')) || !empty(I('post.verify')) || !empty(I('post.pay_password'))|| !empty(I('post.pay_repassword'))){
-                $verify = base64_decode(I('post.verify'));
+                $verify = I('post.verify');
                 $Ver = new \Think\Verify();
                 $result = $Ver->check($verify);
                 if(!$result){
@@ -217,29 +288,30 @@ class LoginController extends CommonController{
                 if(I('post.pay_password') != I('post.pay_repassword')){
                     $this->ajaxReturn(['status'=>'false','info'=>'两次支付密码不一致']);
                 }
-                $nickname = base64_decode(I('post.nickname'));
-                $pwd = $this->_getCompilePwd(base64_decode(I('post.password')));
-                $birthday = base64_decode(I('post.birthday'));
-                $payPassword = $this->_getCompilePwd(base64_decode(I('post.pay_password')));
-                $birthday = !empty(I('post.birthday'))?base64_decode(I('post.birthday')):'';
+                $nickname = I('post.nickname');
+                $pwd = $this->_getCompilePwd(I('post.password'));
+                $birthday = I('post.birthday');
+                $payPassword = $this->_getCompilePwd(I('post.pay_password'));
+                $birthday = !empty(I('post.birthday'))?I('post.birthday'):'';
                 
                 $MemberAction = D('MemberAction');
                 $result = $MemberAction->phoneNumberExist(session('?cellPhone'));
-                if($result){ // 如果手机号已存在
+                if($result['status']){ // 如果手机号已存在
                     $this->ajaxReturn(['status'=>'false','info'=>'手机号已被使用']);
                 }else{ // 如果没被使用过
                     $result = $MemberAction->nicknameExist($nickname);
-                    if($result){ // 如果昵称已经被使用
+                    if($result['status']){ // 如果昵称已经被使用
                         $this->ajaxReturn(['status'=>'false','info'=>'昵称被使用']);
                     }
-                    $data = [
+                    $data = array(
                         'nickname' => $nickname,
                         'cell_phone' => session('cellPhone'),
                         'password' => $pwd,
                         'pay_password' =>$payPassword,
                         'create_time' => time(),
                         'birthday' => $birthday,
-                    ];
+                        'status' => '1',
+                    );
                     $result = $MemberAction->insertNewUser($data);
                     if($result){
                         $this->ajaxReturn(['status'=>'true','info'=>'注册成功','data'=>$data]);
@@ -256,7 +328,6 @@ class LoginController extends CommonController{
             $this->ajaxReturn(['status'=>'false','info'=>'超时或不被允许','data'=>I('session.')]);
         }
     }
-
     
     /*******************************内部方法***************************************/
     

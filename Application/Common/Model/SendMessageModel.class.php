@@ -3,7 +3,7 @@
 /**
  * 消息发送模型
  * @author 陈培捷
- * @lastModifyTime 2016/01/29 15:44
+ * @lastModifyTime 2016/02/03 09:54
  */
 
 namespace Common\Model;
@@ -96,20 +96,20 @@ class SendMessageModel extends Model{
      * @param string $targetEmail 目标邮箱地址
      * @param string $subject 邮件主题
      * @param string $body 邮件内容（可用HTML格式）
-     * @return string json格式的字符串
+     * @return array/boolean 发送信息（数组）或者false
      */
-    public function sendEmail($targetEmail = '',$subject='',$body=''){
+    public function sendEmail($targetEmail = '',$subject = '',$body = '',$identification = ''){
         // 测试默认值
-        $targetEmail = '18378305258@163.com';
-        $subject = '测试标题';
-        $body = '测试内容';
+//        $targetEmail = '18378305258@163.com';
+//        $subject = '测试标题';
+//        $body = '测试内容';
         
         if(empty($targetEmail)){
-            return false; // 缺少$targetEmail
+            return array("status"=>false,"info"=>"缺少目标邮件地址"); // 缺少$targetEmail
         }
         
         if(!@include(LIB_PATH."Org/PHPMailer/PHPMailerAutoload.php")){ // 引入PHPMailer入口文件
-            return false; // 找不到对应文件
+            return array("status"=>false); // 找不到对应文件
         }
         
         $Mo = M('system_message');
@@ -121,7 +121,7 @@ class SendMessageModel extends Model{
         $lastTime = $result['send_time'];
         $remainingTime = $nowTime - $lastTime;
         if($remainingTime < $validTime){
-            return false; // 特定时间不能向同一邮箱账号重复发送
+            return array("status"=>false,"info"=>"特定时间不能向同一邮箱账号重复发送"); // 特定时间不能向同一邮箱账号重复发送
         }
         
         $mail=new \PHPMailer;
@@ -139,34 +139,45 @@ class SendMessageModel extends Model{
         $mail->Subject = $subject;
         $mail->Body = $body;
         if(!$mail->send()) {
-            return false; // 从PHPMailer导致的发送失败
+            return array("status"=>false,"info"=>"条件满足，尝试发送失败"); // 从PHPMailer导致的发送失败
         } else {
             $nowTime = (int)time();
-            $insertData = [
+            $identification = !empty($identification)?$identification:(string)session_id().$nowTime;
+            $insertData = array(
                 'method' => 'email',
                 'type' => 'verification',
                 'target' => $targetEmail,
-                'identification' => (string)session_id().$nowTime,
+                'identification' => $identification,
                 'title' => $subject,
                 'content' => $body,
                 'send_time' => $nowTime,
-            ];
+            );
             $Mo->data($insertData)->add();
-            $succ_data = [
+            $succ_data = array(
                 'targetEmail' => $targetEmail,
                 'validTime' => $validTime,
-                'identification' => (string)session_id().$nowTime,
-            ];
-            return $succ_data; // 发送成功
+                'identification' => $identification,
+            );
+            return array("status"=>true,"info"=>"发送成功","data"=>$succ_data); // 发送成功
         }
     }
     
+    /**
+     * 获取对某手机号最近一次发送短信的时间
+     * @param string $cell_phone 手机号码
+     * @return string 发送时间
+     */
     public function getSmsLastSendTime($cell_phone){
         $where['cell_phone'] = array('EQ',$cell_phone);
         $result = $this->field('send_time')->where($where)->order('send_time desc')->limit(1)->find();
         return $result['send_time'];
     }
     
+    /**
+     * 获取对某手机号最近一次发送短信的内容
+     * @param string $cell_phone 手机号码
+     * @return string 短信内容
+     */
     public function getSmsLastInfo($cell_phone){
         $where['method'] = array('EQ','sms');
         $where['target'] = array('EQ',$cell_phone);

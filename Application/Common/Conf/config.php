@@ -24,5 +24,7 @@ return array(
     'NETEASE_PORT' => '25', // 163邮箱非ssl协议端口为25
     'NETEASE_FROM' => 'cpjmall@163.com', // 从哪个邮箱发送，和邮箱用户名一致
     'NETEASE_CHARSET' => 'UTF-8', // 发送内容的编码
-    'NETEASE_NICKNAME' => '陈培捷的商城' // 发送人昵称
+    'NETEASE_NICKNAME' => '陈培捷的商城', // 发送人昵称
+    
+    'MEMBER_ACTIVE_VALID_TIME' => '30', // 激活用户有效时间
 );

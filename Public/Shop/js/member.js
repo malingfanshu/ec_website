@@ -1,7 +1,7 @@
 /**
  * member.js文件
  * @author 陈培捷
- * @lastModifyTime 2016/02/01 10:45
+ * @lastModifyTime 2016/02/03 9:45
  * Base64.encode("information");
  */
 
@@ -37,9 +37,10 @@ function login_check(){
     $.ajax({
         url:hidden_value.check_url,
         type:"post",
-        data:get_encrypt_seria($("#login_form").serialize()),
+        data:$("#login_form").serialize(),
         dataType:"json",
         success:function(result){
+            console.log(result);
             $("#verify").prop("src",hidden_value.verify_url); // 重新载入验证码
         }
     });
@@ -140,7 +141,7 @@ function register_check(){
     $.ajax({
         url:hidden_value.check_url,
         type:"post",
-        data:get_encrypt_seria($("#register_phone_step2_form").serialize()),
+        data:$("#register_phone_step2_form").serialize(),
         dataType:"json",
         success:function(result){
             console.log(result);
@@ -150,3 +151,10 @@ function register_check(){
 }
 
 /****************************************************************************/
+
+/***********************************邮箱注册部分**************************************/
+
+// 使用日历插件的方法
+$('#register_email_step2_calendar').cxCalendar();
+
+/******************************************************************************/
