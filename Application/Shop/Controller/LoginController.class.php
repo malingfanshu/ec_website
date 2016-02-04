@@ -156,12 +156,6 @@ class LoginController extends CommonController{
         }
     }
     
-    public function demo(){
-        $MemberAction = D("MemberAction");
-        $result = $MemberAction->emailExist('18378305258@163.com');
-        var_dump($result);
-    }
-    
     /**
      * 激活邮箱注册的账号
      */

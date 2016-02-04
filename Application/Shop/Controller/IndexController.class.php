@@ -15,4 +15,10 @@ class IndexController extends CommonController {
         redirect(U('Shop/Login/index'));
     }
     
+    public function demo(){
+        $GoodsClass = D('GoodsClass');
+        $result = $GoodsClass->getAllGoodsClass();
+        echo json_encode($result);exit;
+    }
+    
 }
