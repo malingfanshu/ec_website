@@ -1,0 +1,1731 @@
+[ 2016-02-14T08:52:36+08:00 ] ::1 /ec_website/index.php
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] A session had already been started - ignoring session_start() D:\wamp\www\ec_website\ThinkPHP\Common\functions.php 第 1263 行.
+
+[ 2016-02-14T08:52:36+08:00 ] ::1 /ec_website/index.php/Shop/Login/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.001000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] A session had already been started - ignoring session_start() D:\wamp\www\ec_website\ThinkPHP\Common\functions.php 第 1263 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.011000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.011000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2016-02-14T08:52:36+08:00 ] ::1 /ec_website/index.php/Shop/Common/getVerify
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001001s ]
+NOTIC: [8] A session had already been started - ignoring session_start() D:\wamp\www\ec_website\ThinkPHP\Common\functions.php 第 1263 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-02-14T08:57:10+08:00 ] ::1 /ec_website/index.php/Shop/Login/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.003000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+NOTIC: [8] A session had already been started - ignoring session_start() D:\wamp\www\ec_website\ThinkPHP\Common\functions.php 第 1263 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.015001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.015001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.003000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.003000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-02-14T08:57:10+08:00 ] ::1 /ec_website/index.php/Shop/Common/getVerify
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001001s ]
+NOTIC: [8] A session had already been started - ignoring session_start() D:\wamp\www\ec_website\ThinkPHP\Common\functions.php 第 1263 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-02-14T09:16:03+08:00 ] ::1 /ec_website/index.php/Shop/Index/demo
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+NOTIC: [8] A session had already been started - ignoring session_start() D:\wamp\www\ec_website\ThinkPHP\Common\functions.php 第 1263 行.
+SQL: SHOW COLUMNS FROM `ec_goods_class` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `ec_goods_class` WHERE ( gc_parent_id=0 )  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `ec_goods_class` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `ec_goods_class` WHERE `gc_parent_id` = '1'  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `ec_goods_class` [ RunTime:0.0050s ]
+SQL: SELECT * FROM `ec_goods_class` WHERE `gc_parent_id` = '3'  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `ec_goods_class` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `ec_goods_class` WHERE `gc_parent_id` = '4'  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `ec_goods_class` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `ec_goods_class` WHERE `gc_parent_id` = '2'  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `ec_goods_class` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `ec_goods_class` WHERE `gc_parent_id` = '5'  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `ec_goods_class` [ RunTime:0.0050s ]
+SQL: SELECT * FROM `ec_goods_class` WHERE `gc_parent_id` = '6'  [ RunTime:0.0000s ]
+
+[ 2016-02-14T09:24:57+08:00 ] ::1 /ec_website/index.php/Shop/Index/demo
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] A session had already been started - ignoring session_start() D:\wamp\www\ec_website\ThinkPHP\Common\functions.php 第 1263 行.
+SQL: SHOW COLUMNS FROM `ec_goods_class` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `ec_goods_class` WHERE ( gc_parent_id=0 )  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `ec_goods_class` [ RunTime:0.0050s ]
+SQL: SELECT * FROM `ec_goods_class` WHERE `gc_parent_id` = '1'  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `ec_goods_class` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `ec_goods_class` WHERE `gc_parent_id` = '3'  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `ec_goods_class` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `ec_goods_class` WHERE `gc_parent_id` = '4'  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `ec_goods_class` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `ec_goods_class` WHERE `gc_parent_id` = '2'  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `ec_goods_class` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `ec_goods_class` WHERE `gc_parent_id` = '5'  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `ec_goods_class` [ RunTime:0.0050s ]
+SQL: SELECT * FROM `ec_goods_class` WHERE `gc_parent_id` = '6'  [ RunTime:0.0000s ]
+
+[ 2016-02-14T09:58:49+08:00 ] ::1 /ec_website/index.php/Shop/Index/demo
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] A session had already been started - ignoring session_start() D:\wamp\www\ec_website\ThinkPHP\Common\functions.php 第 1263 行.
+NOTIC: [2] Missing argument 1 for Common\Model\GoodsModel::getClassGoods(), called in D:\wamp\www\ec_website\Application\Shop\Controller\IndexController.class.php on line 20 and defined D:\wamp\www\ec_website\Application\Common\Model\GoodsModel.class.php 第 16 行.
+SQL: SHOW COLUMNS FROM `ec_goods_class` [ RunTime:0.0050s ]
+SQL: SELECT * FROM `ec_goods_class`  [ RunTime:0.0000s ]
+
+[ 2016-02-14T10:00:38+08:00 ] ::1 /ec_website/index.php/Shop/Index/demo
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] A session had already been started - ignoring session_start() D:\wamp\www\ec_website\ThinkPHP\Common\functions.php 第 1263 行.
+
+[ 2016-02-14T10:00:46+08:00 ] ::1 /ec_website/index.php/Shop/Index/demo
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+NOTIC: [8] A session had already been started - ignoring session_start() D:\wamp\www\ec_website\ThinkPHP\Common\functions.php 第 1263 行.
+NOTIC: [2] Missing argument 1 for Common\Model\GoodsModel::getClassGoods(), called in D:\wamp\www\ec_website\Application\Shop\Controller\IndexController.class.php on line 20 and defined D:\wamp\www\ec_website\Application\Common\Model\GoodsModel.class.php 第 16 行.
+NOTIC: [8] Undefined variable: gc_id D:\wamp\www\ec_website\Application\Common\Model\GoodsModel.class.php 第 17 行.
+SQL: SHOW COLUMNS FROM `ec_goods_class` [ RunTime:0.0050s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ')' at line 1
+ [ SQL语句 ] : SELECT * FROM `ec_goods_class` WHERE ( gc_id= ) 
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ')' at line 1
+ [ SQL语句 ] : SELECT * FROM `ec_goods_class` WHERE ( gc_id= ) 
+
+[ 2016-02-14T10:00:56+08:00 ] ::1 /ec_website/index.php/Shop/Index/demo
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] A session had already been started - ignoring session_start() D:\wamp\www\ec_website\ThinkPHP\Common\functions.php 第 1263 行.
+NOTIC: [2] Missing argument 1 for Common\Model\GoodsModel::getClassGoods(), called in D:\wamp\www\ec_website\Application\Shop\Controller\IndexController.class.php on line 20 and defined D:\wamp\www\ec_website\Application\Common\Model\GoodsModel.class.php 第 16 行.
+SQL: SHOW COLUMNS FROM `ec_goods_class` [ RunTime:0.0050s ]
+SQL: SELECT * FROM `ec_goods_class` WHERE ( gc_id=1 )  [ RunTime:0.0010s ]
+
+[ 2016-02-14T10:01:11+08:00 ] ::1 /ec_website/index.php/Shop/Index/demo
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] A session had already been started - ignoring session_start() D:\wamp\www\ec_website\ThinkPHP\Common\functions.php 第 1263 行.
+SQL: SHOW COLUMNS FROM `ec_goods_class` [ RunTime:0.0050s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ')' at line 1
+ [ SQL语句 ] : SELECT * FROM `ec_goods_class` WHERE ( gc_id= ) 
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ')' at line 1
+ [ SQL语句 ] : SELECT * FROM `ec_goods_class` WHERE ( gc_id= ) 
+
+[ 2016-02-14T10:01:22+08:00 ] ::1 /ec_website/index.php/Shop/Index/demo
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] A session had already been started - ignoring session_start() D:\wamp\www\ec_website\ThinkPHP\Common\functions.php 第 1263 行.
+SQL: SHOW COLUMNS FROM `ec_goods_class` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `ec_goods_class` WHERE ( gc_id=1 )  [ RunTime:0.0000s ]
+
+[ 2016-02-14T10:02:02+08:00 ] ::1 /ec_website/index.php/Shop/Index/demo
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] A session had already been started - ignoring session_start() D:\wamp\www\ec_website\ThinkPHP\Common\functions.php 第 1263 行.
+SQL: SHOW COLUMNS FROM `ec_goods_class` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `ec_goods_class` WHERE ( gc_id=1 )  [ RunTime:0.0010s ]
+
+[ 2016-02-14T10:02:45+08:00 ] ::1 /ec_website/index.php/Shop/Index/demo
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] A session had already been started - ignoring session_start() D:\wamp\www\ec_website\ThinkPHP\Common\functions.php 第 1263 行.
+SQL: SHOW COLUMNS FROM `ec_goods_class` [ RunTime:0.0070s ]
+SQL: SELECT * FROM `ec_goods_class` WHERE ( gc_id=1 AND gc_parent_id=1 )  [ RunTime:0.0010s ]
+
+[ 2016-02-14T10:03:03+08:00 ] ::1 /ec_website/index.php/Shop/Index/demo
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] A session had already been started - ignoring session_start() D:\wamp\www\ec_website\ThinkPHP\Common\functions.php 第 1263 行.
+SQL: SHOW COLUMNS FROM `ec_goods_class` [ RunTime:0.0070s ]
+SQL: SELECT * FROM `ec_goods_class` WHERE ( gc_id=1 OR gc_parent_id=1 )  [ RunTime:0.0040s ]
+
+[ 2016-02-14T10:04:06+08:00 ] ::1 /ec_website/index.php/Shop/Index/demo
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] A session had already been started - ignoring session_start() D:\wamp\www\ec_website\ThinkPHP\Common\functions.php 第 1263 行.
+SQL: SHOW COLUMNS FROM `ec_goods_class` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `ec_goods_class` WHERE ( gc_id=3 OR gc_parent_id=3 )  [ RunTime:0.0010s ]
+
+[ 2016-02-14T10:04:14+08:00 ] ::1 /ec_website/index.php/Shop/Index/demo
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+NOTIC: [8] A session had already been started - ignoring session_start() D:\wamp\www\ec_website\ThinkPHP\Common\functions.php 第 1263 行.
+SQL: SHOW COLUMNS FROM `ec_goods_class` [ RunTime:0.0050s ]
+SQL: SELECT * FROM `ec_goods_class` WHERE ( gc_id=1 OR gc_parent_id=1 )  [ RunTime:0.0000s ]
+
+[ 2016-02-14T10:08:44+08:00 ] ::1 /ec_website/index.php/Shop/Index/demo
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.003000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004000s ]
+NOTIC: [8] A session had already been started - ignoring session_start() D:\wamp\www\ec_website\ThinkPHP\Common\functions.php 第 1263 行.
+SQL: SHOW COLUMNS FROM `ec_goods_class` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `ec_goods_class` WHERE ( gc_parent_id<>0 AND gc_parent_id=1 )  [ RunTime:0.0010s ]
+
+[ 2016-02-14T10:08:45+08:00 ] ::1 /ec_website/index.php/Shop/Index/demo
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] A session had already been started - ignoring session_start() D:\wamp\www\ec_website\ThinkPHP\Common\functions.php 第 1263 行.
+SQL: SHOW COLUMNS FROM `ec_goods_class` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `ec_goods_class` WHERE ( gc_parent_id<>0 AND gc_parent_id=1 )  [ RunTime:0.0010s ]
+
+[ 2016-02-14T10:08:51+08:00 ] ::1 /ec_website/index.php/Shop/Index/demo
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] A session had already been started - ignoring session_start() D:\wamp\www\ec_website\ThinkPHP\Common\functions.php 第 1263 行.
+SQL: SHOW COLUMNS FROM `ec_goods_class` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `ec_goods_class` WHERE ( gc_parent_id<>0 AND gc_parent_id=3 )  [ RunTime:0.0000s ]
+
+[ 2016-02-14T10:09:00+08:00 ] ::1 /ec_website/index.php/Shop/Index/demo
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] A session had already been started - ignoring session_start() D:\wamp\www\ec_website\ThinkPHP\Common\functions.php 第 1263 行.
+SQL: SHOW COLUMNS FROM `ec_goods_class` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `ec_goods_class` WHERE ( gc_parent_id<>0 AND gc_parent_id=1 )  [ RunTime:0.0000s ]
+
+[ 2016-02-14T10:09:15+08:00 ] ::1 /ec_website/index.php/Shop/Index/demo
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] A session had already been started - ignoring session_start() D:\wamp\www\ec_website\ThinkPHP\Common\functions.php 第 1263 行.
+SQL: SHOW COLUMNS FROM `ec_goods_class` [ RunTime:0.0040s ]
+SQL: SELECT `gc_id` FROM `ec_goods_class` WHERE ( gc_parent_id<>0 AND gc_parent_id=1 )  [ RunTime:0.0010s ]
+
+[ 2016-02-14T10:10:09+08:00 ] ::1 /ec_website/index.php/Shop/Index/demo
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+NOTIC: [8] A session had already been started - ignoring session_start() D:\wamp\www\ec_website\ThinkPHP\Common\functions.php 第 1263 行.
+SQL: SHOW COLUMNS FROM `ec_goods_class` [ RunTime:0.0050s ]
+SQL: SELECT * FROM `ec_goods_class` WHERE ( gc_parent_id<>0 AND gc_parent_id=1 )  [ RunTime:0.0000s ]
+
+[ 2016-02-14T10:10:35+08:00 ] ::1 /ec_website/index.php/Shop/Index/demo
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] A session had already been started - ignoring session_start() D:\wamp\www\ec_website\ThinkPHP\Common\functions.php 第 1263 行.
+SQL: SHOW COLUMNS FROM `ec_goods_class` [ RunTime:0.0050s ]
+SQL: SELECT * FROM `ec_goods_class` WHERE ( gc_parent_id<>0 AND gc_parent_id=1 )  [ RunTime:0.0000s ]
+
+[ 2016-02-14T10:10:44+08:00 ] ::1 /ec_website/index.php/Shop/Index/demo
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.001000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] A session had already been started - ignoring session_start() D:\wamp\www\ec_website\ThinkPHP\Common\functions.php 第 1263 行.
+SQL: SHOW COLUMNS FROM `ec_goods_class` [ RunTime:0.0040s ]
+SQL: SELECT `gc_id` FROM `ec_goods_class` WHERE ( gc_parent_id<>0 AND gc_parent_id=1 )  [ RunTime:0.0010s ]
+
+[ 2016-02-14T10:10:51+08:00 ] ::1 /ec_website/index.php/Shop/Index/demo
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001001s ]
+NOTIC: [8] A session had already been started - ignoring session_start() D:\wamp\www\ec_website\ThinkPHP\Common\functions.php 第 1263 行.
+SQL: SHOW COLUMNS FROM `ec_goods_class` [ RunTime:0.0040s ]
+SQL: SELECT `gc_id`,`gc_name` FROM `ec_goods_class` WHERE ( gc_parent_id<>0 AND gc_parent_id=1 )  [ RunTime:0.0000s ]
+
+[ 2016-02-14T10:10:56+08:00 ] ::1 /ec_website/index.php/Shop/Index/demo
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+NOTIC: [8] A session had already been started - ignoring session_start() D:\wamp\www\ec_website\ThinkPHP\Common\functions.php 第 1263 行.
+SQL: SHOW COLUMNS FROM `ec_goods_class` [ RunTime:0.0060s ]
+SQL: SELECT * FROM `ec_goods_class` WHERE ( gc_parent_id<>0 AND gc_parent_id=1 )  [ RunTime:0.0010s ]
+
+[ 2016-02-14T10:11:55+08:00 ] ::1 /ec_website/index.php/Shop/Index/demo
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001001s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] A session had already been started - ignoring session_start() D:\wamp\www\ec_website\ThinkPHP\Common\functions.php 第 1263 行.
+SQL: SHOW COLUMNS FROM `ec_goods_class` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `ec_goods_class` WHERE ( gc_parent_id<>0 AND gc_parent_id=14 )  [ RunTime:0.0000s ]
+
+[ 2016-02-14T10:12:01+08:00 ] ::1 /ec_website/index.php/Shop/Index/demo
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] A session had already been started - ignoring session_start() D:\wamp\www\ec_website\ThinkPHP\Common\functions.php 第 1263 行.
+SQL: SHOW COLUMNS FROM `ec_goods_class` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `ec_goods_class` WHERE ( gc_parent_id<>0 AND gc_parent_id=1 )  [ RunTime:0.0000s ]
+
+[ 2016-02-14T10:20:31+08:00 ] ::1 /ec_website/index.php/Shop/Index/demo
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] A session had already been started - ignoring session_start() D:\wamp\www\ec_website\ThinkPHP\Common\functions.php 第 1263 行.
+SQL: SHOW COLUMNS FROM `ec_goods_class` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `ec_goods_class` WHERE ( gc_id=1 OR gc_parent_id=1 )  [ RunTime:0.0010s ]
+
+[ 2016-02-14T10:22:47+08:00 ] ::1 /ec_website/index.php/Shop/Index/demo
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002001s ]
+NOTIC: [8] A session had already been started - ignoring session_start() D:\wamp\www\ec_website\ThinkPHP\Common\functions.php 第 1263 行.
+SQL: SHOW COLUMNS FROM `ec_goods_class` [ RunTime:0.0060s ]
+SQL: SELECT * FROM `ec_goods_class` WHERE ( gc_parent_id<>0 AND gc_parent_id=1 )  [ RunTime:0.0000s ]
+
+[ 2016-02-14T10:26:15+08:00 ] ::1 /ec_website/index.php/Shop/Index/demo
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] A session had already been started - ignoring session_start() D:\wamp\www\ec_website\ThinkPHP\Common\functions.php 第 1263 行.
+SQL: SHOW COLUMNS FROM `ec_goods_class` [ RunTime:0.0060s ]
+SQL: SELECT * FROM `ec_goods_class` WHERE ( gc_parent_id<>0 AND gc_parent_id=1 )  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `ec_goods_class` [ RunTime:0.0050s ]
+SQL: SELECT * FROM `ec_goods_class` WHERE ( gc_parent_id<>0 AND gc_parent_id=3 )  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `ec_goods_class` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `ec_goods_class` WHERE ( gc_parent_id<>0 AND gc_parent_id=4 )  [ RunTime:0.0000s ]
+
+[ 2016-02-14T10:32:38+08:00 ] ::1 /ec_website/index.php/Shop/Index/demo
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+NOTIC: [8] A session had already been started - ignoring session_start() D:\wamp\www\ec_website\ThinkPHP\Common\functions.php 第 1263 行.
+SQL: SHOW COLUMNS FROM `ec_goods_class` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `ec_goods_class` WHERE ( gc_parent_id<>0 AND gc_parent_id=1 )  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `ec_goods_class` [ RunTime:0.0050s ]
+SQL: SELECT * FROM `ec_goods_class` WHERE ( gc_parent_id<>0 AND gc_parent_id=3 )  [ RunTime:0.0010s ]
+NOTIC: [2] array_unshift() expects at least 2 parameters, 1 given D:\wamp\www\ec_website\Application\Common\Model\GoodsClassModel.class.php 第 53 行.
+NOTIC: [2] array_unshift() expects at least 2 parameters, 1 given D:\wamp\www\ec_website\Application\Common\Model\GoodsClassModel.class.php 第 53 行.
+SQL: SHOW COLUMNS FROM `ec_goods_class` [ RunTime:0.0050s ]
+SQL: SELECT * FROM `ec_goods_class` WHERE ( gc_parent_id<>0 AND gc_parent_id=4 )  [ RunTime:0.0000s ]
+NOTIC: [2] array_unshift() expects at least 2 parameters, 1 given D:\wamp\www\ec_website\Application\Common\Model\GoodsClassModel.class.php 第 53 行.
+NOTIC: [2] array_unshift() expects at least 2 parameters, 1 given D:\wamp\www\ec_website\Application\Common\Model\GoodsClassModel.class.php 第 53 行.
+
+[ 2016-02-14T10:32:53+08:00 ] ::1 /ec_website/index.php/Shop/Index/demo
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+NOTIC: [8] A session had already been started - ignoring session_start() D:\wamp\www\ec_website\ThinkPHP\Common\functions.php 第 1263 行.
+SQL: SHOW COLUMNS FROM `ec_goods_class` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `ec_goods_class` WHERE ( gc_parent_id<>0 AND gc_parent_id=1 )  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `ec_goods_class` [ RunTime:0.0050s ]
+SQL: SELECT * FROM `ec_goods_class` WHERE ( gc_parent_id<>0 AND gc_parent_id=3 )  [ RunTime:0.0000s ]
+NOTIC: [2] array_unshift() expects at least 2 parameters, 1 given D:\wamp\www\ec_website\Application\Common\Model\GoodsClassModel.class.php 第 53 行.
+NOTIC: [2] array_unshift() expects at least 2 parameters, 1 given D:\wamp\www\ec_website\Application\Common\Model\GoodsClassModel.class.php 第 53 行.
+SQL: SHOW COLUMNS FROM `ec_goods_class` [ RunTime:0.0050s ]
+SQL: SELECT * FROM `ec_goods_class` WHERE ( gc_parent_id<>0 AND gc_parent_id=4 )  [ RunTime:0.0010s ]
+NOTIC: [2] array_unshift() expects at least 2 parameters, 1 given D:\wamp\www\ec_website\Application\Common\Model\GoodsClassModel.class.php 第 53 行.
+NOTIC: [2] array_unshift() expects at least 2 parameters, 1 given D:\wamp\www\ec_website\Application\Common\Model\GoodsClassModel.class.php 第 53 行.
+
+[ 2016-02-14T10:33:25+08:00 ] ::1 /ec_website/index.php/Shop/Index/demo
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+NOTIC: [8] A session had already been started - ignoring session_start() D:\wamp\www\ec_website\ThinkPHP\Common\functions.php 第 1263 行.
+SQL: SHOW COLUMNS FROM `ec_goods_class` [ RunTime:0.0050s ]
+SQL: SELECT * FROM `ec_goods_class` WHERE ( gc_parent_id<>0 AND gc_parent_id=1 )  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `ec_goods_class` [ RunTime:0.0060s ]
+SQL: SELECT * FROM `ec_goods_class` WHERE ( gc_parent_id<>0 AND gc_parent_id=3 )  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `ec_goods_class` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `ec_goods_class` WHERE ( gc_parent_id<>0 AND gc_parent_id=4 )  [ RunTime:0.0010s ]
+
+[ 2016-02-14T10:33:33+08:00 ] ::1 /ec_website/index.php/Shop/Index/demo
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] A session had already been started - ignoring session_start() D:\wamp\www\ec_website\ThinkPHP\Common\functions.php 第 1263 行.
+SQL: SHOW COLUMNS FROM `ec_goods_class` [ RunTime:0.0070s ]
+SQL: SELECT * FROM `ec_goods_class` WHERE ( gc_parent_id<>0 AND gc_parent_id=1 )  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `ec_goods_class` [ RunTime:0.0060s ]
+SQL: SELECT * FROM `ec_goods_class` WHERE ( gc_parent_id<>0 AND gc_parent_id=3 )  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `ec_goods_class` [ RunTime:0.0070s ]
+SQL: SELECT * FROM `ec_goods_class` WHERE ( gc_parent_id<>0 AND gc_parent_id=4 )  [ RunTime:0.0010s ]
+
+[ 2016-02-14T10:34:10+08:00 ] ::1 /ec_website/index.php/Shop/Index/demo
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] A session had already been started - ignoring session_start() D:\wamp\www\ec_website\ThinkPHP\Common\functions.php 第 1263 行.
+SQL: SHOW COLUMNS FROM `ec_goods_class` [ RunTime:0.0050s ]
+SQL: SELECT * FROM `ec_goods_class` WHERE ( gc_parent_id<>0 AND gc_parent_id=1 )  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `ec_goods_class` [ RunTime:0.0050s ]
+SQL: SELECT * FROM `ec_goods_class` WHERE ( gc_parent_id<>0 AND gc_parent_id=3 )  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `ec_goods_class` [ RunTime:0.0050s ]
+SQL: SELECT * FROM `ec_goods_class` WHERE ( gc_parent_id<>0 AND gc_parent_id=4 )  [ RunTime:0.0000s ]
+
+[ 2016-02-14T10:34:41+08:00 ] ::1 /ec_website/index.php/Shop/Index/demo
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] A session had already been started - ignoring session_start() D:\wamp\www\ec_website\ThinkPHP\Common\functions.php 第 1263 行.
+SQL: SHOW COLUMNS FROM `ec_goods_class` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `ec_goods_class` WHERE ( gc_parent_id<>0 AND gc_parent_id=3 )  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `ec_goods_class` [ RunTime:0.0050s ]
+SQL: SELECT * FROM `ec_goods_class` WHERE ( gc_parent_id<>0 AND gc_parent_id=7 )  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `ec_goods_class` [ RunTime:0.0050s ]
+SQL: SELECT * FROM `ec_goods_class` WHERE ( gc_parent_id<>0 AND gc_parent_id=8 )  [ RunTime:0.0010s ]
+NOTIC: [8] Undefined variable: result D:\wamp\www\ec_website\Application\Common\Model\GoodsClassModel.class.php 第 62 行.
+
+[ 2016-02-14T10:34:42+08:00 ] ::1 /ec_website/index.php/Shop/Index/demo
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] A session had already been started - ignoring session_start() D:\wamp\www\ec_website\ThinkPHP\Common\functions.php 第 1263 行.
+SQL: SHOW COLUMNS FROM `ec_goods_class` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `ec_goods_class` WHERE ( gc_parent_id<>0 AND gc_parent_id=3 )  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `ec_goods_class` [ RunTime:0.0050s ]
+SQL: SELECT * FROM `ec_goods_class` WHERE ( gc_parent_id<>0 AND gc_parent_id=7 )  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `ec_goods_class` [ RunTime:0.0060s ]
+SQL: SELECT * FROM `ec_goods_class` WHERE ( gc_parent_id<>0 AND gc_parent_id=8 )  [ RunTime:0.0000s ]
+NOTIC: [8] Undefined variable: result D:\wamp\www\ec_website\Application\Common\Model\GoodsClassModel.class.php 第 62 行.
+
+[ 2016-02-14T10:34:48+08:00 ] ::1 /ec_website/index.php/Shop/Index/demo
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] A session had already been started - ignoring session_start() D:\wamp\www\ec_website\ThinkPHP\Common\functions.php 第 1263 行.
+SQL: SHOW COLUMNS FROM `ec_goods_class` [ RunTime:0.0050s ]
+SQL: SELECT * FROM `ec_goods_class` WHERE ( gc_parent_id<>0 AND gc_parent_id=1 )  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `ec_goods_class` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `ec_goods_class` WHERE ( gc_parent_id<>0 AND gc_parent_id=3 )  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `ec_goods_class` [ RunTime:0.0050s ]
+SQL: SELECT * FROM `ec_goods_class` WHERE ( gc_parent_id<>0 AND gc_parent_id=4 )  [ RunTime:0.0000s ]
+
+[ 2016-02-14T10:34:58+08:00 ] ::1 /ec_website/index.php/Shop/Index/demo
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001001s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+NOTIC: [8] A session had already been started - ignoring session_start() D:\wamp\www\ec_website\ThinkPHP\Common\functions.php 第 1263 行.
+SQL: SHOW COLUMNS FROM `ec_goods_class` [ RunTime:0.0060s ]
+SQL: SELECT * FROM `ec_goods_class` WHERE ( gc_parent_id<>0 AND gc_parent_id=2 )  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `ec_goods_class` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `ec_goods_class` WHERE ( gc_parent_id<>0 AND gc_parent_id=5 )  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `ec_goods_class` [ RunTime:0.0050s ]
+SQL: SELECT * FROM `ec_goods_class` WHERE ( gc_parent_id<>0 AND gc_parent_id=6 )  [ RunTime:0.0000s ]
+
+[ 2016-02-14T10:35:00+08:00 ] ::1 /ec_website/index.php/Shop/Index/demo
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] A session had already been started - ignoring session_start() D:\wamp\www\ec_website\ThinkPHP\Common\functions.php 第 1263 行.
+SQL: SHOW COLUMNS FROM `ec_goods_class` [ RunTime:0.0060s ]
+SQL: SELECT * FROM `ec_goods_class` WHERE ( gc_parent_id<>0 AND gc_parent_id=2 )  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `ec_goods_class` [ RunTime:0.0050s ]
+SQL: SELECT * FROM `ec_goods_class` WHERE ( gc_parent_id<>0 AND gc_parent_id=5 )  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `ec_goods_class` [ RunTime:0.0050s ]
+SQL: SELECT * FROM `ec_goods_class` WHERE ( gc_parent_id<>0 AND gc_parent_id=6 )  [ RunTime:0.0010s ]
+
+[ 2016-02-14T10:35:05+08:00 ] ::1 /ec_website/index.php/Shop/Index/demo
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] A session had already been started - ignoring session_start() D:\wamp\www\ec_website\ThinkPHP\Common\functions.php 第 1263 行.
+SQL: SHOW COLUMNS FROM `ec_goods_class` [ RunTime:0.0050s ]
+SQL: SELECT * FROM `ec_goods_class` WHERE ( gc_parent_id<>0 AND gc_parent_id=1 )  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `ec_goods_class` [ RunTime:0.0050s ]
+SQL: SELECT * FROM `ec_goods_class` WHERE ( gc_parent_id<>0 AND gc_parent_id=3 )  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `ec_goods_class` [ RunTime:0.0060s ]
+SQL: SELECT * FROM `ec_goods_class` WHERE ( gc_parent_id<>0 AND gc_parent_id=4 )  [ RunTime:0.0000s ]
+
+[ 2016-02-14T10:35:26+08:00 ] ::1 /ec_website/index.php/Shop/Index/demo
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] A session had already been started - ignoring session_start() D:\wamp\www\ec_website\ThinkPHP\Common\functions.php 第 1263 行.
+SQL: SHOW COLUMNS FROM `ec_goods_class` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `ec_goods_class` WHERE ( gc_parent_id<>0 AND gc_parent_id=2 )  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `ec_goods_class` [ RunTime:0.0050s ]
+SQL: SELECT * FROM `ec_goods_class` WHERE ( gc_parent_id<>0 AND gc_parent_id=5 )  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `ec_goods_class` [ RunTime:0.0050s ]
+SQL: SELECT * FROM `ec_goods_class` WHERE ( gc_parent_id<>0 AND gc_parent_id=6 )  [ RunTime:0.0000s ]
+
+[ 2016-02-14T10:35:43+08:00 ] ::1 /ec_website/index.php/Shop/Index/demo
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] A session had already been started - ignoring session_start() D:\wamp\www\ec_website\ThinkPHP\Common\functions.php 第 1263 行.
+SQL: SHOW COLUMNS FROM `ec_goods_class` [ RunTime:0.0050s ]
+SQL: SELECT * FROM `ec_goods_class` WHERE ( gc_parent_id<>0 AND gc_parent_id=3 )  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `ec_goods_class` [ RunTime:0.0060s ]
+SQL: SELECT * FROM `ec_goods_class` WHERE ( gc_parent_id<>0 AND gc_parent_id=7 )  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `ec_goods_class` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `ec_goods_class` WHERE ( gc_parent_id<>0 AND gc_parent_id=8 )  [ RunTime:0.0000s ]
+NOTIC: [8] Undefined variable: result D:\wamp\www\ec_website\Application\Common\Model\GoodsClassModel.class.php 第 62 行.
+
+[ 2016-02-14T10:36:30+08:00 ] ::1 /ec_website/index.php/Shop/Index/demo
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+NOTIC: [8] A session had already been started - ignoring session_start() D:\wamp\www\ec_website\ThinkPHP\Common\functions.php 第 1263 行.
+SQL: SHOW COLUMNS FROM `ec_goods_class` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `ec_goods_class` WHERE ( gc_parent_id<>0 AND gc_parent_id=3 )  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `ec_goods_class` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `ec_goods_class` WHERE ( gc_parent_id<>0 AND gc_parent_id=7 )  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `ec_goods_class` [ RunTime:0.0050s ]
+SQL: SELECT * FROM `ec_goods_class` WHERE ( gc_parent_id<>0 AND gc_parent_id=8 )  [ RunTime:0.0000s ]
+
+[ 2016-02-14T10:36:36+08:00 ] ::1 /ec_website/index.php/Shop/Index/demo
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] A session had already been started - ignoring session_start() D:\wamp\www\ec_website\ThinkPHP\Common\functions.php 第 1263 行.
+SQL: SHOW COLUMNS FROM `ec_goods_class` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `ec_goods_class` WHERE ( gc_parent_id<>0 AND gc_parent_id=1 )  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `ec_goods_class` [ RunTime:0.0100s ]
+SQL: SELECT * FROM `ec_goods_class` WHERE ( gc_parent_id<>0 AND gc_parent_id=3 )  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `ec_goods_class` [ RunTime:0.0050s ]
+SQL: SELECT * FROM `ec_goods_class` WHERE ( gc_parent_id<>0 AND gc_parent_id=4 )  [ RunTime:0.0010s ]
+
+[ 2016-02-14T10:36:41+08:00 ] ::1 /ec_website/index.php/Shop/Index/demo
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] A session had already been started - ignoring session_start() D:\wamp\www\ec_website\ThinkPHP\Common\functions.php 第 1263 行.
+SQL: SHOW COLUMNS FROM `ec_goods_class` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `ec_goods_class` WHERE ( gc_parent_id<>0 AND gc_parent_id=3 )  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `ec_goods_class` [ RunTime:0.0050s ]
+SQL: SELECT * FROM `ec_goods_class` WHERE ( gc_parent_id<>0 AND gc_parent_id=7 )  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `ec_goods_class` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `ec_goods_class` WHERE ( gc_parent_id<>0 AND gc_parent_id=8 )  [ RunTime:0.0010s ]
+
+[ 2016-02-14T10:37:09+08:00 ] ::1 /ec_website/index.php/Shop/Index/demo
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+NOTIC: [8] A session had already been started - ignoring session_start() D:\wamp\www\ec_website\ThinkPHP\Common\functions.php 第 1263 行.
+SQL: SHOW COLUMNS FROM `ec_goods_class` [ RunTime:0.0050s ]
+SQL: SELECT * FROM `ec_goods_class` WHERE ( gc_parent_id<>0 AND gc_parent_id=3 )  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `ec_goods_class` [ RunTime:0.0060s ]
+SQL: SELECT * FROM `ec_goods_class` WHERE ( gc_parent_id<>0 AND gc_parent_id=7 )  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `ec_goods_class` [ RunTime:0.0060s ]
+SQL: SELECT * FROM `ec_goods_class` WHERE ( gc_parent_id<>0 AND gc_parent_id=8 )  [ RunTime:0.0010s ]
+
+[ 2016-02-14T10:37:31+08:00 ] ::1 /ec_website/index.php/Shop/Index/demo
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] A session had already been started - ignoring session_start() D:\wamp\www\ec_website\ThinkPHP\Common\functions.php 第 1263 行.
+SQL: SHOW COLUMNS FROM `ec_goods_class` [ RunTime:0.0050s ]
+SQL: SELECT * FROM `ec_goods_class` WHERE ( gc_parent_id<>0 AND gc_parent_id=3 )  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `ec_goods_class` [ RunTime:0.0060s ]
+SQL: SELECT * FROM `ec_goods_class` WHERE ( gc_parent_id<>0 AND gc_parent_id=7 )  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `ec_goods_class` [ RunTime:0.0050s ]
+SQL: SELECT * FROM `ec_goods_class` WHERE ( gc_parent_id<>0 AND gc_parent_id=8 )  [ RunTime:0.0010s ]
+
+[ 2016-02-14T10:43:36+08:00 ] ::1 /ec_website/index.php/Shop/Index/demo
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] A session had already been started - ignoring session_start() D:\wamp\www\ec_website\ThinkPHP\Common\functions.php 第 1263 行.
+SQL: SHOW COLUMNS FROM `ec_goods_class` [ RunTime:0.0060s ]
+SQL: SELECT * FROM `ec_goods_class` WHERE ( gc_parent_id<>0 AND gc_parent_id=3 )  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `ec_goods_class` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `ec_goods_class` WHERE ( gc_parent_id<>0 AND gc_parent_id=7 )  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `ec_goods_class` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `ec_goods_class` WHERE ( gc_parent_id<>0 AND gc_parent_id=8 )  [ RunTime:0.0010s ]
+
+[ 2016-02-14T10:44:25+08:00 ] ::1 /ec_website/index.php/Shop/Index/demo
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002001s ]
+NOTIC: [8] A session had already been started - ignoring session_start() D:\wamp\www\ec_website\ThinkPHP\Common\functions.php 第 1263 行.
+SQL: SHOW COLUMNS FROM `ec_goods_class` [ RunTime:0.0060s ]
+SQL: SELECT * FROM `ec_goods_class` WHERE ( gc_parent_id<>0 AND gc_parent_id=3 )  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `ec_goods_class` [ RunTime:0.0070s ]
+SQL: SELECT * FROM `ec_goods_class` WHERE ( gc_parent_id<>0 AND gc_parent_id=7 )  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `ec_goods_class` [ RunTime:0.0050s ]
+SQL: SELECT * FROM `ec_goods_class` WHERE ( gc_parent_id<>0 AND gc_parent_id=8 )  [ RunTime:0.0010s ]
+
+[ 2016-02-14T10:44:26+08:00 ] ::1 /ec_website/index.php/Shop/Index/demo
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] A session had already been started - ignoring session_start() D:\wamp\www\ec_website\ThinkPHP\Common\functions.php 第 1263 行.
+SQL: SHOW COLUMNS FROM `ec_goods_class` [ RunTime:0.0060s ]
+SQL: SELECT * FROM `ec_goods_class` WHERE ( gc_parent_id<>0 AND gc_parent_id=3 )  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `ec_goods_class` [ RunTime:0.0050s ]
+SQL: SELECT * FROM `ec_goods_class` WHERE ( gc_parent_id<>0 AND gc_parent_id=7 )  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `ec_goods_class` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `ec_goods_class` WHERE ( gc_parent_id<>0 AND gc_parent_id=8 )  [ RunTime:0.0000s ]
+
+[ 2016-02-14T10:44:30+08:00 ] ::1 /ec_website/index.php/Shop/Index/demo
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] A session had already been started - ignoring session_start() D:\wamp\www\ec_website\ThinkPHP\Common\functions.php 第 1263 行.
+SQL: SHOW COLUMNS FROM `ec_goods_class` [ RunTime:0.0050s ]
+SQL: SELECT * FROM `ec_goods_class` WHERE ( gc_parent_id<>0 AND gc_parent_id=4 )  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `ec_goods_class` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `ec_goods_class` WHERE ( gc_parent_id<>0 AND gc_parent_id=9 )  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `ec_goods_class` [ RunTime:0.0050s ]
+SQL: SELECT * FROM `ec_goods_class` WHERE ( gc_parent_id<>0 AND gc_parent_id=10 )  [ RunTime:0.0000s ]
+
+[ 2016-02-14T10:44:35+08:00 ] ::1 /ec_website/index.php/Shop/Index/demo
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] A session had already been started - ignoring session_start() D:\wamp\www\ec_website\ThinkPHP\Common\functions.php 第 1263 行.
+SQL: SHOW COLUMNS FROM `ec_goods_class` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `ec_goods_class` WHERE ( gc_parent_id<>0 AND gc_parent_id=1 )  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `ec_goods_class` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `ec_goods_class` WHERE ( gc_parent_id<>0 AND gc_parent_id=3 )  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `ec_goods_class` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `ec_goods_class` WHERE ( gc_parent_id<>0 AND gc_parent_id=4 )  [ RunTime:0.0010s ]
+
+[ 2016-02-14T10:45:25+08:00 ] ::1 /ec_website/index.php/Shop/Index/demo
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] A session had already been started - ignoring session_start() D:\wamp\www\ec_website\ThinkPHP\Common\functions.php 第 1263 行.
+SQL: SHOW COLUMNS FROM `ec_goods_class` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `ec_goods_class` WHERE ( gc_parent_id<>0 AND gc_parent_id=1 )  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `ec_goods_class` [ RunTime:0.0050s ]
+SQL: SELECT * FROM `ec_goods_class` WHERE ( gc_parent_id<>0 AND gc_parent_id=3 )  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `ec_goods_class` [ RunTime:0.0060s ]
+SQL: SELECT * FROM `ec_goods_class` WHERE ( gc_parent_id<>0 AND gc_parent_id=4 )  [ RunTime:0.0000s ]
+
+[ 2016-02-14T10:45:26+08:00 ] ::1 /ec_website/index.php/Shop/Index/demo
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+NOTIC: [8] A session had already been started - ignoring session_start() D:\wamp\www\ec_website\ThinkPHP\Common\functions.php 第 1263 行.
+SQL: SHOW COLUMNS FROM `ec_goods_class` [ RunTime:0.0050s ]
+SQL: SELECT * FROM `ec_goods_class` WHERE ( gc_parent_id<>0 AND gc_parent_id=1 )  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `ec_goods_class` [ RunTime:0.0050s ]
+SQL: SELECT * FROM `ec_goods_class` WHERE ( gc_parent_id<>0 AND gc_parent_id=3 )  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `ec_goods_class` [ RunTime:0.0050s ]
+SQL: SELECT * FROM `ec_goods_class` WHERE ( gc_parent_id<>0 AND gc_parent_id=4 )  [ RunTime:0.0000s ]
+
+[ 2016-02-14T10:45:29+08:00 ] ::1 /ec_website/index.php/Shop/Index/demo
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] A session had already been started - ignoring session_start() D:\wamp\www\ec_website\ThinkPHP\Common\functions.php 第 1263 行.
+SQL: SHOW COLUMNS FROM `ec_goods_class` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `ec_goods_class` WHERE ( gc_parent_id<>0 AND gc_parent_id=1 )  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `ec_goods_class` [ RunTime:0.0050s ]
+SQL: SELECT * FROM `ec_goods_class` WHERE ( gc_parent_id<>0 AND gc_parent_id=3 )  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `ec_goods_class` [ RunTime:0.0060s ]
+SQL: SELECT * FROM `ec_goods_class` WHERE ( gc_parent_id<>0 AND gc_parent_id=4 )  [ RunTime:0.0010s ]
+
+[ 2016-02-14T10:45:35+08:00 ] ::1 /ec_website/index.php/Shop/Index/demo
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001001s ]
+NOTIC: [8] A session had already been started - ignoring session_start() D:\wamp\www\ec_website\ThinkPHP\Common\functions.php 第 1263 行.
+SQL: SHOW COLUMNS FROM `ec_goods_class` [ RunTime:0.0060s ]
+SQL: SELECT `gc_id` FROM `ec_goods_class` WHERE ( gc_parent_id<>0 AND gc_parent_id=1 )  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `ec_goods_class` [ RunTime:0.0050s ]
+SQL: SELECT `gc_id` FROM `ec_goods_class` WHERE ( gc_parent_id<>0 AND gc_parent_id=3 )  [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `ec_goods_class` [ RunTime:0.0040s ]
+SQL: SELECT `gc_id` FROM `ec_goods_class` WHERE ( gc_parent_id<>0 AND gc_parent_id=4 )  [ RunTime:0.0000s ]
+
+[ 2016-02-14T10:45:51+08:00 ] ::1 /ec_website/index.php/Shop/Index/demo
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] A session had already been started - ignoring session_start() D:\wamp\www\ec_website\ThinkPHP\Common\functions.php 第 1263 行.
+SQL: SHOW COLUMNS FROM `ec_goods_class` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `ec_goods_class` WHERE ( gc_parent_id<>0 AND gc_parent_id=1 )  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `ec_goods_class` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `ec_goods_class` WHERE ( gc_parent_id<>0 AND gc_parent_id=3 )  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `ec_goods_class` [ RunTime:0.0060s ]
+SQL: SELECT * FROM `ec_goods_class` WHERE ( gc_parent_id<>0 AND gc_parent_id=4 )  [ RunTime:0.0000s ]
+
+[ 2016-02-14T10:51:47+08:00 ] ::1 /ec_website/index.php/Shop/Index/demo
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+NOTIC: [8] A session had already been started - ignoring session_start() D:\wamp\www\ec_website\ThinkPHP\Common\functions.php 第 1263 行.
+SQL: SHOW COLUMNS FROM `ec_goods_class` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `ec_goods_class` WHERE ( gc_parent_id<>0 AND gc_parent_id=1 )  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `ec_goods_class` [ RunTime:0.0050s ]
+SQL: SELECT * FROM `ec_goods_class` WHERE ( gc_parent_id<>0 AND gc_parent_id=3 )  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `ec_goods_class` [ RunTime:0.0060s ]
+SQL: SELECT * FROM `ec_goods_class` WHERE ( gc_parent_id<>0 AND gc_parent_id=4 )  [ RunTime:0.0000s ]
+
+[ 2016-02-14T11:02:31+08:00 ] ::1 /ec_website/index.php/Shop/Index/demo
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] A session had already been started - ignoring session_start() D:\wamp\www\ec_website\ThinkPHP\Common\functions.php 第 1263 行.
+SQL: SHOW COLUMNS FROM `ec_goods_class` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `ec_goods_class` WHERE ( gc_parent_id<>0 AND gc_parent_id=1 )  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `ec_goods_class` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `ec_goods_class` WHERE ( gc_parent_id<>0 AND gc_parent_id=3 )  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `ec_goods_class` [ RunTime:0.0050s ]
+SQL: SELECT * FROM `ec_goods_class` WHERE ( gc_parent_id<>0 AND gc_parent_id=4 )  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `ec_goods` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `ec_goods` WHERE `gc_id` IN ('7','9')  [ RunTime:0.0000s ]
+
+[ 2016-02-14T11:02:38+08:00 ] ::1 /ec_website/index.php/Shop/Index/demo
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+NOTIC: [8] A session had already been started - ignoring session_start() D:\wamp\www\ec_website\ThinkPHP\Common\functions.php 第 1263 行.
+SQL: SHOW COLUMNS FROM `ec_goods_class` [ RunTime:0.0050s ]
+SQL: SELECT * FROM `ec_goods_class` WHERE ( gc_parent_id<>0 AND gc_parent_id=1 )  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `ec_goods_class` [ RunTime:0.0050s ]
+SQL: SELECT * FROM `ec_goods_class` WHERE ( gc_parent_id<>0 AND gc_parent_id=3 )  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `ec_goods_class` [ RunTime:0.0050s ]
+SQL: SELECT * FROM `ec_goods_class` WHERE ( gc_parent_id<>0 AND gc_parent_id=4 )  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `ec_goods` [ RunTime:0.0050s ]
+SQL: SELECT * FROM `ec_goods` WHERE `gc_id` IN ('7')  [ RunTime:0.0010s ]
+
+[ 2016-02-14T11:02:47+08:00 ] ::1 /ec_website/index.php/Shop/Index/demo
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002001s ]
+NOTIC: [8] A session had already been started - ignoring session_start() D:\wamp\www\ec_website\ThinkPHP\Common\functions.php 第 1263 行.
+SQL: SHOW COLUMNS FROM `ec_goods_class` [ RunTime:0.0050s ]
+SQL: SELECT * FROM `ec_goods_class` WHERE ( gc_parent_id<>0 AND gc_parent_id=1 )  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `ec_goods_class` [ RunTime:0.0050s ]
+SQL: SELECT * FROM `ec_goods_class` WHERE ( gc_parent_id<>0 AND gc_parent_id=3 )  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `ec_goods_class` [ RunTime:0.0050s ]
+SQL: SELECT * FROM `ec_goods_class` WHERE ( gc_parent_id<>0 AND gc_parent_id=4 )  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `ec_goods` [ RunTime:0.0060s ]
+SQL: SELECT * FROM `ec_goods` WHERE `gc_id` IN ('9')  [ RunTime:0.0010s ]
+
+[ 2016-02-14T11:05:32+08:00 ] ::1 /ec_website/index.php/Shop/Index/demo
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+NOTIC: [8] A session had already been started - ignoring session_start() D:\wamp\www\ec_website\ThinkPHP\Common\functions.php 第 1263 行.
+SQL: SHOW COLUMNS FROM `ec_goods_class` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `ec_goods_class` WHERE ( gc_parent_id<>0 AND gc_parent_id=1 )  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `ec_goods_class` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `ec_goods_class` WHERE ( gc_parent_id<>0 AND gc_parent_id=3 )  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `ec_goods_class` [ RunTime:0.0060s ]
+SQL: SELECT * FROM `ec_goods_class` WHERE ( gc_parent_id<>0 AND gc_parent_id=4 )  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `ec_goods` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `ec_goods` WHERE `gc_id` IN ('7','8','9','10')  [ RunTime:0.0000s ]
+
+[ 2016-02-14T11:05:39+08:00 ] ::1 /ec_website/index.php/Shop/Index/demo
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+NOTIC: [8] A session had already been started - ignoring session_start() D:\wamp\www\ec_website\ThinkPHP\Common\functions.php 第 1263 行.
+SQL: SHOW COLUMNS FROM `ec_goods_class` [ RunTime:0.0050s ]
+SQL: SELECT * FROM `ec_goods_class` WHERE ( gc_parent_id<>0 AND gc_parent_id=2 )  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `ec_goods_class` [ RunTime:0.0050s ]
+SQL: SELECT * FROM `ec_goods_class` WHERE ( gc_parent_id<>0 AND gc_parent_id=5 )  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `ec_goods_class` [ RunTime:0.0060s ]
+SQL: SELECT * FROM `ec_goods_class` WHERE ( gc_parent_id<>0 AND gc_parent_id=6 )  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `ec_goods` [ RunTime:0.0050s ]
+SQL: SELECT * FROM `ec_goods` WHERE `gc_id` IN ('11','12','13','14')  [ RunTime:0.0010s ]
+
+[ 2016-02-14T11:05:43+08:00 ] ::1 /ec_website/index.php/Shop/Index/demo
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] A session had already been started - ignoring session_start() D:\wamp\www\ec_website\ThinkPHP\Common\functions.php 第 1263 行.
+SQL: SHOW COLUMNS FROM `ec_goods_class` [ RunTime:0.0050s ]
+SQL: SELECT * FROM `ec_goods_class` WHERE ( gc_parent_id<>0 AND gc_parent_id=3 )  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `ec_goods_class` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `ec_goods_class` WHERE ( gc_parent_id<>0 AND gc_parent_id=7 )  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `ec_goods_class` [ RunTime:0.0050s ]
+SQL: SELECT * FROM `ec_goods_class` WHERE ( gc_parent_id<>0 AND gc_parent_id=8 )  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `ec_goods` [ RunTime:0.0050s ]
+SQL: SELECT * FROM `ec_goods` WHERE `gc_id` IN ('7','8')  [ RunTime:0.0000s ]
+
+[ 2016-02-14T11:05:48+08:00 ] ::1 /ec_website/index.php/Shop/Index/demo
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+NOTIC: [8] A session had already been started - ignoring session_start() D:\wamp\www\ec_website\ThinkPHP\Common\functions.php 第 1263 行.
+SQL: SHOW COLUMNS FROM `ec_goods_class` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `ec_goods_class` WHERE ( gc_parent_id<>0 AND gc_parent_id=1 )  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `ec_goods_class` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `ec_goods_class` WHERE ( gc_parent_id<>0 AND gc_parent_id=3 )  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `ec_goods_class` [ RunTime:0.0050s ]
+SQL: SELECT * FROM `ec_goods_class` WHERE ( gc_parent_id<>0 AND gc_parent_id=4 )  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `ec_goods` [ RunTime:0.0060s ]
+SQL: SELECT * FROM `ec_goods` WHERE `gc_id` IN ('7','8','9','10')  [ RunTime:0.0000s ]
+
+[ 2016-02-14T11:22:37+08:00 ] ::1 /ec_website/index.php/Shop/Index/demo
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] A session had already been started - ignoring session_start() D:\wamp\www\ec_website\ThinkPHP\Common\functions.php 第 1263 行.
+SQL: SHOW COLUMNS FROM `ec_goods_class` [ RunTime:0.0050s ]
+SQL: SELECT * FROM `ec_goods_class` WHERE ( gc_parent_id<>0 AND gc_parent_id=1 )  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `ec_goods_class` [ RunTime:0.0050s ]
+SQL: SELECT * FROM `ec_goods_class` WHERE ( gc_parent_id<>0 AND gc_parent_id=3 )  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `ec_goods_class` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `ec_goods_class` WHERE ( gc_parent_id<>0 AND gc_parent_id=4 )  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `ec_goods` [ RunTime:0.0050s ]
+SQL: SELECT * FROM `ec_goods` WHERE `gc_id` IN ('7','8','9','10')  [ RunTime:0.0000s ]
+
+[ 2016-02-14T11:22:37+08:00 ] ::1 /ec_website/index.php/Shop/Index/demo
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] A session had already been started - ignoring session_start() D:\wamp\www\ec_website\ThinkPHP\Common\functions.php 第 1263 行.
+SQL: SHOW COLUMNS FROM `ec_goods_class` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `ec_goods_class` WHERE ( gc_parent_id<>0 AND gc_parent_id=1 )  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `ec_goods_class` [ RunTime:0.0050s ]
+SQL: SELECT * FROM `ec_goods_class` WHERE ( gc_parent_id<>0 AND gc_parent_id=3 )  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `ec_goods_class` [ RunTime:0.0050s ]
+SQL: SELECT * FROM `ec_goods_class` WHERE ( gc_parent_id<>0 AND gc_parent_id=4 )  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `ec_goods` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `ec_goods` WHERE `gc_id` IN ('7','8','9','10')  [ RunTime:0.0000s ]
+
+[ 2016-02-14T11:38:55+08:00 ] ::1 /ec_website/index.php/Shop/Index/demo
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] A session had already been started - ignoring session_start() D:\wamp\www\ec_website\ThinkPHP\Common\functions.php 第 1263 行.
+SQL: SHOW COLUMNS FROM `ec_goods_class` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `ec_goods_class` WHERE ( gc_parent_id<>0 AND gc_parent_id=1 )  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `ec_goods_class` [ RunTime:0.0050s ]
+SQL: SELECT * FROM `ec_goods_class` WHERE ( gc_parent_id<>0 AND gc_parent_id=3 )  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `ec_goods_class` [ RunTime:0.0050s ]
+SQL: SELECT * FROM `ec_goods_class` WHERE ( gc_parent_id<>0 AND gc_parent_id=4 )  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `ec_goods` [ RunTime:0.0050s ]
+SQL: SELECT * FROM `ec_goods` WHERE `gc_id` IN ('7','8','9','10')  [ RunTime:0.0000s ]
+
+[ 2016-02-14T11:41:59+08:00 ] ::1 /ec_website/index.php/Shop/Index/demo
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] A session had already been started - ignoring session_start() D:\wamp\www\ec_website\ThinkPHP\Common\functions.php 第 1263 行.
+SQL: SHOW COLUMNS FROM `ec_goods_class` [ RunTime:0.0050s ]
+SQL: SELECT * FROM `ec_goods_class` WHERE ( gc_parent_id<>0 AND gc_parent_id=1 )  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `ec_goods_class` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `ec_goods_class` WHERE ( gc_parent_id<>0 AND gc_parent_id=3 )  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `ec_goods_class` [ RunTime:0.0050s ]
+SQL: SELECT * FROM `ec_goods_class` WHERE ( gc_parent_id<>0 AND gc_parent_id=4 )  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `ec_goods` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `ec_goods` WHERE `gc_id` IN ('7','8','9','10')  [ RunTime:0.0000s ]
+
+[ 2016-02-14T13:34:24+08:00 ] ::1 /ec_website/index.php/Shop/Index/demo
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] A session had already been started - ignoring session_start() D:\wamp\www\ec_website\ThinkPHP\Common\functions.php 第 1263 行.
+
+[ 2016-02-14T13:35:14+08:00 ] ::1 /ec_website/index.php/Shop/Index/demo
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002001s ]
+NOTIC: [8] A session had already been started - ignoring session_start() D:\wamp\www\ec_website\ThinkPHP\Common\functions.php 第 1263 行.
+
+[ 2016-02-14T13:35:16+08:00 ] ::1 /ec_website/index.php/Shop/Index/demo
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] A session had already been started - ignoring session_start() D:\wamp\www\ec_website\ThinkPHP\Common\functions.php 第 1263 行.
+
+[ 2016-02-14T13:35:31+08:00 ] ::1 /ec_website/index.php/Shop/Index/demo
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] A session had already been started - ignoring session_start() D:\wamp\www\ec_website\ThinkPHP\Common\functions.php 第 1263 行.
+ERR: Think\Model:addDiscountInfoAll方法不存在！
+
+[ 2016-02-14T13:35:50+08:00 ] ::1 /ec_website/index.php/Shop/Index/demo
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] A session had already been started - ignoring session_start() D:\wamp\www\ec_website\ThinkPHP\Common\functions.php 第 1263 行.
+
+[ 2016-02-14T13:36:54+08:00 ] ::1 /ec_website/index.php/Shop/Index/demo
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001001s ]
+NOTIC: [8] A session had already been started - ignoring session_start() D:\wamp\www\ec_website\ThinkPHP\Common\functions.php 第 1263 行.
+SQL: SHOW COLUMNS FROM `ec_goods` [ RunTime:0.0050s ]
+SQL: SELECT * FROM `ec_goods` WHERE `goods_id` BETWEEN '1' AND '3'  [ RunTime:0.0010s ]
+
+[ 2016-02-14T13:37:08+08:00 ] ::1 /ec_website/index.php/Shop/Index/demo
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001001s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] A session had already been started - ignoring session_start() D:\wamp\www\ec_website\ThinkPHP\Common\functions.php 第 1263 行.
+SQL: SHOW COLUMNS FROM `ec_goods` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `ec_goods` WHERE `goods_id` BETWEEN '1' AND '2'  [ RunTime:0.0000s ]
+
+[ 2016-02-14T13:43:26+08:00 ] ::1 /ec_website/index.php/Shop/Index/demo
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] A session had already been started - ignoring session_start() D:\wamp\www\ec_website\ThinkPHP\Common\functions.php 第 1263 行.
+SQL: SHOW COLUMNS FROM `ec_goods` [ RunTime:0.0050s ]
+ERR: 1054:Unknown column 'start_time' in 'where clause'
+ [ SQL语句 ] : SELECT * FROM `ec_goods` WHERE ( start_time<1455428606 AND end_time>1455428606 ) 
+ERR: 1054:Unknown column 'start_time' in 'where clause'
+ [ SQL语句 ] : SELECT * FROM `ec_goods` WHERE ( start_time<1455428606 AND end_time>1455428606 ) 
+
+[ 2016-02-14T13:43:54+08:00 ] ::1 /ec_website/index.php/Shop/Index/demo
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] A session had already been started - ignoring session_start() D:\wamp\www\ec_website\ThinkPHP\Common\functions.php 第 1263 行.
+SQL: SHOW COLUMNS FROM `ec_goods` [ RunTime:0.0040s ]
+ERR: 1054:Unknown column 'start_time' in 'where clause'
+ [ SQL语句 ] : SELECT * FROM `ec_goods` WHERE ( start_time<1455428634 AND end_time>1455428634 ) 
+ERR: 1054:Unknown column 'start_time' in 'where clause'
+ [ SQL语句 ] : SELECT * FROM `ec_goods` WHERE ( start_time<1455428634 AND end_time>1455428634 ) 
+
+[ 2016-02-14T13:43:55+08:00 ] ::1 /ec_website/index.php/Shop/Index/demo
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001001s ]
+NOTIC: [8] A session had already been started - ignoring session_start() D:\wamp\www\ec_website\ThinkPHP\Common\functions.php 第 1263 行.
+SQL: SHOW COLUMNS FROM `ec_goods` [ RunTime:0.0050s ]
+ERR: 1054:Unknown column 'start_time' in 'where clause'
+ [ SQL语句 ] : SELECT * FROM `ec_goods` WHERE ( start_time<1455428635 AND end_time>1455428635 ) 
+ERR: 1054:Unknown column 'start_time' in 'where clause'
+ [ SQL语句 ] : SELECT * FROM `ec_goods` WHERE ( start_time<1455428635 AND end_time>1455428635 ) 
+
+[ 2016-02-14T13:44:04+08:00 ] ::1 /ec_website/index.php/Shop/Index/demo
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] A session had already been started - ignoring session_start() D:\wamp\www\ec_website\ThinkPHP\Common\functions.php 第 1263 行.
+SQL: SHOW COLUMNS FROM `ec_goods` [ RunTime:0.0050s ]
+ERR: 1054:Unknown column 'start_time' in 'where clause'
+ [ SQL语句 ] : SELECT * FROM `ec_goods` WHERE ( start_time<1455428644 AND end_time>1455428644 ) 
+ERR: 1054:Unknown column 'start_time' in 'where clause'
+ [ SQL语句 ] : SELECT * FROM `ec_goods` WHERE ( start_time<1455428644 AND end_time>1455428644 ) 
+
+[ 2016-02-14T13:45:46+08:00 ] ::1 /ec_website/index.php/Shop/Index/demo
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] A session had already been started - ignoring session_start() D:\wamp\www\ec_website\ThinkPHP\Common\functions.php 第 1263 行.
+SQL: SHOW COLUMNS FROM `ec_goods` [ RunTime:0.0050s ]
+SQL: SELECT * FROM `ec_goods`  [ RunTime:0.0000s ]
+
+[ 2016-02-14T13:48:25+08:00 ] ::1 /ec_website/index.php/Shop/Index/demo
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+NOTIC: [8] A session had already been started - ignoring session_start() D:\wamp\www\ec_website\ThinkPHP\Common\functions.php 第 1263 行.
+SQL: SHOW COLUMNS FROM `ec_discount` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `ec_discount` WHERE `start_time` < 1455428905 AND `end_time` > 1455428905  [ RunTime:0.0000s ]
+
+[ 2016-02-14T13:48:52+08:00 ] ::1 /ec_website/index.php/Shop/Index/demo
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.001000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] A session had already been started - ignoring session_start() D:\wamp\www\ec_website\ThinkPHP\Common\functions.php 第 1263 行.
+SQL: SHOW COLUMNS FROM `ec_discount` [ RunTime:0.0050s ]
+SQL: SELECT * FROM `ec_discount` WHERE `start_time` < 1455428932 AND `end_time` > 1455428932 AND `status` = '1'  [ RunTime:0.0000s ]
+
+[ 2016-02-14T13:49:07+08:00 ] ::1 /ec_website/index.php/Shop/Index/demo
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] A session had already been started - ignoring session_start() D:\wamp\www\ec_website\ThinkPHP\Common\functions.php 第 1263 行.
+SQL: SHOW COLUMNS FROM `ec_discount` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `ec_discount` WHERE `start_time` < '1455421001' AND `end_time` > '1455421001' AND `status` = '1'  [ RunTime:0.0000s ]
+
+[ 2016-02-14T13:49:11+08:00 ] ::1 /ec_website/index.php/Shop/Index/demo
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] A session had already been started - ignoring session_start() D:\wamp\www\ec_website\ThinkPHP\Common\functions.php 第 1263 行.
+SQL: SHOW COLUMNS FROM `ec_discount` [ RunTime:0.0060s ]
+SQL: SELECT * FROM `ec_discount` WHERE `start_time` < '1455421002' AND `end_time` > '1455421002' AND `status` = '1'  [ RunTime:0.0000s ]
+
+[ 2016-02-14T13:49:19+08:00 ] ::1 /ec_website/index.php/Shop/Index/demo
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] A session had already been started - ignoring session_start() D:\wamp\www\ec_website\ThinkPHP\Common\functions.php 第 1263 行.
+SQL: SHOW COLUMNS FROM `ec_discount` [ RunTime:0.0050s ]
+SQL: SELECT * FROM `ec_discount` WHERE `start_time` < '1455507459' AND `end_time` > '1455507459' AND `status` = '1'  [ RunTime:0.0000s ]
+
+[ 2016-02-14T13:49:23+08:00 ] ::1 /ec_website/index.php/Shop/Index/demo
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001001s ]
+NOTIC: [8] A session had already been started - ignoring session_start() D:\wamp\www\ec_website\ThinkPHP\Common\functions.php 第 1263 行.
+SQL: SHOW COLUMNS FROM `ec_discount` [ RunTime:0.0050s ]
+SQL: SELECT * FROM `ec_discount` WHERE `start_time` < '1455507458' AND `end_time` > '1455507458' AND `status` = '1'  [ RunTime:0.0000s ]
+
+[ 2016-02-14T13:49:30+08:00 ] ::1 /ec_website/index.php/Shop/Index/demo
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] A session had already been started - ignoring session_start() D:\wamp\www\ec_website\ThinkPHP\Common\functions.php 第 1263 行.
+SQL: SHOW COLUMNS FROM `ec_discount` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `ec_discount` WHERE `start_time` < 1455428970 AND `end_time` > 1455428970 AND `status` = '1'  [ RunTime:0.0000s ]
+
+[ 2016-02-14T13:49:42+08:00 ] ::1 /ec_website/index.php/Shop/Index/demo
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] A session had already been started - ignoring session_start() D:\wamp\www\ec_website\ThinkPHP\Common\functions.php 第 1263 行.
+SQL: SHOW COLUMNS FROM `ec_discount` [ RunTime:0.0050s ]
+SQL: SELECT * FROM `ec_discount` WHERE `start_time` < 1455428982 AND `end_time` > 1455428982 AND `status` = '1'  [ RunTime:0.0000s ]
+
+[ 2016-02-14T13:50:21+08:00 ] ::1 /ec_website/index.php/Shop/Index/demo
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] A session had already been started - ignoring session_start() D:\wamp\www\ec_website\ThinkPHP\Common\functions.php 第 1263 行.
+SQL: SHOW COLUMNS FROM `ec_discount` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `ec_discount` WHERE `start_time` < 1455429021 AND `end_time` > 1455429021 AND `status` = '1'  [ RunTime:0.0000s ]
+
+[ 2016-02-14T14:03:12+08:00 ] ::1 /ec_website/index.php/Shop/Index/demo
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] A session had already been started - ignoring session_start() D:\wamp\www\ec_website\ThinkPHP\Common\functions.php 第 1263 行.
+
+[ 2016-02-14T14:03:20+08:00 ] ::1 /ec_website/index.php/Shop/Index/demo
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+NOTIC: [8] A session had already been started - ignoring session_start() D:\wamp\www\ec_website\ThinkPHP\Common\functions.php 第 1263 行.
+
+[ 2016-02-14T14:03:42+08:00 ] ::1 /ec_website/index.php/Shop/Index/demo
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] A session had already been started - ignoring session_start() D:\wamp\www\ec_website\ThinkPHP\Common\functions.php 第 1263 行.
+ERR: Think\Model:addDiscountInfoAll方法不存在！
+
+[ 2016-02-14T14:03:53+08:00 ] ::1 /ec_website/index.php/Shop/Index/demo
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] A session had already been started - ignoring session_start() D:\wamp\www\ec_website\ThinkPHP\Common\functions.php 第 1263 行.
+SQL: SHOW COLUMNS FROM `ec_discount` [ RunTime:0.0060s ]
+SQL: SELECT * FROM `ec_discount` WHERE `start_time` < 1455429833 AND `end_time` > 1455429833 AND `status` = '1'  [ RunTime:0.0010s ]
+
+[ 2016-02-14T14:07:24+08:00 ] ::1 /ec_website/index.php/Shop/Index/demo
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] A session had already been started - ignoring session_start() D:\wamp\www\ec_website\ThinkPHP\Common\functions.php 第 1263 行.
+ERR: Think\Model:getEffectiveGoodsDiscountList方法不存在！
+
+[ 2016-02-14T14:07:37+08:00 ] ::1 /ec_website/index.php/Shop/Index/demo
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] A session had already been started - ignoring session_start() D:\wamp\www\ec_website\ThinkPHP\Common\functions.php 第 1263 行.
+ERR: Think\Model:getEffectiveGoodsDiscountList方法不存在！
+
+[ 2016-02-14T14:09:17+08:00 ] ::1 /ec_website/index.php/Shop/Index/demo
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] A session had already been started - ignoring session_start() D:\wamp\www\ec_website\ThinkPHP\Common\functions.php 第 1263 行.
+
+[ 2016-02-14T14:09:38+08:00 ] ::1 /ec_website/index.php/Shop/Index/demo
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] A session had already been started - ignoring session_start() D:\wamp\www\ec_website\ThinkPHP\Common\functions.php 第 1263 行.
+SQL: SHOW COLUMNS FROM `ec_discount` [ RunTime:0.0070s ]
+SQL: SELECT * FROM `ec_discount` WHERE `start_time` < 1455430178 AND `end_time` > 1455430178 AND `status` = '1'  [ RunTime:0.0000s ]
+NOTIC: [8] Undefined index: discount D:\wamp\www\ec_website\Application\Common\Model\DiscountModel.class.php 第 38 行.
+NOTIC: [8] Undefined index: discount D:\wamp\www\ec_website\Application\Common\Model\DiscountModel.class.php 第 38 行.
+
+[ 2016-02-14T14:09:52+08:00 ] ::1 /ec_website/index.php/Shop/Index/demo
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+NOTIC: [8] A session had already been started - ignoring session_start() D:\wamp\www\ec_website\ThinkPHP\Common\functions.php 第 1263 行.
+SQL: SHOW COLUMNS FROM `ec_discount` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `ec_discount` WHERE `start_time` < 1455430192 AND `end_time` > 1455430192 AND `status` = '1'  [ RunTime:0.0000s ]
+NOTIC: [8] Undefined index: discount D:\wamp\www\ec_website\Application\Common\Model\DiscountModel.class.php 第 38 行.
+NOTIC: [8] Undefined index: discount D:\wamp\www\ec_website\Application\Common\Model\DiscountModel.class.php 第 38 行.
+
+[ 2016-02-14T14:09:57+08:00 ] ::1 /ec_website/index.php/Shop/Index/demo
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] A session had already been started - ignoring session_start() D:\wamp\www\ec_website\ThinkPHP\Common\functions.php 第 1263 行.
+SQL: SHOW COLUMNS FROM `ec_discount` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `ec_discount` WHERE `start_time` < 1455430197 AND `end_time` > 1455430197 AND `status` = '1'  [ RunTime:0.0000s ]
+NOTIC: [8] Undefined index: discount D:\wamp\www\ec_website\Application\Common\Model\DiscountModel.class.php 第 38 行.
+NOTIC: [8] Undefined index: discount D:\wamp\www\ec_website\Application\Common\Model\DiscountModel.class.php 第 38 行.
+
+[ 2016-02-14T14:10:06+08:00 ] ::1 /ec_website/index.php/Shop/Index/demo
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] A session had already been started - ignoring session_start() D:\wamp\www\ec_website\ThinkPHP\Common\functions.php 第 1263 行.
+SQL: SHOW COLUMNS FROM `ec_discount` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `ec_discount` WHERE `start_time` < 1455430206 AND `end_time` > 1455430206 AND `status` = '1'  [ RunTime:0.0000s ]
+
+[ 2016-02-14T14:10:17+08:00 ] ::1 /ec_website/index.php/Shop/Index/demo
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+NOTIC: [8] A session had already been started - ignoring session_start() D:\wamp\www\ec_website\ThinkPHP\Common\functions.php 第 1263 行.
+SQL: SHOW COLUMNS FROM `ec_discount` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `ec_discount` WHERE `start_time` < 1455430217 AND `end_time` > 1455430217 AND `status` = '1'  [ RunTime:0.0010s ]
+
+[ 2016-02-14T14:10:20+08:00 ] ::1 /ec_website/index.php/Shop/Index/demo
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] A session had already been started - ignoring session_start() D:\wamp\www\ec_website\ThinkPHP\Common\functions.php 第 1263 行.
+SQL: SHOW COLUMNS FROM `ec_discount` [ RunTime:0.0050s ]
+SQL: SELECT * FROM `ec_discount` WHERE `start_time` < 1455430220 AND `end_time` > 1455430220 AND `status` = '1'  [ RunTime:0.0000s ]
+
+[ 2016-02-14T14:20:23+08:00 ] ::1 /ec_website/index.php/Shop/Index/demo
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] A session had already been started - ignoring session_start() D:\wamp\www\ec_website\ThinkPHP\Common\functions.php 第 1263 行.
+SQL: SHOW COLUMNS FROM `ec_discount` [ RunTime:0.0050s ]
+SQL: SELECT * FROM `ec_discount` WHERE `start_time` < 1455430823 AND `end_time` > 1455430823 AND `status` = '1'  [ RunTime:0.0010s ]
+
+[ 2016-02-14T14:33:00+08:00 ] ::1 /ec_website/index.php/Shop/Index/demo
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001001s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+NOTIC: [8] A session had already been started - ignoring session_start() D:\wamp\www\ec_website\ThinkPHP\Common\functions.php 第 1263 行.
+NOTIC: [2] Missing argument 1 for Common\Model\DiscountModel::packGoodsDiscountInfo(), called in D:\wamp\www\ec_website\Application\Shop\Controller\IndexController.class.php on line 22 and defined D:\wamp\www\ec_website\Application\Common\Model\DiscountModel.class.php 第 16 行.
+SQL: SHOW COLUMNS FROM `ec_discount` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `ec_discount` WHERE `start_time` < 1455431580 AND `end_time` > 1455431580 AND `status` = '1'  [ RunTime:0.0000s ]
+NOTIC: [8] Undefined variable: arrGoods D:\wamp\www\ec_website\Application\Common\Model\DiscountModel.class.php 第 19 行.
+NOTIC: [2] Invalid argument supplied for foreach() D:\wamp\www\ec_website\Application\Common\Model\DiscountModel.class.php 第 19 行.
+
+[ 2016-02-14T14:34:50+08:00 ] ::1 /ec_website/index.php/Shop/Index/demo
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+NOTIC: [8] A session had already been started - ignoring session_start() D:\wamp\www\ec_website\ThinkPHP\Common\functions.php 第 1263 行.
+SQL: SHOW COLUMNS FROM `ec_goods_class` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `ec_goods_class` WHERE ( gc_parent_id<>0 AND gc_parent_id=1 )  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `ec_goods_class` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `ec_goods_class` WHERE ( gc_parent_id<>0 AND gc_parent_id=3 )  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `ec_goods_class` [ RunTime:0.0050s ]
+SQL: SELECT * FROM `ec_goods_class` WHERE ( gc_parent_id<>0 AND gc_parent_id=4 )  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `ec_goods` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `ec_goods` WHERE `gc_id` IN ('7','8','9','10')  [ RunTime:0.0000s ]
+
+[ 2016-02-14T14:35:42+08:00 ] ::1 /ec_website/index.php/Shop/Index/demo
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] A session had already been started - ignoring session_start() D:\wamp\www\ec_website\ThinkPHP\Common\functions.php 第 1263 行.
+SQL: SHOW COLUMNS FROM `ec_goods_class` [ RunTime:0.0050s ]
+SQL: SELECT * FROM `ec_goods_class` WHERE ( gc_parent_id<>0 AND gc_parent_id=1 )  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `ec_goods_class` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `ec_goods_class` WHERE ( gc_parent_id<>0 AND gc_parent_id=3 )  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `ec_goods_class` [ RunTime:0.0050s ]
+SQL: SELECT * FROM `ec_goods_class` WHERE ( gc_parent_id<>0 AND gc_parent_id=4 )  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `ec_goods` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `ec_goods` WHERE `gc_id` IN ('7','8','9','10')  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `ec_discount` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `ec_discount` WHERE `start_time` < 1455431742 AND `end_time` > 1455431742 AND `status` = '1'  [ RunTime:0.0010s ]
+NOTIC: [8] Undefined index: price D:\wamp\www\ec_website\Application\Common\Model\DiscountModel.class.php 第 22 行.
+NOTIC: [8] Undefined index: price D:\wamp\www\ec_website\Application\Common\Model\DiscountModel.class.php 第 22 行.
+
+[ 2016-02-14T14:35:57+08:00 ] ::1 /ec_website/index.php/Shop/Index/demo
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] A session had already been started - ignoring session_start() D:\wamp\www\ec_website\ThinkPHP\Common\functions.php 第 1263 行.
+SQL: SHOW COLUMNS FROM `ec_goods_class` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `ec_goods_class` WHERE ( gc_parent_id<>0 AND gc_parent_id=1 )  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `ec_goods_class` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `ec_goods_class` WHERE ( gc_parent_id<>0 AND gc_parent_id=3 )  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `ec_goods_class` [ RunTime:0.0050s ]
+SQL: SELECT * FROM `ec_goods_class` WHERE ( gc_parent_id<>0 AND gc_parent_id=4 )  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `ec_goods` [ RunTime:0.0050s ]
+SQL: SELECT * FROM `ec_goods` WHERE `gc_id` IN ('7','8','9','10')  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `ec_discount` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `ec_discount` WHERE `start_time` < 1455431757 AND `end_time` > 1455431757 AND `status` = '1'  [ RunTime:0.0010s ]
+NOTIC: [8] Undefined index: price D:\wamp\www\ec_website\Application\Common\Model\DiscountModel.class.php 第 22 行.
+NOTIC: [8] Undefined index: price D:\wamp\www\ec_website\Application\Common\Model\DiscountModel.class.php 第 22 行.
+
+[ 2016-02-14T14:36:04+08:00 ] ::1 /ec_website/index.php/Shop/Index/demo
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] A session had already been started - ignoring session_start() D:\wamp\www\ec_website\ThinkPHP\Common\functions.php 第 1263 行.
+SQL: SHOW COLUMNS FROM `ec_goods_class` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `ec_goods_class` WHERE ( gc_parent_id<>0 AND gc_parent_id=1 )  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `ec_goods_class` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `ec_goods_class` WHERE ( gc_parent_id<>0 AND gc_parent_id=3 )  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `ec_goods_class` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `ec_goods_class` WHERE ( gc_parent_id<>0 AND gc_parent_id=4 )  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `ec_goods` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `ec_goods` WHERE `gc_id` IN ('7','8','9','10')  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `ec_discount` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `ec_discount` WHERE `start_time` < 1455431764 AND `end_time` > 1455431764 AND `status` = '1'  [ RunTime:0.0000s ]
+NOTIC: [8] Undefined index: price D:\wamp\www\ec_website\Application\Common\Model\DiscountModel.class.php 第 22 行.
+NOTIC: [8] Undefined index: price D:\wamp\www\ec_website\Application\Common\Model\DiscountModel.class.php 第 22 行.
+
+[ 2016-02-14T14:36:27+08:00 ] ::1 /ec_website/index.php/Shop/Index/demo
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] A session had already been started - ignoring session_start() D:\wamp\www\ec_website\ThinkPHP\Common\functions.php 第 1263 行.
+SQL: SHOW COLUMNS FROM `ec_goods_class` [ RunTime:0.0050s ]
+SQL: SELECT * FROM `ec_goods_class` WHERE ( gc_parent_id<>0 AND gc_parent_id=1 )  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `ec_goods_class` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `ec_goods_class` WHERE ( gc_parent_id<>0 AND gc_parent_id=3 )  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `ec_goods_class` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `ec_goods_class` WHERE ( gc_parent_id<>0 AND gc_parent_id=4 )  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `ec_goods` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `ec_goods` WHERE `gc_id` IN ('7','8','9','10')  [ RunTime:0.0000s ]
+
+[ 2016-02-14T14:36:33+08:00 ] ::1 /ec_website/index.php/Shop/Index/demo
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+NOTIC: [8] A session had already been started - ignoring session_start() D:\wamp\www\ec_website\ThinkPHP\Common\functions.php 第 1263 行.
+SQL: SHOW COLUMNS FROM `ec_goods_class` [ RunTime:0.0060s ]
+SQL: SELECT * FROM `ec_goods_class` WHERE ( gc_parent_id<>0 AND gc_parent_id=1 )  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `ec_goods_class` [ RunTime:0.0070s ]
+SQL: SELECT * FROM `ec_goods_class` WHERE ( gc_parent_id<>0 AND gc_parent_id=3 )  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `ec_goods_class` [ RunTime:0.0090s ]
+SQL: SELECT * FROM `ec_goods_class` WHERE ( gc_parent_id<>0 AND gc_parent_id=4 )  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `ec_goods` [ RunTime:0.0050s ]
+SQL: SELECT * FROM `ec_goods` WHERE `gc_id` IN ('7','8','9','10')  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `ec_discount` [ RunTime:0.0050s ]
+SQL: SELECT * FROM `ec_discount` WHERE `start_time` < 1455431793 AND `end_time` > 1455431793 AND `status` = '1'  [ RunTime:0.0010s ]
+NOTIC: [8] Undefined index: price D:\wamp\www\ec_website\Application\Common\Model\DiscountModel.class.php 第 22 行.
+NOTIC: [8] Undefined index: price D:\wamp\www\ec_website\Application\Common\Model\DiscountModel.class.php 第 22 行.
+
+[ 2016-02-14T14:36:48+08:00 ] ::1 /ec_website/index.php/Shop/Index/demo
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] A session had already been started - ignoring session_start() D:\wamp\www\ec_website\ThinkPHP\Common\functions.php 第 1263 行.
+SQL: SHOW COLUMNS FROM `ec_goods_class` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `ec_goods_class` WHERE ( gc_parent_id<>0 AND gc_parent_id=1 )  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `ec_goods_class` [ RunTime:0.0050s ]
+SQL: SELECT * FROM `ec_goods_class` WHERE ( gc_parent_id<>0 AND gc_parent_id=3 )  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `ec_goods_class` [ RunTime:0.0050s ]
+SQL: SELECT * FROM `ec_goods_class` WHERE ( gc_parent_id<>0 AND gc_parent_id=4 )  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `ec_goods` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `ec_goods` WHERE `gc_id` IN ('7','8','9','10')  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `ec_discount` [ RunTime:0.0050s ]
+SQL: SELECT * FROM `ec_discount` WHERE `start_time` < 1455431808 AND `end_time` > 1455431808 AND `status` = '1'  [ RunTime:0.0000s ]
+NOTIC: [8] Undefined index: price D:\wamp\www\ec_website\Application\Common\Model\DiscountModel.class.php 第 22 行.
+NOTIC: [8] Undefined index: price D:\wamp\www\ec_website\Application\Common\Model\DiscountModel.class.php 第 22 行.
+
+[ 2016-02-14T14:37:22+08:00 ] ::1 /ec_website/index.php/Shop/Index/demo
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+NOTIC: [8] A session had already been started - ignoring session_start() D:\wamp\www\ec_website\ThinkPHP\Common\functions.php 第 1263 行.
+SQL: SHOW COLUMNS FROM `ec_goods_class` [ RunTime:0.0080s ]
+SQL: SELECT * FROM `ec_goods_class` WHERE ( gc_parent_id<>0 AND gc_parent_id=1 )  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `ec_goods_class` [ RunTime:0.0060s ]
+SQL: SELECT * FROM `ec_goods_class` WHERE ( gc_parent_id<>0 AND gc_parent_id=3 )  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `ec_goods_class` [ RunTime:0.0060s ]
+SQL: SELECT * FROM `ec_goods_class` WHERE ( gc_parent_id<>0 AND gc_parent_id=4 )  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `ec_goods` [ RunTime:0.0070s ]
+SQL: SELECT * FROM `ec_goods` WHERE `gc_id` IN ('7','8','9','10')  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `ec_discount` [ RunTime:0.0060s ]
+SQL: SELECT * FROM `ec_discount` WHERE `start_time` < 1455431842 AND `end_time` > 1455431842 AND `status` = '1'  [ RunTime:0.0000s ]
+NOTIC: [8] Undefined index: price D:\wamp\www\ec_website\Application\Common\Model\DiscountModel.class.php 第 22 行.
+NOTIC: [8] Undefined index: price D:\wamp\www\ec_website\Application\Common\Model\DiscountModel.class.php 第 22 行.
+
+[ 2016-02-14T14:37:34+08:00 ] ::1 /ec_website/index.php/Shop/Index/demo
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] A session had already been started - ignoring session_start() D:\wamp\www\ec_website\ThinkPHP\Common\functions.php 第 1263 行.
+SQL: SHOW COLUMNS FROM `ec_goods_class` [ RunTime:0.0050s ]
+SQL: SELECT * FROM `ec_goods_class` WHERE ( gc_parent_id<>0 AND gc_parent_id=1 )  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `ec_goods_class` [ RunTime:0.0050s ]
+SQL: SELECT * FROM `ec_goods_class` WHERE ( gc_parent_id<>0 AND gc_parent_id=3 )  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `ec_goods_class` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `ec_goods_class` WHERE ( gc_parent_id<>0 AND gc_parent_id=4 )  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `ec_goods` [ RunTime:0.0060s ]
+SQL: SELECT * FROM `ec_goods` WHERE `gc_id` IN ('7','8','9','10')  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `ec_discount` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `ec_discount` WHERE `start_time` < 1455431854 AND `end_time` > 1455431854 AND `status` = '1'  [ RunTime:0.0000s ]
+NOTIC: [8] Undefined index: price D:\wamp\www\ec_website\Application\Common\Model\DiscountModel.class.php 第 22 行.
+NOTIC: [8] Undefined index: price D:\wamp\www\ec_website\Application\Common\Model\DiscountModel.class.php 第 22 行.
+
+[ 2016-02-14T14:37:38+08:00 ] ::1 /ec_website/index.php/Shop/Index/demo
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] A session had already been started - ignoring session_start() D:\wamp\www\ec_website\ThinkPHP\Common\functions.php 第 1263 行.
+SQL: SHOW COLUMNS FROM `ec_goods_class` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `ec_goods_class` WHERE ( gc_parent_id<>0 AND gc_parent_id=1 )  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `ec_goods_class` [ RunTime:0.0050s ]
+SQL: SELECT * FROM `ec_goods_class` WHERE ( gc_parent_id<>0 AND gc_parent_id=3 )  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `ec_goods_class` [ RunTime:0.0050s ]
+SQL: SELECT * FROM `ec_goods_class` WHERE ( gc_parent_id<>0 AND gc_parent_id=4 )  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `ec_goods` [ RunTime:0.0050s ]
+SQL: SELECT * FROM `ec_goods` WHERE `gc_id` IN ('7','8','9','10')  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `ec_discount` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `ec_discount` WHERE `start_time` < 1455431858 AND `end_time` > 1455431858 AND `status` = '1'  [ RunTime:0.0010s ]
+NOTIC: [8] Undefined index: price D:\wamp\www\ec_website\Application\Common\Model\DiscountModel.class.php 第 22 行.
+NOTIC: [8] Undefined index: price D:\wamp\www\ec_website\Application\Common\Model\DiscountModel.class.php 第 22 行.
+
+[ 2016-02-14T14:37:41+08:00 ] ::1 /ec_website/index.php/Shop/Index/demo
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+NOTIC: [8] A session had already been started - ignoring session_start() D:\wamp\www\ec_website\ThinkPHP\Common\functions.php 第 1263 行.
+SQL: SHOW COLUMNS FROM `ec_goods_class` [ RunTime:0.0050s ]
+SQL: SELECT * FROM `ec_goods_class` WHERE ( gc_parent_id<>0 AND gc_parent_id=1 )  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `ec_goods_class` [ RunTime:0.0050s ]
+SQL: SELECT * FROM `ec_goods_class` WHERE ( gc_parent_id<>0 AND gc_parent_id=3 )  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `ec_goods_class` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `ec_goods_class` WHERE ( gc_parent_id<>0 AND gc_parent_id=4 )  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `ec_goods` [ RunTime:0.0050s ]
+SQL: SELECT * FROM `ec_goods` WHERE `gc_id` IN ('7','8','9','10')  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `ec_discount` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `ec_discount` WHERE `start_time` < 1455431861 AND `end_time` > 1455431861 AND `status` = '1'  [ RunTime:0.0000s ]
+NOTIC: [8] Undefined index: price D:\wamp\www\ec_website\Application\Common\Model\DiscountModel.class.php 第 22 行.
+NOTIC: [8] Undefined index: price D:\wamp\www\ec_website\Application\Common\Model\DiscountModel.class.php 第 22 行.
+
+[ 2016-02-14T14:37:50+08:00 ] ::1 /ec_website/index.php/Shop/Index/demo
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+NOTIC: [8] A session had already been started - ignoring session_start() D:\wamp\www\ec_website\ThinkPHP\Common\functions.php 第 1263 行.
+SQL: SHOW COLUMNS FROM `ec_goods_class` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `ec_goods_class` WHERE ( gc_parent_id<>0 AND gc_parent_id=1 )  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `ec_goods_class` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `ec_goods_class` WHERE ( gc_parent_id<>0 AND gc_parent_id=3 )  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `ec_goods_class` [ RunTime:0.0050s ]
+SQL: SELECT * FROM `ec_goods_class` WHERE ( gc_parent_id<>0 AND gc_parent_id=4 )  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `ec_goods` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `ec_goods` WHERE `gc_id` IN ('7','8','9','10')  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `ec_discount` [ RunTime:0.0050s ]
+SQL: SELECT * FROM `ec_discount` WHERE `start_time` < 1455431870 AND `end_time` > 1455431870 AND `status` = '1'  [ RunTime:0.0010s ]
+
+[ 2016-02-14T14:38:08+08:00 ] ::1 /ec_website/index.php/Shop/Index/demo
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] A session had already been started - ignoring session_start() D:\wamp\www\ec_website\ThinkPHP\Common\functions.php 第 1263 行.
+SQL: SHOW COLUMNS FROM `ec_goods_class` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `ec_goods_class` WHERE ( gc_parent_id<>0 AND gc_parent_id=1 )  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `ec_goods_class` [ RunTime:0.0050s ]
+SQL: SELECT * FROM `ec_goods_class` WHERE ( gc_parent_id<>0 AND gc_parent_id=3 )  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `ec_goods_class` [ RunTime:0.0050s ]
+SQL: SELECT * FROM `ec_goods_class` WHERE ( gc_parent_id<>0 AND gc_parent_id=4 )  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `ec_goods` [ RunTime:0.0050s ]
+SQL: SELECT * FROM `ec_goods` WHERE `gc_id` IN ('7','8','9','10')  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `ec_discount` [ RunTime:0.0060s ]
+SQL: SELECT * FROM `ec_discount` WHERE `start_time` < 1455431888 AND `end_time` > 1455431888 AND `status` = '1'  [ RunTime:0.0000s ]
+
+[ 2016-02-14T14:40:14+08:00 ] ::1 /ec_website/index.php/Shop/Index/demo
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001001s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+NOTIC: [8] A session had already been started - ignoring session_start() D:\wamp\www\ec_website\ThinkPHP\Common\functions.php 第 1263 行.
+SQL: SHOW COLUMNS FROM `ec_goods_class` [ RunTime:0.0050s ]
+SQL: SELECT * FROM `ec_goods_class` WHERE ( gc_parent_id<>0 AND gc_parent_id=1 )  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `ec_goods_class` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `ec_goods_class` WHERE ( gc_parent_id<>0 AND gc_parent_id=3 )  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `ec_goods_class` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `ec_goods_class` WHERE ( gc_parent_id<>0 AND gc_parent_id=4 )  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `ec_goods` [ RunTime:0.0050s ]
+SQL: SELECT * FROM `ec_goods` WHERE `gc_id` IN ('7','8','9','10')  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `ec_discount` [ RunTime:0.0050s ]
+SQL: SELECT * FROM `ec_discount` WHERE `start_time` < 1455432014 AND `end_time` > 1455432014 AND `status` = '1'  [ RunTime:0.0010s ]
+

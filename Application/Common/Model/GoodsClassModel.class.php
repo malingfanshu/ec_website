@@ -3,7 +3,7 @@
 /**
  * 商品分类模型
  * @author 陈培捷
- * @lastModifyTime 2016/02/04 09:50
+ * @lastModifyTime 2016/02/14 10:11
  */
 
 namespace Common\Model;
@@ -34,6 +34,34 @@ class GoodsClassModel extends Model{
         }
         return $classTmp;
     }
+    
+    /**
+     * 获取下一级分类
+     * @param string $gc_id 分类id
+     * @param string $field 字段
+     * @return array
+     */
+    public function getNextGoodsClass($gc_id,$field='*'){
+        return $this->table(C('DB_PREFIX').'goods_class')->where('gc_parent_id<>0 AND gc_parent_id='.$gc_id)->field($field)->select();
+    }
+    
+    /**
+     * 获取指定分类下的所有三级分类
+     * @param string $gc_id
+     * @param string $field
+     * @return array 一维数组
+     */
+    public function getNextAllGoodsClass($gc_id,$field='*'){
+        $arrTmp =  $this->getNextGoodsClass($gc_id,$field);
+        foreach($arrTmp as $key=>$value){
+            $arrTmp2 = $this->getNextGoodsClass($value['gc_id'],$field);
+            foreach($arrTmp2 as $ke=>$val){
+                $result[] = $val;
+            }
+        }
+        return !empty($result)?$result:$arrTmp;
+    }
+    
     
 }
 

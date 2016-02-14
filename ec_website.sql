@@ -10,10 +10,33 @@ Target Server Type    : MYSQL
 Target Server Version : 50617
 File Encoding         : 65001
 
-Date: 2016-02-05 17:37:06
+Date: 2016-02-14 15:25:13
 */
 
 SET FOREIGN_KEY_CHECKS=0;
+
+-- ----------------------------
+-- Table structure for ec_discount
+-- ----------------------------
+DROP TABLE IF EXISTS `ec_discount`;
+CREATE TABLE `ec_discount` (
+  `id` bigint(20) unsigned NOT NULL AUTO_INCREMENT COMMENT '折扣活动id',
+  `discount_name` varchar(50) CHARACTER SET utf8 DEFAULT NULL COMMENT '限时折扣名',
+  `discount` decimal(5,2) DEFAULT NULL COMMENT '折扣',
+  `description` text CHARACTER SET utf8 COMMENT '描述',
+  `goods_id` varchar(50) CHARACTER SET utf8 DEFAULT NULL COMMENT '限时折扣参与商品id',
+  `start_time` varchar(50) CHARACTER SET utf8 DEFAULT NULL COMMENT '开始时间',
+  `end_time` varchar(50) CHARACTER SET utf8 DEFAULT NULL COMMENT '结束时间',
+  `create_time` varchar(50) CHARACTER SET utf8 DEFAULT NULL COMMENT '创建时间',
+  `status` enum('2','1','0') CHARACTER SET utf8 DEFAULT '0' COMMENT '折扣活动状态（0：等待审核；1：正常；2：暂停）',
+  `remarks` text,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
+
+-- ----------------------------
+-- Records of ec_discount
+-- ----------------------------
+INSERT INTO `ec_discount` VALUES ('1', '限时折扣活动1', '6.50', '活动描述1', '1,2', '1455421001', '1455507459', '1455421059', '1', null);
 
 -- ----------------------------
 -- Table structure for ec_empty
@@ -36,20 +59,27 @@ DROP TABLE IF EXISTS `ec_goods`;
 CREATE TABLE `ec_goods` (
   `goods_id` bigint(20) unsigned NOT NULL AUTO_INCREMENT COMMENT '商品ID',
   `goods_common_id` bigint(50) DEFAULT NULL COMMENT '同种商品ID',
+  `goods_name` varchar(100) CHARACTER SET utf8 DEFAULT NULL COMMENT '商品名',
   `goods_short_tag` varchar(50) CHARACTER SET utf8 DEFAULT NULL COMMENT '商品短标签',
   `goods_long_tag` varchar(100) CHARACTER SET utf8 DEFAULT NULL COMMENT '商品长标签',
+  `goods_pic` text CHARACTER SET utf8 COMMENT '商品图片',
   `gc_id` bigint(20) DEFAULT NULL COMMENT '所属分类id',
   `goods_market_price` decimal(18,4) DEFAULT '0.0000' COMMENT '市场价',
+  `status` enum('2','1','0') CHARACTER SET utf8 DEFAULT '1' COMMENT '商品状态（0：下架；1：正常；2：冻结）',
   `goods_storage` bigint(20) unsigned DEFAULT '0' COMMENT '商品库存',
   `goods_price` decimal(18,4) DEFAULT '0.0000' COMMENT '商品价格',
   `goods_details` text CHARACTER SET utf8 COMMENT '商品详情',
   `remarks` text CHARACTER SET utf8 COMMENT '备注',
   PRIMARY KEY (`goods_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=latin1;
 
 -- ----------------------------
 -- Records of ec_goods
 -- ----------------------------
+INSERT INTO `ec_goods` VALUES ('1', '1', '商品1', 'short_tag1', 'long_tag1', null, '7', '10.0000', '1', '100', '9.0000', '详情1', null);
+INSERT INTO `ec_goods` VALUES ('2', '1', '商品2', 'short_tag2', 'long_tag2', null, '7', '11.0000', '1', '100', '10.0000', '详情2', null);
+INSERT INTO `ec_goods` VALUES ('3', '2', '商品3', 'short_tag3', 'long_tag3', null, '9', '12.0000', '1', '100', '11.0000', '详情3', null);
+INSERT INTO `ec_goods` VALUES ('4', '3', '商品4', 'short_tag4', 'long_tag4', null, '11', '13.0000', '1', '100', '12.0000', '详情4', null);
 
 -- ----------------------------
 -- Table structure for ec_goods_class
@@ -60,6 +90,7 @@ CREATE TABLE `ec_goods_class` (
   `gc_name` varchar(50) CHARACTER SET utf8 DEFAULT NULL COMMENT '分类名',
   `gc_description` text CHARACTER SET utf8 COMMENT '分类描述',
   `gc_parent_id` bigint(20) unsigned NOT NULL DEFAULT '0' COMMENT '父级分类id',
+  `gc_pic` text CHARACTER SET utf8 COMMENT '分类图片',
   `gc_sort` bigint(20) unsigned DEFAULT '0' COMMENT '排序字段',
   `remarks` text CHARACTER SET utf8 COMMENT '备注',
   PRIMARY KEY (`gc_id`)
@@ -68,20 +99,20 @@ CREATE TABLE `ec_goods_class` (
 -- ----------------------------
 -- Records of ec_goods_class
 -- ----------------------------
-INSERT INTO `ec_goods_class` VALUES ('1', '一级分类1', '无描述', '0', '0', null);
-INSERT INTO `ec_goods_class` VALUES ('2', '一级分类2', '无描述', '0', '0', null);
-INSERT INTO `ec_goods_class` VALUES ('3', '二级分类1', '无描述', '1', '0', null);
-INSERT INTO `ec_goods_class` VALUES ('4', '二级分类2', '无描述', '1', '0', null);
-INSERT INTO `ec_goods_class` VALUES ('5', '二级分类3', '无描述', '2', '0', null);
-INSERT INTO `ec_goods_class` VALUES ('6', '二级分类4', '无描述', '2', '0', null);
-INSERT INTO `ec_goods_class` VALUES ('7', '三级分类1', '无描述', '3', '0', null);
-INSERT INTO `ec_goods_class` VALUES ('8', '三级分类2', '无描述', '3', '0', null);
-INSERT INTO `ec_goods_class` VALUES ('9', '三级分类3', '无描述', '4', '0', null);
-INSERT INTO `ec_goods_class` VALUES ('10', '三级分类4', '无描述', '4', '0', null);
-INSERT INTO `ec_goods_class` VALUES ('11', '三级分类5', '无描述', '5', '0', null);
-INSERT INTO `ec_goods_class` VALUES ('12', '三级分类6', '无描述', '5', '0', null);
-INSERT INTO `ec_goods_class` VALUES ('13', '三级分类7', '无描述', '6', '0', null);
-INSERT INTO `ec_goods_class` VALUES ('14', '三级分类8', '无描述', '6', '0', null);
+INSERT INTO `ec_goods_class` VALUES ('1', '一级分类1', '无描述', '0', null, '0', null);
+INSERT INTO `ec_goods_class` VALUES ('2', '一级分类2', '无描述', '0', null, '0', null);
+INSERT INTO `ec_goods_class` VALUES ('3', '二级分类1', '无描述', '1', null, '0', null);
+INSERT INTO `ec_goods_class` VALUES ('4', '二级分类2', '无描述', '1', null, '0', null);
+INSERT INTO `ec_goods_class` VALUES ('5', '二级分类3', '无描述', '2', null, '0', null);
+INSERT INTO `ec_goods_class` VALUES ('6', '二级分类4', '无描述', '2', null, '0', null);
+INSERT INTO `ec_goods_class` VALUES ('7', '三级分类1', '无描述', '3', null, '0', null);
+INSERT INTO `ec_goods_class` VALUES ('8', '三级分类2', '无描述', '3', null, '0', null);
+INSERT INTO `ec_goods_class` VALUES ('9', '三级分类3', '无描述', '4', null, '0', null);
+INSERT INTO `ec_goods_class` VALUES ('10', '三级分类4', '无描述', '4', null, '0', null);
+INSERT INTO `ec_goods_class` VALUES ('11', '三级分类5', '无描述', '5', null, '0', null);
+INSERT INTO `ec_goods_class` VALUES ('12', '三级分类6', '无描述', '5', null, '0', null);
+INSERT INTO `ec_goods_class` VALUES ('13', '三级分类7', '无描述', '6', null, '0', null);
+INSERT INTO `ec_goods_class` VALUES ('14', '三级分类8', '无描述', '6', null, '0', null);
 
 -- ----------------------------
 -- Table structure for ec_lock

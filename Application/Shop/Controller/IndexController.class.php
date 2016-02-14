@@ -16,8 +16,12 @@ class IndexController extends CommonController {
     }
     
     public function demo(){
-        $GoodsClass = D('GoodsClass');
-        $result = $GoodsClass->getAllGoodsClass();
+//        $str = '1';
+//        echo json_encode(explode(',',$str));exit;
+        $D = D('Goods');
+        $result = $D->getClassGoods('1');
+        $D2= D('Discount');
+        $result = $D2->packGoodsDiscountInfo($result);
         echo json_encode($result);exit;
     }
     
