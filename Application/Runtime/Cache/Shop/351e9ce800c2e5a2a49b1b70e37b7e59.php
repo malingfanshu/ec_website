@@ -11,7 +11,7 @@
         
         <link rel="stylesheet" href="/ec_website/Public/Css/common.css"/>
         <link rel="stylesheet" href="/ec_website/Public/Shop/css/member.css"/>
-        <script src="/ec_website/Public/js/jquery-1.8.3.min.js"></script>
+        <script src="/ec_website/Public/js/jquery-1.11.3.min.js"></script>
         
         <!--弹窗插件-->
         <link rel="stylesheet" href="/ec_website/Public/Plugin/layer/skin/layer.css"/>
@@ -30,18 +30,20 @@
         
     </head>
     <body>
-        <link rel="stylesheet" href="/ec_website/Public/Shop/css/member.css"/>
-<div class="main">
-    <form id="login_form" method="post">
-        用户名：<input type="text" name="user" class="validate[required]" /><br />
-        密码：<input type="password" name="pwd" class="validate[required]" /><br />
-        验证码：<input type="text" name='verify' class="validate[required]"><br />
-    </form>
-    <button id="login_check_btn">登录验证</button>
-    <image id="verify" src="<?php echo U('Shop/Common/getVerify');?>" />
+        <div class="col-md-12 header">
+    <div class="col-md-10">
+        <a class="a-common header-text" href="javascript:void(0);">Youn商城</a>|
+        <a class="a-common header-text" href="javascript:void(0);">帮助中心</a>
+    </div>
+    <div class="col-md-1">
+        <a class="a-common header-text" href="javascript:void(0);">登录</a>|
+        <a class="a-common header-text" href="javascript:void(0);">注册</a>
+    </div>
+    <div class="col-md-1">
+        <a class="a-common header-text" href="javascript:void(0);">购物车</a>
+    </div>
 </div>
-<!--隐藏值-->
-<input type="hidden" id="hidden_value" value={check_url:"<?php echo U('Shop/Login/ajaxLoginCheck');?>",verify_url:"<?php echo U('Shop/Common/getVerify');?>"} />
-<script src="/ec_website/Public/Shop/js/member.js"></script>
+        sdfds
+        <div>尾部</div>
     </body>
 </html>

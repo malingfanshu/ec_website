@@ -24,7 +24,7 @@ class DiscountModel extends Model{
         foreach($arrGoods as $key=>$value){
             foreach($DiscountList as $ke=>$val){
                 if($val['goods_id'] == $value['goods_id']){
-                    $value['discount_price'] = $value['goods_price'] * (double)$val['discount']/10;
+                    $value['promotion_price'] = $value['goods_price'] * (double)$val['discount']/10;
                 }
             }
             $arrTmp[] = $value;
