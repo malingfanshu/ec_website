@@ -1,4 +1,57 @@
-.header{ background-color:#333; height:30px; color:#424242; font-size:16px; }
-.a-common:hover{ text-decoration:none; color:white; }
-.header-text{ color:#b0b0b0; font-size:14px; font-family:微软雅黑; margin-left:5px; margin-right:5px; }
+/**
+* 重复率较高的通用样式
+* @author 陈培捷
+* @lastModifyTime 2016/02/17 16:52
+*/
 
+/*全局样式*/
+body{ font-family:微软雅黑; margin:0px; padding:0px; }
+li{ list-style-type:none; }
+a{ text-decoration:none; }
+
+/*公共部分*/
+.H05{ height:5px; }
+.H10{ height:10px; }
+.H15{ height:15px; }
+.H20{ height:20px; }
+.H25{ height:25px; }
+.H30{ height:30px; }
+.H35{ height:35px; }
+.H40{ height:40px; }
+.H45{ height:45px; }
+.H50{ height:50px; }
+.H55{ height:55px; }
+.H60{ height:60px; }
+.H65{ height:65px; }
+.H70{ height:70px; }
+.H75{ height:75px; }
+.H80{ height:80px; }
+
+.clear-right-padding{ padding-right:0px !important; }
+.clear-left-padding{ padding-left:0px !important; }
+.clear-top-padding{ padding-top:0px !important; }
+.clear-bottom-padding{ padding-bottom:0px !important; }
+.clear-horizontal-padding{ padding-left:0px !important; padding-right:0px !important; }
+.clear-vertical-padding{ padding-top:0px !important; padding-bottom:0px !important; }
+
+.clear-right-margin{ margin-right:0px !important; }
+.clear-left-margin{ margin-left:0px !important; }
+.clear-top-margin{ margin-top:0px !important; }
+.clear-bottom-margin{ margin-bottom:0px !important; }
+.clear-horizontal-margin{ margin-left:0px !important; margin-right:0px !important; }
+.clear-vertical-margin{ margin-top:0px !important; margin-bottom:0px !important; }
+
+.hidden{ visibility:hidden; }
+.main-block{ min-width:1230px; border:1px solid red; }
+.center-block{ width:1230px; margin:auto; }
+
+
+/*头部部分*/
+.top-bar{ background-color:#333; min-width:1230px; }
+.header-bar .site-logo{ height:55px; max-height:55px; max-width:250px; background-image:url(../Image/logo2.jpg); background-repeat:no-repeat; }
+
+/*主体内容部分*/
+
+
+/*测试用样式*/
+.demo{ background-color:blue; }

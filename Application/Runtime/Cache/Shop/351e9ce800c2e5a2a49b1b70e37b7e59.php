@@ -24,26 +24,22 @@
         <link rel="stylesheet" href="/ec_website/Public/Plugin/jquery.cxcalendar-1.5/css/jquery.cxcalendar.css"/>
         <script src="/ec_website/Public/Plugin/jquery.cxcalendar-1.5/js/jquery.cxcalendar.min.js"></script>
         <script src="/ec_website/Public/Js/common.js"></script>
-        <!--Bootstrap v3.3.5-->
-        <link rel="stylesheet" href="/ec_website/Public/Plugin/bootstarp/css/bootstrap.min.css"/>
-        <script src="/ec_website/Public/Plugin/bootstarp/js/bootstrap.min.js"></script>
-        
+        <!--Superslide v2.1-->
+        <script src="/ec_website/Public/Plugin/superslide-2.1/jquery.SuperSlide.2.1.js"></script>
     </head>
     <body>
-        <div class="col-md-12 header">
-    <div class="col-md-10">
-        <a class="a-common header-text" href="javascript:void(0);">Youn商城</a>|
-        <a class="a-common header-text" href="javascript:void(0);">帮助中心</a>
+        <header>
+    <div class="top-bar H35">
+        
     </div>
-    <div class="col-md-1">
-        <a class="a-common header-text" href="javascript:void(0);">登录</a>|
-        <a class="a-common header-text" href="javascript:void(0);">注册</a>
+    <div class="header-bar main-block H80">
+        <div class="site-logo"></div>
     </div>
-    <div class="col-md-1">
-        <a class="a-common header-text" href="javascript:void(0);">购物车</a>
-    </div>
+</header>
+        <div class="main-block H80">
+    <div class="demo H10 center-block"></div>
 </div>
-        sdfds
-        <div>尾部</div>
+
+        
     </body>
 </html>
