@@ -1,7 +1,7 @@
 /**
 * 重复率较高的通用样式
 * @author 陈培捷
-* @lastModifyTime 2016/02/17 16:52
+* @lastModifyTime 2016/02/18 09:17
 */
 
 /*全局样式*/
@@ -26,6 +26,10 @@ a{ text-decoration:none; }
 .H70{ height:70px; }
 .H75{ height:75px; }
 .H80{ height:80px; }
+.H85{ height:85px; }
+.H90{ height:90px; }
+.H95{ height:95px; }
+.H100{ height:100px; }
 
 .clear-right-padding{ padding-right:0px !important; }
 .clear-left-padding{ padding-left:0px !important; }
@@ -33,6 +37,7 @@ a{ text-decoration:none; }
 .clear-bottom-padding{ padding-bottom:0px !important; }
 .clear-horizontal-padding{ padding-left:0px !important; padding-right:0px !important; }
 .clear-vertical-padding{ padding-top:0px !important; padding-bottom:0px !important; }
+.clear-padding{ padding:0px !important; }
 
 .clear-right-margin{ margin-right:0px !important; }
 .clear-left-margin{ margin-left:0px !important; }
@@ -40,18 +45,47 @@ a{ text-decoration:none; }
 .clear-bottom-margin{ margin-bottom:0px !important; }
 .clear-horizontal-margin{ margin-left:0px !important; margin-right:0px !important; }
 .clear-vertical-margin{ margin-top:0px !important; margin-bottom:0px !important; }
+.clear-margin{ margin:0px !important; }
 
 .hidden{ visibility:hidden; }
-.main-block{ min-width:1230px; border:1px solid red; }
-.center-block{ width:1230px; margin:auto; }
-
+.main-block{ min-width:1226px; }
+.center-block{ width:1226px; margin:auto; }
 
 /*头部部分*/
-.top-bar{ background-color:#333; min-width:1230px; }
-.header-bar .site-logo{ height:55px; max-height:55px; max-width:250px; background-image:url(../Image/logo2.jpg); background-repeat:no-repeat; }
+.header-bar a{ color:#333; }
+.header-bar a:hover{ color:#ff6700; }
+.header-bar ul li{ float:left; padding-right:30px; cursor:pointer; }
+
+.top-bar{ background-color:#333; min-width:1226px; }
+.header-bar .site-logo{ float:left; min-width:55px; min-height:55px; max-height:55px; max-width:250px; background-image:url(../Image/logo.png); background-repeat:no-repeat; }
+.header-bar .center-block{ min-height:55px; margin-top:20px; }
+.header-bar .center-block .header-nav{ float:left; }
+.header-bar .horizontal-block{ width:100px; height:1px; }
 
 /*主体内容部分*/
+.main-slide{ position:relative; }
 
+.main-slide .classify{ position:absolute; z-index:2; }
+.main-slide .classify ul{ background-color:rgba(0,0,0,0.4); width:235px; min-height:460px; }
+.main-slide .classify ul li{ cursor:pointer; padding-top:10px; padding-bottom:10px; padding-left:25px; }
+.main-slide .classify ul li:hover{ background-color:#ff6700; }
+.main-slide .classify ul li a{ color:white; }
 
+.main-slide .classify-second{ position:absolute; z-index:2; left:235px; }
+.main-slide .classify-second ul{ float:left; min-height:460px; max-height:460px; min-width:265px; background-color:white; border-top:1px solid #999999; box-shadow:5px 3px 15px #999999; }
+.main-slide .classify-second ul li{ padding-top:20px; padding-bottom:20px; cursor:pointer; }
+.main-slide .classify-second ul li:hover{ color:#ff6700; }
+.main-slide .classify-second ul li a{ position:relative; padding-left:20px; }
+.main-slide .classify-second ul li a span{ position:absolute; min-width:100px; left:65px; bottom:10px; }
+
+.main-slide .slideBox{ position:absolute; z-index:1; }
+.main-slide .slideBox .hd{ position:absolute; }
+.main-slide .slideBox .hd ul{ position:absolute; left:1130px; top:420px; min-width:100px; }
+.main-slide .slideBox .hd ul li{ float:left; padding-right:2px; }
+.main-slide .slideBox .slide-control-button{ position:absolute; top:230px; }
+.main-slide .slideBox .slide-control-button .prev{ position:absolute; left:235px; }
+.main-slide .slideBox .slide-control-button .next{ position:absolute; left:1210px; }
+.main-slide .slideBox .hd ul li .slide-circle{ width:10px; height:10px; background-color:white; border:1px solid black; border-radius:50%; } 
+.main-slide .slideBox .hd ul li.on .slide-circle{ background-color:red !important; }
 /*测试用样式*/
 .demo{ background-color:blue; }
