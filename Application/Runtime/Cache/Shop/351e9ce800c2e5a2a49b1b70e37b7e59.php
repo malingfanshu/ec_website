@@ -28,25 +28,50 @@
         <script src="/ec_website/Public/Plugin/superslide-2.1/jquery.SuperSlide.2.1.js"></script>
     </head>
     <body>
-        <header>
-    <div class="top-bar H35">
-        
-    </div>
-    <div class="header-bar main-block H100">
+        <div class="body">
+            <header>
+    
+    <!--顶栏-->
+    <div class="top-bar H35"></div>
+    
+    <!--头部栏-->
+    <div class="header-bar main-block H80">
         <div class="center-block">
             <div class="site-logo"></div>
             <div class="header-nav">
                 <ul>
                     <li class="horizontal-block clear-right-padding"></li>
-                    <li><a href="javascript:void(0);">产品列表1</a></li>
-                    <li><a href="javascript:void(0);">产品列表2</a></li>
+                    <li class="classify-item"><a href="javascript:void(0);">产品列表1</a></li>
+                    <li class="classify-item"><a href="javascript:void(0);">产品列表2</a></li>
                 </ul>
             </div>
         </div>
+        
     </div>
+    
+    <!--下拉产品列表-->
+    <div class="pull-down H100 hidden">
+    </div>
+    
 </header>
-        <div class="main-block">
+
+<script>
+    $(".header-bar .header-nav ul li, .pull-down").mouseover(function(e){
+        if($(".pull-down").hasClass("hidden")){
+            $(".pull-down").removeClass("hidden");
+        }
+    });
+    $(".header-bar .header-nav ul li.classify-item, .pull-down").mouseout(function(e){
+        if(!$(".pull-down").hasClass("hidden")){
+             $(".pull-down").addClass("hidden");
+        }
+        console.log("out .header-bar");
+    });
+</script>
+                <div class="main-block main-content">
     <div class="main-slide center-block">
+        
+        <!--左侧产品分类-->
         <div class="classify">
             <ul class="clear-margin clear-left-padding">
                 <div class="H15"></div>
@@ -56,6 +81,8 @@
                 <div class="H15"></div>
             </ul>
         </div>
+        
+        <!--触发显示的产品具体分类-->
         <div class="classify-second hidden">
             <ul class="clear-margin clear-left-padding">
                 <li>
@@ -134,6 +161,8 @@
                 </li>
             </ul>
         </div>
+        
+        <!--首页幻灯片-->
         <div class="slideBox">
             <div class="hd">
                 <ul class="clear-padding clear-margin">
@@ -156,11 +185,62 @@
                 <a class="next" href="javascript:void(0)">后</a>
             </div>
         </div>
+        
+    </div>
+    <div class="star-product center-block">
+        <!--明星单品部分-->
+        <p>明星单品</p>
+        <div class="txtScroll-left">
+            <div class="hd">
+                <a class="next">前</a>
+                <a class="prev">后</a>
+            </div>
+            <div class="bd">
+                <ul class="infoList">
+                    <li class="page">
+                        <a href="javascript:void(0);" target="_blank">
+                            <div class="item"></div>
+                            <div class="item"></div>
+                            <div class="item"></div>
+                            <div class="item"></div>
+                            <div class="item clear-right-margin"></div>
+                        </a>
+                    </li>
+                    <li class="page">
+                        <a href="javascript:void(0);" target="_blank">
+                            <div class="item"></div>
+                            <div class="item"></div>
+                            <div class="item"></div>
+                            <div class="item"></div>
+                            <div class="item clear-right-margin"></div>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="on-sale center-block">
+            <!--限时折扣部分-->
+            <p>限时折扣</p>
+            <div class="item">
+                <div class="left-image">
+                    <image src="/ec_website/Public/Image/left-image.jpg"></image>
+                </div>
+            </div>            
+            <div class="item">
+                
+            </div>
+                
+            </div>
+        </div>
+        
     </div>
 </div>
 <script>
     // 首页主要轮播
     $(".slideBox").slide({mainCell:".bd ul",autoPlay:true});
+    // 明星单品部分滚动
+    $(".txtScroll-left").slide({mainCell:".bd ul",autoPage:true,effect:"left",autoPlay:true,scroll:1,vis:1,trigger:"click"});
     // 
     $(".main-slide .classify ul li, .main-slide .classify-second").mouseover(function(e){
         if($(".main-slide .classify-second").hasClass('hidden')){
@@ -174,6 +254,7 @@
     });
 </script>
 
-        
+            
+        </div>
     </body>
 </html>

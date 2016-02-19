@@ -1,5 +1,7 @@
-<div class="main-block">
+<div class="main-block main-content">
     <div class="main-slide center-block">
+        
+        <!--左侧产品分类-->
         <div class="classify">
             <ul class="clear-margin clear-left-padding">
                 <div class="H15"></div>
@@ -9,6 +11,8 @@
                 <div class="H15"></div>
             </ul>
         </div>
+        
+        <!--触发显示的产品具体分类-->
         <div class="classify-second hidden">
             <ul class="clear-margin clear-left-padding">
                 <li>
@@ -87,6 +91,8 @@
                 </li>
             </ul>
         </div>
+        
+        <!--首页幻灯片-->
         <div class="slideBox">
             <div class="hd">
                 <ul class="clear-padding clear-margin">
@@ -109,11 +115,60 @@
                 <a class="next" href="javascript:void(0)">后</a>
             </div>
         </div>
+        
+    </div>
+    <div class="star-product center-block">
+        <!--明星单品部分-->
+        <p>明星单品</p>
+        <div class="txtScroll-left">
+            <div class="hd">
+                <a class="next">前</a>
+                <a class="prev">后</a>
+            </div>
+            <div class="bd">
+                <ul class="infoList">
+                    <li class="page">
+                        <a href="javascript:void(0);" target="_blank">
+                            <div class="item"></div>
+                            <div class="item"></div>
+                            <div class="item"></div>
+                            <div class="item"></div>
+                            <div class="item clear-right-margin"></div>
+                        </a>
+                    </li>
+                    <li class="page">
+                        <a href="javascript:void(0);" target="_blank">
+                            <div class="item"></div>
+                            <div class="item"></div>
+                            <div class="item"></div>
+                            <div class="item"></div>
+                            <div class="item clear-right-margin"></div>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="on-sale center-block">
+            <!--限时折扣部分-->
+            <p>限时折扣</p>
+            <div class="list">
+                <image class="left-image" src="__ROOT__/Public/Image/left-image.jpg"></image>
+            </div>            
+            <div class="list">
+                <div class="item"></div>
+            </div>
+                
+            </div>
+        </div>
+        
     </div>
 </div>
 <script>
     // 首页主要轮播
     $(".slideBox").slide({mainCell:".bd ul",autoPlay:true});
+    // 明星单品部分滚动
+    $(".txtScroll-left").slide({mainCell:".bd ul",autoPage:true,effect:"left",autoPlay:true,scroll:1,vis:1,trigger:"click"});
     // 
     $(".main-slide .classify ul li, .main-slide .classify-second").mouseover(function(e){
         if($(".main-slide .classify-second").hasClass('hidden')){

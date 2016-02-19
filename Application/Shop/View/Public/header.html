@@ -1,17 +1,39 @@
 <header>
-    <div class="top-bar H35">
-        
-    </div>
-    <div class="header-bar main-block H100">
+    
+    <!--顶栏-->
+    <div class="top-bar H35"></div>
+    
+    <!--头部栏-->
+    <div class="header-bar main-block H80">
         <div class="center-block">
             <div class="site-logo"></div>
             <div class="header-nav">
                 <ul>
                     <li class="horizontal-block clear-right-padding"></li>
-                    <li><a href="javascript:void(0);">产品列表1</a></li>
-                    <li><a href="javascript:void(0);">产品列表2</a></li>
+                    <li class="classify-item"><a href="javascript:void(0);">产品列表1</a></li>
+                    <li class="classify-item"><a href="javascript:void(0);">产品列表2</a></li>
                 </ul>
             </div>
         </div>
+        
     </div>
+    
+    <!--下拉产品列表-->
+    <div class="pull-down H100 hidden">
+    </div>
+    
 </header>
+
+<script>
+    $(".header-bar .header-nav ul li, .pull-down").mouseover(function(e){
+        if($(".pull-down").hasClass("hidden")){
+            $(".pull-down").removeClass("hidden");
+        }
+    });
+    $(".header-bar .header-nav ul li.classify-item, .pull-down").mouseout(function(e){
+        if(!$(".pull-down").hasClass("hidden")){
+             $(".pull-down").addClass("hidden");
+        }
+        console.log("out .header-bar");
+    });
+</script>

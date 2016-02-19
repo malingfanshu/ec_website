@@ -47,6 +47,7 @@ a{ text-decoration:none; }
 .clear-vertical-margin{ margin-top:0px !important; margin-bottom:0px !important; }
 .clear-margin{ margin:0px !important; }
 
+.body{ position:relative; }
 .hidden{ visibility:hidden; }
 .main-block{ min-width:1226px; }
 .center-block{ width:1226px; margin:auto; }
@@ -55,6 +56,7 @@ a{ text-decoration:none; }
 .header-bar a{ color:#333; }
 .header-bar a:hover{ color:#ff6700; }
 .header-bar ul li{ float:left; padding-right:30px; cursor:pointer; }
+.header-bar ul li.classify-item{ height:70px; }
 
 .top-bar{ background-color:#333; min-width:1226px; }
 .header-bar .site-logo{ float:left; min-width:55px; min-height:55px; max-height:55px; max-width:250px; background-image:url(../Image/logo.png); background-repeat:no-repeat; }
@@ -62,8 +64,11 @@ a{ text-decoration:none; }
 .header-bar .center-block .header-nav{ float:left; }
 .header-bar .horizontal-block{ width:100px; height:1px; }
 
+.pull-down{ position:absolute; background-color:white; border-top:1px solid #e0e0e0; min-height:230px; width:100%; box-shadow:1px 2px 3px #999999; z-index:2; }
+
 /*主体内容部分*/
-.main-slide{ position:relative; }
+.main-content{ position:relative; z-index:1; }
+.main-slide{ position:relative; height:460px; }
 
 .main-slide .classify{ position:absolute; z-index:2; }
 .main-slide .classify ul{ background-color:rgba(0,0,0,0.4); width:235px; min-height:460px; }
@@ -87,5 +92,11 @@ a{ text-decoration:none; }
 .main-slide .slideBox .slide-control-button .next{ position:absolute; left:1210px; }
 .main-slide .slideBox .hd ul li .slide-circle{ width:10px; height:10px; background-color:white; border:1px solid black; border-radius:50%; } 
 .main-slide .slideBox .hd ul li.on .slide-circle{ background-color:red !important; }
+
+.star-product ul.infoList .page{ width:1226px; }
+.star-product ul.infoList .page .item{ float:left; width:234px; height:300px; background-color:#fafafa; margin-right:14px; border-top:1px solid #22ea0d; }
+.star-product ul.infoList .page .item:hover{ border-top:1px solid red; }
+
+.on-sale .left-image{  }
+
 /*测试用样式*/
-.demo{ background-color:blue; }
