@@ -15,7 +15,16 @@ class CommonController extends Controller{
     public function _initialize(){
         header("Content-Type:text/html;Charset=utf-8"); // 格式全部规定utf-8
         session(array('name'=>'session_id','expire'=>3600));
+        $this->assign("mall_name",C("MALL_NAME"));
         if(is_mobile()) redirect(U('/Wap/Index/index'));
+        
+        /*商品总分类*/
+        $GoodsClass = D("GoodsClass");
+        $allGoodsClass = $GoodsClass->getAllGoodsClass();
+        $this->assign("all_goods_class",$allGoodsClass);
+        
+        // 输出测试数据
+        $this->assign('data',json_encode($allGoodsClass));
     }
     
     /**

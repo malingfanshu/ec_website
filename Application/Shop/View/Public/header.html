@@ -1,30 +1,95 @@
 <header>
     
     <!--顶栏-->
-    <div class="top-bar H35"></div>
+    <div class="top-bar H35">
+        <div class="center-block">
+            <div class="mall-name">
+                <span>{$mall_name}</span>
+            </div>
+            <div class="control"></div>
+        </div>
+    </div>
     
     <!--头部栏-->
     <div class="header-bar main-block H80">
         <div class="center-block">
-            <div class="site-logo"></div>
+            <div class="site-logo">
+                <img src="__ROOT__/Public/Image/logo.png">
+            </div>
             <div class="header-nav">
                 <ul>
                     <li class="horizontal-block clear-right-padding"></li>
                     <li class="classify-item"><a href="javascript:void(0);">产品列表1</a></li>
                     <li class="classify-item"><a href="javascript:void(0);">产品列表2</a></li>
+                    <li class="classify-item"><a href="javascript:void(0);">产品列表3</a></li>
+                    <li class="classify-item"><a href="javascript:void(0);">产品列表4</a></li>
+                    <li class="classify-item"><a href="javascript:void(0);">产品列表4</a></li>
                 </ul>
             </div>
+            <div class="search">
+                <div class="search-input"><input type="text" placeholder="请输入要搜索的商品（关键词用空格分隔）" value="{:I('get.keywords')}" /></div><div class="search-btn"><p>搜索</p></div>
+                <div style="clear:both;"></div>
+            </div>
         </div>
-        
     </div>
     
     <!--下拉产品列表-->
     <div class="pull-down H100 hidden">
     </div>
     
+    <!--其他分类-->
+    <div class="main-block classify-bar">
+        <div class="center-block">
+            <div class="other-nav">
+                <div class="all-classify">
+                    <span>全部分类</span><img src="__ROOT__/Public/Image/icon/iconfont-xiala.png" />
+                </div>
+
+                    <div class="classify-block hidden">
+                        <ul class="left clear-padding clear-margin">
+                            <div class="H15"></div>
+                            <volist name="all_goods_class" id="vo">
+                                <a href="{:U('Shop/Search/index/gc_id/'.$vo[gc_id])}"><li data-gcid="{$vo[gc_id]}">{$vo[gc_name]}</li></a>
+                            </volist>
+                            <div class="H15"></div>
+                        </ul>
+                        <ul class="right clear-padding clear-margin">
+                        <volist name="all_goods_class" id="vo">
+                        <div data-gcid="{$vo[gc_id]}" class="right-body none">
+                        <volist name="vo[class2]" id="v">
+                            <div class="second-item">
+                                <div class="classify-second-name"><a href="{:U('Shop/Search/index/gc_id/'.$v[gc_id])}"><span>{$v[gc_name]}></span></a></div>
+
+                                    <div class="third">
+                                    <volist name="v[class3]" id="s">
+                                        <div class="third-item"><a href="{:U('Shop/Search/index/gc_id/'.$s[gc_id])}"><span>{$s[gc_name]}</span></a></div>
+                                    </volist>
+                                        <div style="clear:both;"></div>
+                                    </div>
+                            </div>
+                        </volist>
+                        </div>
+                        </volist>
+                        </ul>
+                    </div>
+
+                <div style="clear:both;"></div>
+            </div>
+        </div>
+    </div>
+    <div class="main-block full-screen-line">   
+    </div>
 </header>
 
 <script>
+    // 搜索功能
+    $("div.header-bar div.search-btn").on("click",function(e){
+        var keywords = $("div.header-bar div.search-input input").val();
+        var url = "{:U('Shop/Search/index/keywords')}"+'/'+keywords;
+        var index = layer.load(1); //换了种风格
+        window.location.href = url;
+    });
+    
     $(".header-bar .header-nav ul li, .pull-down").mouseover(function(e){
         if($(".pull-down").hasClass("hidden")){
             $(".pull-down").removeClass("hidden");
@@ -34,6 +99,40 @@
         if(!$(".pull-down").hasClass("hidden")){
              $(".pull-down").addClass("hidden");
         }
-        console.log("out .header-bar");
     });
+    $(".other-nav .all-classify").mouseover(function(e){
+        if($(".other-nav .classify-block").hasClass("hidden")){
+            $(".other-nav .classify-block").removeClass("hidden");
+            
+        }
+    });
+    $(".other-nav .classify-block").mouseleave(function(event){
+        if(!$(".other-nav .classify-block").hasClass("hidden")){
+            $(".other-nav .classify-block").addClass("hidden");
+        }
+    });
+    
+    // 商品分类部分
+    function changeRightBody(gcid){
+        var parent = $(".other-nav .classify-block .right");
+        parent.children("div.right-body").each(function(index,ele){
+            $(ele).addClass("none");
+        });
+        if(gcid != null && gcid != ''){
+            parent.children("div.right-body").each(function(index,ele){
+                if($(ele).data("gcid") == gcid){
+                    $(ele).removeClass("none");
+                }
+            });
+        }else{
+            parent.children("div.right-body:first").removeClass("none");
+        }
+    }
+    changeRightBody();
+    
+    $(".classify-block ul.left li").on("mouseover",function(e){
+//        $(this).data('gcid');
+        changeRightBody($(this).data('gcid'));
+    });
+
 </script>

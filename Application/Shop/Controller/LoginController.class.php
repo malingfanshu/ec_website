@@ -15,14 +15,18 @@ class LoginController extends CommonController{
      * 主方法（登录页面）
      */
     public function index(){
+        $memberInfo = I('session.member_info');
+        if(!empty($memberInfo)){ // 探测到已登录，重定向回主页
+            redirect(U("Shop/Index/index"));
+        }
         
         // 页面信息
         $pageInfo['title'] = C("MALL_NAME").'-登录';
         
-        layout("Layout/layout_common");
+        layout("Layout/layout_common2");
         
         $this->assign($pageInfo);
-        $this->display('login');
+        $this->display('login2');
     }
     
     /**
@@ -177,29 +181,56 @@ class LoginController extends CommonController{
      * 登录验证的处理
      */
     public function ajaxLoginCheck(){
-        $Da = D('MemberAction');
-        if(!empty(I('post.user')) || !empty(I('post.pwd')) || !empty(I('post.verify')) ){
-            $verify = I('post.verify');
-            $Ver = new \Think\Verify();
-            $result = $Ver->check($verify);
-            if(!$result){
-                $this->ajaxReturn(array('status'=>'false','info'=>'验证码有误'));
-            }
+        $MemberAction = D('MemberAction');
+        if(!empty(I('post.user')) || !empty(I('post.pwd')) || !empty(I('post.verify'))){
+//            $verify = I('post.verify');
+//            $Ver = new \Think\Verify();
+//            $result = $Ver->check($verify);
+//            if(!$result){
+//                $this->ajaxReturn(array('status'=>'false','info'=>'验证码有误','data'=>I('post.')));
+//            }
             $user = I('post.user');
             $pwd = $this->_getCompilePwd(I('post.pwd'));
-            $result = $Da->generalLoginCheck($user,$pwd);
-            if($result['status']){
+            $result = $MemberAction->generalLoginCheck($user,$pwd);
+            if($result['status']){ // 如果判断登录成功
+                $member_id = $result['data'];
+                $field = 'member_id,nickname,avatar,cell_phone,email_address';
+                $result = $MemberAction->getMemberInfo($member_id,$field);
+                session('member_info',$result);
                 $this->ajaxReturn(array('status'=>'true','info'=>'成功'));
             }else{
                 if(!empty($result['code']) && $result['code'] == '6'){
                     $this->ajaxReturn(array('status'=>'false','code'=>$result['code'],'info'=>'账户没有激活'));
                 }else{
-                    $this->ajaxReturn(array('status'=>'false','info'=>'账户密码不匹配','data'=>$user));
+                    $this->ajaxReturn(array('status'=>'false','info'=>'账户密码不匹配'));
                 }
             }
         }else{
-            $this->ajaxReturn(['status'=>'false','info'=>'没有接收到数据']);
+            $this->ajaxReturn(array('status'=>'false','info'=>'没有接收到数据'));
         }
+    }
+    
+    public function temLogin(){
+        $memberInfo = array(
+            'member_id' => '1',
+            'nickname' => 'ab_cd',
+            'cell_phone' => '15577375746',
+        );
+        session('member_info',$memberInfo);
+    }
+    
+    /**
+     * 退出登录
+     */
+    public function loginOut(){
+        session('member_info',null);
+        redirect(U("Shop/Login/index"));
+    }
+    
+    public function demo(){
+        $MemberAction = D('MemberAction');
+        $result = $MemberAction->getMemberInfo('1');
+        var_dump($result);exit;
     }
     
     /**

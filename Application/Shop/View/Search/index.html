@@ -1,0 +1,188 @@
+<include file="Public/nav_breadcrumb" />
+<if condition="$goods_info[data] neq ''">
+    <include file="Public/goods_scope" />
+    <div class="center-block">
+        <div class='search-info'>
+
+            <div class='recom-list'>
+                <div class="title">推荐商品位置</div>
+                <div class="item">
+                    <div class="image">
+                        <img src="/Public/Image/test/hongmi2_hong_1.png">
+                    </div>
+                    <div class="goods-name">
+                        <span>某某商品某某商品某某商品某某商品某某商品</span>
+                    </div>
+                    <div class="goods-price">
+                        <span>￥200</span>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="image">
+                        <img src="/Public/Image/test/hongmi2_hong_1.png">
+                    </div>
+                    <div class="goods-name">
+                        <span>某某商品某某商品某某商品某某商品某某商品</span>
+                    </div>
+                    <div class="goods-price">
+                        <span>￥200</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class='goods-list'>
+                <div class="sort">
+                    <a href="javascript:void(0);">
+                    <if condition="$sort_info[sort] eq ''">
+                        <div class="items on">
+                    <else />
+                        <div data-type="zonghe" class="items">
+                    </if>
+                            <span>综合<span>
+                        </div>
+                    </a>
+                    <a href="javascript:void(0);">
+                        
+                    <if condition="$sort_info[sort] eq '1'">
+                        <div data-type="xiaoliang" class="items on">   
+                            <span>销量<span>
+                        <switch name="sort_info[order]">
+                            <case value="1"><span data-order="1">▲</span></case>
+                            <case value="2"><span data-order="2">▼</span></case>
+                            <default />
+                            <case value="2"><span data-order="2">▼</span></case>
+                        </switch>
+                    <else />
+                        <div data-type="xiaoliang" class="items">
+                            <span>销量<span>
+                    </if>
+                        </div>
+                    </a>
+                    <a href="javascript:void(0);">
+                    <if condition="$sort_info[sort] eq '2'">
+                        <div data-type="jiage" class="items on">   
+                            <span>价格<span>
+                        <switch name="sort_info[order]">
+                            <case value="1"><span data-order="1">▲</span></case>
+                            <case value="2"><span data-order="2">▼</span></case>
+                            <default />
+                            <case value="1"><span data-order="1">▲</span></case>
+                        </switch>
+                    <else />
+                        <div data-type="jiage" class="items">
+                            <span>价格<span>
+                    </if>
+                        </div>
+                    </a>
+                    <a href="javascript:void(0);">
+                    <if condition="$sort_info[sort] eq '3'">
+                        <div data-type="pingjia" class="items on">   
+                            <span>评价<span>
+                        <switch name="sort_info[order]">
+                            <case value="1"><span data-order="1">▲</span></case>
+                            <case value="2"><span data-order="2">▼</span></case>
+                            <default />
+                            <case value="2"><span data-order="2">▼</span></case>
+                        </switch>
+                    <else />
+                        <div data-type="pingjia" class="items">
+                            <span>评价<span>
+                    </if>
+                        </div>
+                    </a>
+                    <div style="clear:both;"></div>
+                </div>
+                <div class="list">
+                <volist name="goods_info[data]" id="vo">
+                    <div class='item'>
+                        <div class='image'>
+                            <a href="{:U('Shop/Goods/index/goods_id/'.$vo[goods_id])}"><img src='{$vo[goods_pic][main_pic]}'/></a>
+                        </div>
+                        <div class='price'><span>￥{$vo[goods_price]}</span></div>
+                        <div class='goods-name'><a href="{:U('Shop/Goods/index/goods_id/'.$vo[goods_id])}"><span>{$vo[goods_name]}</span></a></div>
+                        <div class='other-info'>
+                            <div class='evaluation-info'>已有<span>1000</span>人评价</div>
+                            <div class='sold-info'>售出<span>1000</span>件</div>
+                        </div>
+                        <div class='add-cart'><span>加入购物车</span></div>
+                    </div>
+                </volist>
+                    <div style='clear:both;'></div>
+                </div>
+            </div>
+            <div style='clear:both;'></div>
+        </div>
+    </div>
+<else />
+    <include file="Public/empty_search" />
+</if>
+<script>
+    // 获取排序的order值
+    function getOrder(type){
+        var value = '';
+        var order = "{:I('get.order')}";
+        if(order == '' || order == null){ // order默认值
+            switch(type){
+                case 'xiaoliang':
+                    value = 2;
+                    break;
+                case 'jiage':
+                    value = 1;
+                    break;
+                case 'pingjia':
+                    value = 2;
+                    break;
+                default:
+                    value = 1;
+                    break;
+            }
+            return value;
+        }else{ // 这里变order的值
+            if(order == 1){
+                value = 2;
+            }else if(order == 2){
+                value = 1;
+            }
+            return value;
+        }
+    }
+    
+    // 其他get值
+    function otherGet(){
+        var keywords = "{:I('get.keywords')}";
+        var gc_id = "{:I('get.gc_id')}";
+        // 功能上设计不会同时有keywords和gc_id存在的情况
+        if(keywords != '' && keywords != null){
+            return "/keywords/"+keywords;
+        }
+        if(gc_id != '' && gc_id != null){
+            return "/gc_id/"+gc_id;
+        }
+        if(keywords == '' && gc_id == ''){
+            return '';
+        }
+    }
+    
+    // 切换排序
+    $("div.search-info div.goods-list div.sort div.items").on("click",function(e){
+        var type = $(this).data("type");
+        var url = '';
+        switch(type){
+            case 'zonghe':
+                url = "{:U('Shop/Search/index')}"+otherGet();
+                break;
+            case 'xiaoliang':
+                url = "{:U('Shop/Search/index')}"+otherGet()+"/sort/1/order/"+getOrder(type);
+                break;
+            case 'jiage':
+                url = "{:U('Shop/Search/index')}"+otherGet()+"/sort/2/order/"+getOrder(type);
+                break;
+            case 'pingjia':
+                url = "{:U('Shop/Search/index')}"+otherGet()+"/sort/3/order/"+getOrder(type);
+                break;
+        }
+        var index = layer.load(1);
+        window.location.href = url;
+    });
+    
+</script>

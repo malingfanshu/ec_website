@@ -1,0 +1,11 @@
+<div class="center-block">
+    <div class='nav-breadcrumb'>
+        <if condition="$class_info neq ''">
+            <a href="javascript:void(0);">首页</a><span>></span><a href="javascript:void(0);">{$class_info['gc_1']['gc_name']}</a><span>></span><a href="javascript:void(0);">{$class_info['gc_2']['gc_name']}</a><span>></span><a href="javascript:void(0);">{$class_info['gc_3']['gc_name']}</a>
+        <else />
+            <if condition="$choose_info neq ''">
+                首页>"{$choose_info}"全部结果
+            </if>
+        </if>
+    </div>
+</div>

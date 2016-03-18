@@ -14,7 +14,7 @@ class DiscountModel extends Model{
     protected $autoCheckFields = false; // 设置不自动检测表信息
     
     /**
-     * 对查询出来的商品数组进行再封装（加上限时折扣的价格）
+     * 对查询出来的商品（多商品二维）数组进行再封装（加上限时折扣的价格）
      * @param array $arrGoods 二维的商品数组
      * @return array 封装后的商品数组
      */
@@ -30,6 +30,21 @@ class DiscountModel extends Model{
             $arrTmp[] = $value;
         }
         return $arrTmp;
+    }
+    
+    /**
+     * 对查询出来的商品数组（单商品）进行再封装（加上限时折扣的价格）
+     * @param array $arrGoods 单商品数组（一维）
+     * @return array 封装后的商品数组
+     */
+    public function packSingleGoodsDiscountInfo($arrGoods){
+        $DiscountList = $this->getEffectiveGoodsDiscountList();
+        foreach($DiscountList as $key=>$value){
+            if($value['goods_id'] == $arrGoods['goods_id']){
+                $arrGoods['promotion_price'] = $arrGoods['goods_price'] * (double)$value['discount']/10;
+            }
+        }
+        return $arrGoods;
     }
     
     /**

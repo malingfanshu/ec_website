@@ -27,4 +27,8 @@ return array(
     'NETEASE_NICKNAME' => '陈培捷的商城', // 发送人昵称
     
     'MEMBER_ACTIVE_VALID_TIME' => '30', // 激活用户有效时间
+    
+    /*默认的一些配置*/
+    'DEFAULT_GOODS_PIC' => '/Public/Image/test/not_pic.png', // 商品无图调用的默认图片
+    
 );

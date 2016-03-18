@@ -9,9 +9,8 @@
         <link rel="shortcut icon" href="/ec_website/favicon.ico"/>
         
         
-        <link rel="stylesheet" href="/ec_website/Public/Css/common.css"/>
-        <link rel="stylesheet" href="/ec_website/Public/Shop/css/member.css"/>
-        <script src="/ec_website/Public/js/jquery-1.8.3.min.js"></script>
+        <link rel="stylesheet" href="/ec_website/Public/Shop/css/common.css"/>
+        <script src="/ec_website/Public/js/jquery-1.11.3.min.js"></script>
         
         <!--弹窗插件-->
         <link rel="stylesheet" href="/ec_website/Public/Plugin/layer/skin/layer.css"/>
@@ -20,17 +19,10 @@
         <link rel="stylesheet" href="/ec_website/Public/Plugin/jquery-validation-engine/css/validationEngine.jquery.css"/>
         <script src="/ec_website/Public/Plugin/jquery-validation-engine/js/jquery.validationEngine-zh_CN.js"></script>
         <script src="/ec_website/Public/Plugin/jquery-validation-engine/js/jquery.validationEngine.min.js"></script>
-        <!--日历插件-->
-        <link rel="stylesheet" href="/ec_website/Public/Plugin/jquery.cxcalendar-1.5/css/jquery.cxcalendar.css"/>
-        <script src="/ec_website/Public/Plugin/jquery.cxcalendar-1.5/js/jquery.cxcalendar.min.js"></script>
-        <script src="/ec_website/Public/Js/common.js"></script>
-        <!--Bootstrap v3.3.5-->
-        <link rel="stylesheet" href="/ec_website/Public/Plugin/bootstarp/css/bootstrap.min.css"/>
-        <script src="/ec_website/Public/Plugin/bootstarp/js/bootstrap.min.js"></script>
-        
     </head>
     <body>
-        <link rel="stylesheet" href="/ec_website/Public/Shop/css/member.css"/>
+        <div class="body">
+            <link rel="stylesheet" href="/ec_website/Public/Shop/css/member.css"/>
 <div class="main">
     <form id="login_form" method="post">
         用户名：<input type="text" name="user" class="validate[required]" /><br />
@@ -42,6 +34,7 @@
 </div>
 <!--隐藏值-->
 <input type="hidden" id="hidden_value" value={check_url:"<?php echo U('Shop/Login/ajaxLoginCheck');?>",verify_url:"<?php echo U('Shop/Common/getVerify');?>"} />
-<script src="/ec_website/Public/Shop/js/member.js"></script>
+<script src="/ec_website/Public/Shop/js/member.js"></script>  
+        </div>
     </body>
 </html>

@@ -1,0 +1,209 @@
+<script type="text/javascript" charset="utf-8" src="http://static.bshare.cn/b/buttonLite.js#uuid=&amp;style=10&amp;bgcolor=Orange&amp;ssc=false"></script>
+<include file="Public/nav_breadcrumb" />
+<div class="center-block goods-body">
+    <div class="left-block">
+        <div class="up-block">
+            <div class="show-pictures">
+                
+                <div class="picFocus">
+                    <div class="bd">
+                        <ul>
+                            <volist name="goods_info[goods_pic][pic_list]" id="vo" >
+                                <li><a target="_blank" href="javascript:void(0);"><img src="__ROOT__{$vo}" /></a></li>
+                            </volist>
+                        </ul>
+                    </div>
+                    <div class="hd">
+                        <ul class="clear-padding">
+                            <volist name="goods_info[goods_pic][pic_list]" id="vo" >
+                                <li><img src="__ROOT__{$vo}" /></li>
+                            </volist>
+                            <div style="clear:both;"></div>
+                        </ul>
+                    </div>
+		</div>
+                <div class="fn">
+                    <div class="favorite"><img src="/Public/Image/icon/iconfont-shoucangweishoucang-copy.png" /><span>收藏</span></div>
+                    <div class="share"><a class="bshareDiv" href="http://www.bshare.cn/share"><img src="/Public/Image/icon/iconfont-fenxiang.png" /><span>分享</span></a></div>
+                    <div style="clear:both;"></div>
+                </div>
+            </div>
+            <div class="goods-info">
+                <div class="goods-name">
+                    <b>{:$goods_info['goods_name']}</b>
+                </div>
+                <div class="price-info">
+                    <div class="up"></div>
+                    <div class="down">
+                        <div class="item">
+                            <span class="name">价格</span>
+                            <span class="content">￥499</span>
+                        </div>
+                        <div class="item">
+                            <span class="name">运费</span>
+                            <span class="content">￥0</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="sale-volumn">
+                    <div>月销量<span>155575</span></div>
+                    <div>累计评价<span>155575</span></div>
+                    <div style="clear:both;"></div>
+                </div>
+                
+                <div class="specification">
+                    <div class="item">
+                        <div class="specification-name">
+                            <span>颜色<span>
+                        </div>
+                        <div class="specification-type">
+                            <ul class="clear-padding clear-margin">
+                                <li class="on">A颜色</li>
+                                <li>B颜色</li>
+                                <div style="clear:both;"></div>
+                            </ul>
+                        </div>
+                        <div style="clear:both;"></div>
+                    </div>
+                    <div class="item">
+                        <div class="specification-name">
+                            <span>尺寸</span>
+                        </div>
+                        <div class="specification-type">
+                            <ul class="clear-padding clear-margin">
+                                <li>C尺寸</li>
+                                <li class="on">D尺寸</li>
+                                <div style="clear:both;"></div>
+                            </ul>
+                        </div>
+                        <div style="clear:both;"></div>
+                    </div>
+                    <div class="item">
+                        <div class="specification-name"><span>数量</span></div>
+                        <span class="volume">
+                            <input class="num" type="text" value="1" />
+                            <span class="control">
+                                <span class="up">&nbsp;△&nbsp;</span>
+                                <span class="down">&nbsp;▽&nbsp;</span>
+                            </span>
+                            <span class="inventory">&nbsp;&nbsp;&nbsp;&nbsp;库存3</span>
+                        </span>
+                        
+                    </div>
+                </div>
+                
+                <div class="purchasing-behavior">
+                    <div class="buy-now"><span>立即购买</span></div>
+                    <div class="add-cart"><span>加入购物车</span></div>
+                </div>
+                <div style="clear:both;"></div>
+            </div>
+            <div style="clear:both;"></div>
+        </div>
+        <div class="down-block">
+            <div class="select">
+                <ul class="clear-padding clear-margin">
+                    <li class="on"><span>商品详情<span></li>
+                    <li><span>累计评价15535</span></li>
+                    <div style="clear:both;"></div>
+                </ul>
+            </div>
+            <div class="show">
+                <div class="goods-detail">
+                    详情部分
+                </div>
+                <div class="goods-evaluation none">
+                    评价部分
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="right-block">
+        <div class="title">推荐商品位置</div>
+        <div class="item">
+            <div class="image">
+                <img src="__ROOT__/Public/Image/test/hongmi2_hong_1.png" />
+            </div>
+            <div class="goods-name">
+                <span>某某商品某某商品某某商品某某商品某某商品</span>
+            </div>
+            <div class="goods-price">
+                <span>￥200</span>
+            </div>
+        </div>
+        <div class="item">
+            <div class="image">
+                <img src="__ROOT__/Public/Image/test/hongmi2_hong_1.png" />
+            </div>
+            <div class="goods-name">
+                <span>某某商品</span>
+            </div>
+            <div class="goods-price">
+                <span>￥200</span>
+            </div>
+        </div>
+        <div class="item">
+            <div class="image">
+                <img src="__ROOT__/Public/Image/test/hongmi2_hong_1.png" />
+            </div>
+            <div class="goods-name">
+                <span>某某商品</span>
+            </div>
+            <div class="goods-price">
+                <span>￥200</span>
+            </div>
+        </div>
+    </div>
+    <div style="clear:both;"></div>
+</div>
+<!--页面隐藏值-->
+<input type="hidden" id="hidden_value" value={inventory:"3"} />
+<script>
+    // 商品图片展示
+    $(".picFocus").slide({ mainCell:".bd ul",effect:"left",autoPlay:true });
+    
+    // 商品详情和商品评价切换
+    $(".goods-body .left-block .down-block .select ul li").on("click",function(e){
+        if(!$(e.target).hasClass("on")){
+            $(e.target).addClass("on");
+        }
+        $(this).parent().children("li").each(function(index,ele){
+            $(ele).removeClass("on");
+        });
+        $(this).addClass("on");
+        var index = $(this).index();
+        $(".goods-body .left-block .down-block .show div").each(function(i,ele){
+            if(!$(ele).hasClass("none")){
+                $(ele).addClass("none");
+            }
+        });
+        $(".goods-body .left-block .down-block .show div:eq("+index+")").removeClass("none");
+    });
+    
+    // 规格切换效果
+    $(".goods-body .left-block .up-block .goods-info .specification .specification-type ul li").on("click",function(e){
+        $(this).parent().children("li").each(function(index,ele){
+            $(ele).removeClass("on");
+        });
+        if(!$(this).hasClass("on")){
+            $(this).addClass("on");
+        }
+    });
+    
+    // 购买数量增减
+    $("div.specification div.item span.volume span.control .up").on("click",function(e){
+        var ele_num = $("div.specification div.item span.volume input.num");
+        var now_num = parseInt(ele_num.val());
+        var hidden_value = eval("(" + $('#hidden_value').val() + ")");
+        if(now_num+1 <= parseInt(hidden_value['inventory'])){
+            ele_num.val(now_num+1);
+        }
+    });
+    $("div.specification div.item span.volume span.control .down").on("click",function(e){
+        var ele_num = $("div.specification div.item span.volume input.num");
+        var now_num = parseInt(ele_num.val());
+        if(now_num-1 >= 1){
+            ele_num.val(now_num-1);
+        }
+    });
+</script>

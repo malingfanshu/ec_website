@@ -10,10 +10,48 @@ Target Server Type    : MYSQL
 Target Server Version : 50617
 File Encoding         : 65001
 
-Date: 2016-02-19 17:54:52
+Date: 2016-03-02 18:06:12
 */
 
 SET FOREIGN_KEY_CHECKS=0;
+
+-- ----------------------------
+-- Table structure for ec_brand
+-- ----------------------------
+DROP TABLE IF EXISTS `ec_brand`;
+CREATE TABLE `ec_brand` (
+  `id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
+  `brand_name` varchar(50) CHARACTER SET utf8 DEFAULT NULL COMMENT '品牌名',
+  `brand_intro` text CHARACTER SET utf8 COMMENT '品牌介绍',
+  `brand_logo` text CHARACTER SET utf8 COMMENT '品牌logo图',
+  `create_time` varchar(50) CHARACTER SET utf8 DEFAULT NULL COMMENT '创建时间',
+  `status` enum('0','1','2') DEFAULT '1' COMMENT '品牌状态（1：正常；2：冻结）',
+  `remarks` text CHARACTER SET utf8 COMMENT '备注',
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
+
+-- ----------------------------
+-- Records of ec_brand
+-- ----------------------------
+INSERT INTO `ec_brand` VALUES ('1', '小米', '小米是......', null, '1456388453', '1', '');
+
+-- ----------------------------
+-- Table structure for ec_cart
+-- ----------------------------
+DROP TABLE IF EXISTS `ec_cart`;
+CREATE TABLE `ec_cart` (
+  `id` bigint(20) unsigned NOT NULL AUTO_INCREMENT COMMENT '唯一标识',
+  `member_id` bigint(20) unsigned DEFAULT NULL COMMENT '用户id',
+  `goods_id` bigint(20) DEFAULT NULL COMMENT '商品id',
+  `quantity` int(11) DEFAULT NULL COMMENT '该商品数量',
+  `create_time` varchar(50) CHARACTER SET utf8 DEFAULT NULL COMMENT '商品添加时间',
+  `remarks` text CHARACTER SET utf8 COMMENT '备注',
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- ----------------------------
+-- Records of ec_cart
+-- ----------------------------
 
 -- ----------------------------
 -- Table structure for ec_discount
@@ -36,7 +74,7 @@ CREATE TABLE `ec_discount` (
 -- ----------------------------
 -- Records of ec_discount
 -- ----------------------------
-INSERT INTO `ec_discount` VALUES ('1', '限时折扣活动1', '6.50', '活动描述1', '1,2', '1455421001', '1455507459', '1455421059', '1', null);
+INSERT INTO `ec_discount` VALUES ('1', '限时折扣活动1', '6.50', '活动描述1', '1,2', '1455421001', '1486463000', '1455420009', '1', null);
 
 -- ----------------------------
 -- Table structure for ec_empty
@@ -67,7 +105,9 @@ CREATE TABLE `ec_goods` (
   `goods_market_price` decimal(18,4) DEFAULT '0.0000' COMMENT '市场价',
   `status` enum('2','1','0') CHARACTER SET utf8 DEFAULT '1' COMMENT '商品状态（0：下架；1：正常；2：冻结）',
   `goods_storage` bigint(20) unsigned DEFAULT '0' COMMENT '商品库存',
+  `goods_brand` bigint(20) unsigned DEFAULT NULL COMMENT '品牌id',
   `goods_price` decimal(18,4) DEFAULT '0.0000' COMMENT '商品价格',
+  `goods_spec` text CHARACTER SET utf8 COMMENT '规格字段（区分不同颜色等，json格式字符串）',
   `goods_details` text CHARACTER SET utf8 COMMENT '商品详情',
   `remarks` text CHARACTER SET utf8 COMMENT '备注',
   PRIMARY KEY (`goods_id`)
@@ -76,10 +116,10 @@ CREATE TABLE `ec_goods` (
 -- ----------------------------
 -- Records of ec_goods
 -- ----------------------------
-INSERT INTO `ec_goods` VALUES ('1', '1', '商品1', 'short_tag1', 'long_tag1', null, '7', '10.0000', '1', '100', '9.0000', '详情1', null);
-INSERT INTO `ec_goods` VALUES ('2', '1', '商品2', 'short_tag2', 'long_tag2', null, '7', '11.0000', '1', '100', '10.0000', '详情2', null);
-INSERT INTO `ec_goods` VALUES ('3', '2', '商品3', 'short_tag3', 'long_tag3', null, '9', '12.0000', '1', '100', '11.0000', '详情3', null);
-INSERT INTO `ec_goods` VALUES ('4', '3', '商品4', 'short_tag4', 'long_tag4', null, '11', '13.0000', '1', '100', '12.0000', '详情4', null);
+INSERT INTO `ec_goods` VALUES ('1', '1', '红米手机2 红色 标准版', 'short_tag1', 'long_tag1', null, '7', '10.0000', '1', '0', '0', '9.0000', '\r\n{\"specification\":[[{\"spec_id\":\"101\",\"spec_name\":\"\\u7ea2\\u8272\"},{\"spec_id\":\"102\",\"spec_name\":\"\\u84dd\\u8272\"}],[{\"spec_id\":\"201\",\"spec_name\":\"\\u6807\\u51c6\\u7248\"},{\"spec_id\":\"202\",\"spec_name\":\"\\u9ad8\\u914d\\u7248\"}]],\"direction\":[{\"spec_id_set\":\"101|201\",\"goods_id\":\"1\"},{\"spec_id_set\":\"101|202\",\"goods_id\":\"3\"},{\"spec_id_set\":\"102|201\",\"goods_id\":\"2\"},{\"spec_id_set\":\"102|202\",\"goods_id\":\"4\"}]}', '详情1', null);
+INSERT INTO `ec_goods` VALUES ('2', '1', '红米手机2 蓝色 标准版', 'short_tag2', 'long_tag2', null, '7', '11.0000', '1', '100', '0', '10.0000', '\r\n{\"specification\":[[{\"spec_id\":\"101\",\"spec_name\":\"\\u7ea2\\u8272\"},{\"spec_id\":\"102\",\"spec_name\":\"\\u84dd\\u8272\"}],[{\"spec_id\":\"201\",\"spec_name\":\"\\u6807\\u51c6\\u7248\"},{\"spec_id\":\"202\",\"spec_name\":\"\\u9ad8\\u914d\\u7248\"}]],\"direction\":[{\"spec_id_set\":\"101|201\",\"goods_id\":\"1\"},{\"spec_id_set\":\"101|202\",\"goods_id\":\"3\"},{\"spec_id_set\":\"102|201\",\"goods_id\":\"2\"},{\"spec_id_set\":\"102|202\",\"goods_id\":\"4\"}]}', '详情2', null);
+INSERT INTO `ec_goods` VALUES ('3', '1', '红米手机2 红色 高配版', 'short_tag3', 'long_tag3', null, '7', '12.0000', '1', '100', '0', '11.0000', '\r\n{\"specification\":[[{\"spec_id\":\"101\",\"spec_name\":\"\\u7ea2\\u8272\"},{\"spec_id\":\"102\",\"spec_name\":\"\\u84dd\\u8272\"}],[{\"spec_id\":\"201\",\"spec_name\":\"\\u6807\\u51c6\\u7248\"},{\"spec_id\":\"202\",\"spec_name\":\"\\u9ad8\\u914d\\u7248\"}]],\"direction\":[{\"spec_id_set\":\"101|201\",\"goods_id\":\"1\"},{\"spec_id_set\":\"101|202\",\"goods_id\":\"3\"},{\"spec_id_set\":\"102|201\",\"goods_id\":\"2\"},{\"spec_id_set\":\"102|202\",\"goods_id\":\"4\"}]}', '详情3', null);
+INSERT INTO `ec_goods` VALUES ('4', '1', '红米手机2 蓝色 高配版', 'short_tag4', 'long_tag4', null, '11', '13.0000', '1', '0', '0', '12.0000', '\r\n{\"specification\":[[{\"spec_id\":\"101\",\"spec_name\":\"\\u7ea2\\u8272\"},{\"spec_id\":\"102\",\"spec_name\":\"\\u84dd\\u8272\"}],[{\"spec_id\":\"201\",\"spec_name\":\"\\u6807\\u51c6\\u7248\"},{\"spec_id\":\"202\",\"spec_name\":\"\\u9ad8\\u914d\\u7248\"}]],\"direction\":[{\"spec_id_set\":\"101|201\",\"goods_id\":\"1\"},{\"spec_id_set\":\"101|202\",\"goods_id\":\"3\"},{\"spec_id_set\":\"102|201\",\"goods_id\":\"2\"},{\"spec_id_set\":\"102|202\",\"goods_id\":\"4\"}]}', '详情4', null);
 
 -- ----------------------------
 -- Table structure for ec_goods_class

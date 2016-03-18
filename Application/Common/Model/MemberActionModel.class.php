@@ -23,31 +23,31 @@ class MemberActionModel extends Model{
         
         $where['nickname'] = array('EQ',$user);
         $where['password'] = array('EQ',$pwd);
-        $field = 'nickname,password';
+        $field = 'member_id,nickname,password';
         $result = $this->table('ec_member')->where($where)->field($field)->select();
         if(!empty($result)){
-            return array('status'=>true,'info'=>'验证通过');
+            return array('status'=>true,'info'=>'验证通过','data'=>$result[0]['member_id']);
         }else{
             unset($where['nickname']);
             $where['cell_phone'] = array('EQ',$user);
-            $field = 'cell_phone,password';
+            $field = 'member_id,cell_phone,password';
             $result = $this->table('ec_member')->where($where)->field($field)->select();
             if(!empty($result)){
-                return array('status'=>true,'info'=>'验证通过');
+                return array('status'=>true,'info'=>'验证通过','data'=>$result[0]['member_id']);
             }else{
                 unset($where['cell_phone']);
                 $where['email_address'] = array('EQ',$user);
-                $field = 'email_address,password';
+                $field = 'member_id,email_address,password';
                 $result = $this->table('ec_member')->where($where)->field($field)->select();
                 if(!empty($result)){
-                    return array('status'=>true,'info'=>'验证通过');
+                    return array('status'=>true,'info'=>'验证通过','data'=>$result[0]['member_id']);
                 }else{ // 没有该用户或未激活
                     $where['status'] = array('EQ','6');
                     $result = $this->table('ec_member')->where($where)->field($field)->select();
                     if(!empty($result)){
                         return array('status'=>false,'code'=>'6','info'=>'用户未激活');
                     }else{
-                        return array('status'=>false,'info'=>'没有该用户');
+                        return array('status'=>false,'info'=>'没有该用户','data');
                     }
                 }
             }
@@ -182,6 +182,22 @@ class MemberActionModel extends Model{
             return array('status'=>true,"info"=>'删除成功');
         }else{
             return array('status'=>false,"info"=>'删除失败');
+        }
+    }
+    
+    /**
+     * 根据member_id查询用户信息
+     * @param string/int $member_id 用户id
+     * @param mixed $field 查询字段
+     * @return array
+     */
+    public function getMemberInfo($member_id,$field = '*'){
+        $where['member_id'] = $member_id;
+        $result = $this->table(C('DB_PREFIX').'member')->where($where)->field($field)->select();
+        if($result){
+            return array('status'=>true,"info"=>'查询成功','data'=>$result[0]);
+        }else{
+            return array('status'=>false,"info"=>'查询失败');
         }
     }
     

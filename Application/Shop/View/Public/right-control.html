@@ -1,0 +1,32 @@
+<div class="right-control">
+    
+    <div class="btn login" title="个人资料">
+        <div class="img">
+            <img src="__ROOT__/Public/Image/icon/iconfont-denglu.png">
+        </div>
+    </div>
+    <div class="btn shopping-cart" title="购物车">
+        <div class="img">
+            <img src="__ROOT__/Public/Image/icon/iconfont-gouwuche.png">
+        </div>
+    </div>
+    <div class="btn favorite" title="收藏夹">
+        <div class="img">
+            <img src="__ROOT__/Public/Image/icon/iconfont-shoucang.png">
+        </div>
+    </div>
+    <div class="btn return-top" title="返回顶部">
+        <div class="img">
+            <img src="__ROOT__/Public/Image/icon/iconfont-fanhuidingbu.png">
+        </div>
+    </div>
+    
+</div>
+<script>
+    // 返回顶部
+    $(".right-control .return-top").on("click",function(e){
+        $('body').animate({
+            scrollTop:'0px',
+        },'fast');
+    });
+</script>

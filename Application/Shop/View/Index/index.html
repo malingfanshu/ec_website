@@ -1,3 +1,7 @@
+<style>
+    .classify-bar{ display:none !important; }
+</style>
+
 <div class="main-block main-content">
     <div class="main-slide center-block">
         
@@ -8,6 +12,7 @@
                 <li><a>分类1</a></li>
                 <li><a>分类2</a></li>
                 <li><a>分类3</a></li>
+                <div class='more-products'><a href='javascript:void(0);'>更多</a></div>
                 <div class="H15"></div>
             </ul>
         </div>
@@ -111,65 +116,162 @@
                 </ul>
             </div>
             <div class="slide-control-button">
-                <a class="prev" href="javascript:void(0)">前</a>
-                <a class="next" href="javascript:void(0)">后</a>
+                <a class="prev" href="javascript:void(0)">
+                    <div class="button-bg">
+                        <img class="btn-img" src="__ROOT__/Public/Image/icon/iconfont-iconback.png" />
+                    </div>
+                </a>
+                <a class="next" href="javascript:void(0)">
+                    <div class="button-bg">
+                         <img class="btn-img"  src="__ROOT__/Public/Image/icon/iconfont-iconmore.png" />
+                    </div>
+                </a>
             </div>
         </div>
         
     </div>
-    <div class="star-product center-block">
+    <div class="show-product center-block">
+        
         <!--明星单品部分-->
-        <p>明星单品</p>
-        <div class="txtScroll-left">
-            <div class="hd">
-                <a class="next">前</a>
-                <a class="prev">后</a>
+        <div class="star-single">
+            <div class="title">
+                <img src="__ROOT__/Public/Image/icon/iconfont-31shoucang.png"><span>明星单品</span>
             </div>
-            <div class="bd">
-                <ul class="infoList">
-                    <li class="page">
-                        <a href="javascript:void(0);" target="_blank">
-                            <div class="item"></div>
-                            <div class="item"></div>
-                            <div class="item"></div>
-                            <div class="item"></div>
-                            <div class="item clear-right-margin"></div>
-                        </a>
-                    </li>
-                    <li class="page">
-                        <a href="javascript:void(0);" target="_blank">
-                            <div class="item"></div>
-                            <div class="item"></div>
-                            <div class="item"></div>
-                            <div class="item"></div>
-                            <div class="item clear-right-margin"></div>
-                        </a>
-                    </li>
-                </ul>
+            <div class="txtScroll-left">
+                <div class="hd">
+                    <a class="prev">
+                        <p><</p>
+                    </a>
+                    <a class="next">
+                        <p>></p>
+                    </a>
+                </div>
+                <div class="bd">
+                    <ul class="infoList">
+                        <li class="page">
+                            <a href="javascript:void(0);" target="_blank">
+                                <div class="item"></div>
+                                <div class="item"></div>
+                                <div class="item"></div>
+                                <div class="item"></div>
+                                <div class="item clear-right-margin"></div>
+                            </a>
+                        </li>
+                        <li class="page">
+                            <a href="javascript:void(0);" target="_blank">
+                                <div class="item"></div>
+                                <div class="item"></div>
+                                <div class="item"></div>
+                                <div class="item"></div>
+                                <div class="item clear-right-margin"></div>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
             </div>
         </div>
         
+        <!--限时折扣部分-->
         <div class="on-sale center-block">
-            <!--限时折扣部分-->
-            <p>限时折扣</p>
-            <div class="list">
-                <image class="left-image" src="__ROOT__/Public/Image/left-image.jpg"></image>
-            </div>            
+            <div class="title">
+                <img src="__ROOT__/Public/Image/icon/iconfont-shijian.png"><span>限时折扣</span>
+            </div>
+            <div class="list clear-padding">
+                <img class="left-image" src="__ROOT__/Public/Image/left-image.jpg" />
+            </div>
             <div class="list">
                 <div class="item"></div>
+                <div class="item"></div>
             </div>
-                
+            <div class="list">
+                <div class="item"></div>
+                <div class="item"></div>
             </div>
+            <div class="list">
+                <div class="item"></div>
+                <div class="item"></div>
+            </div>
+            <div class="list">
+                <div class="item"></div>
+                <div class="item"></div>
+            </div>
+            <div style='clear:both;'></div>
+        </div>
+        
+        <!--推荐商品部分-->
+        <div class="recom-list center-block">
+            <div class="title">
+                <img src="__ROOT__/Public/Image/icon/iconfont-guanzhu.png"><span>推荐商品</span>
+            </div>
+            <div class="list clear-padding">
+                <img class="left-image" src="__ROOT__/Public/Image/left-image.jpg" />
+            </div>
+            <div class="list goods-list">
+                <div class="txtScroll-left">
+                    <div class="hd">
+                        <a class="prev">
+                            <p><</p>
+                        </a>
+                        <a class="next">
+                            <p>></p>
+                        </a>
+                    </div>
+                    <div class="bd">
+                        <ul class="infoList">
+                            <li class="page">
+                                <a href="javascript:void(0);" target="_blank">
+                                    <div class="item"></div>
+                                    <div class="item"></div>
+                                    <div class="item"></div>
+                                    <div class="item"></div>
+                                    <div class="item"></div>
+                                    <div class="item"></div>
+                                    <div class="item"></div>
+                                    <div class="item"></div>
+                                </a>
+                            </li>
+                            <li class="page">
+                                <a href="javascript:void(0);" target="_blank">
+                                    <div class="item"></div>
+                                    <div class="item"></div>
+                                    <div class="item"></div>
+                                    <div class="item"></div>
+                                    <div class="item"></div>
+                                    <div class="item"></div>
+                                    <div class="item"></div>
+                                    <div class="item"></div>
+                                </a>
+                            </li>
+                            <li class="page">
+                                <a href="javascript:void(0);" target="_blank">
+                                    <div class="item"></div>
+                                    <div class="item"></div>
+                                    <div class="item"></div>
+                                    <div class="item"></div>
+                                    <div class="item"></div>
+                                    <div class="item"></div>
+                                    <div class="item"></div>
+                                    <div class="item"></div>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div style='clear:both;'></div>
         </div>
         
     </div>
+
 </div>
 <script>
     // 首页主要轮播
-    $(".slideBox").slide({mainCell:".bd ul",autoPlay:true});
+    $(".slideBox").slide({mainCell:".bd ul",effect:'fold',autoPlay:true});
     // 明星单品部分滚动
-    $(".txtScroll-left").slide({mainCell:".bd ul",autoPage:true,effect:"left",autoPlay:true,scroll:1,vis:1,trigger:"click"});
-    // 
+    $(".star-single .txtScroll-left").slide({mainCell:".bd ul",autoPage:true,effect:"left",autoPlay:true,scroll:1,vis:1,trigger:"click",pnLoop:false});
+    // 推荐商品部分滚动
+    $(".recom-list .txtScroll-left").slide({mainCell:".bd ul",autoPage:true,effect:"left",autoPlay:true,scroll:1,vis:1,trigger:"click",pnLoop:false});
+    
     $(".main-slide .classify ul li, .main-slide .classify-second").mouseover(function(e){
         if($(".main-slide .classify-second").hasClass('hidden')){
             $(".main-slide .classify-second").removeClass("hidden");
