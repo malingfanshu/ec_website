@@ -53,6 +53,16 @@ class GoodsModel extends Model{
         return $result;
     }
     
+    /**
+     * 获取指定商品列表（搜索那部分，包括各种排序、关键词搜索之类）
+     * @param type $table 操作的表
+     * @param type $where 条件
+     * @param type $field 字段
+     * @param type $join 多表联查的join信息
+     * @param type $order 排序命令
+     * @param type $pages 分页信息？
+     * @return array
+     */
     public function getSpecificGoodsList($table = '',$where = '',$field = '*',$join = '',$order = '',$pages = '1'){
         $count = $this->table($table)->join($join)->where($where)->count();
         $Page = new \Think\Page($count,$pages);

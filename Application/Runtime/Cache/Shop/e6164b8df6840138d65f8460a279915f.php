@@ -192,11 +192,16 @@
 </script>
                 <div class="center-block">
     <div class='nav-breadcrumb'>
-        <?php if($class_info != ''): ?><a href="javascript:void(0);">首页</a><span>></span><a href="javascript:void(0);"><?php echo ($class_info['gc_1']['gc_name']); ?></a><span>></span><a href="javascript:void(0);"><?php echo ($class_info['gc_2']['gc_name']); ?></a><span>></span><a href="javascript:void(0);"><?php echo ($class_info['gc_3']['gc_name']); ?></a>
-        <?php else: ?>
-            <?php if($choose_info != ''): ?>首页>"<?php echo ($choose_info); ?>"全部结果<?php endif; endif; ?>
+        <?php switch($bread_crumb[bread_type]): case "goods": ?><a href="<?php echo U('Shop/Search/index');?>">全部商品</a><span>></span><a href="<?php echo U('Shop/Search/index/gc_id/'.$bread_crumb['class_info']['gc_1']['gc_id']);?>"><?php echo ($bread_crumb['class_info']['gc_1']['gc_name']); ?></a><span>></span><a href="<?php echo U('Shop/Search/index/gc_id/'.$bread_crumb['class_info']['gc_2']['gc_id']);?>"><?php echo ($bread_crumb['class_info']['gc_2']['gc_name']); ?></a><span>></span><a href="<?php echo U('Shop/Search/index/gc_id/'.$bread_crumb['class_info']['gc_3']['gc_id']);?>"><?php echo ($bread_crumb['class_info']['gc_3']['gc_name']); ?></a><span>></span><span><?php echo ($bread_crumb['class_info']['goods']['goods_name']); ?></span><?php break;?>
+            <?php case "classify": ?><a href="<?php echo U('Shop/Search/index');?>">全部商品</a><span>></span><a href="<?php echo U('Shop/Search/index/gc_id/'.$bread_crumb['class_info']['gc_1']['gc_id']);?>"><?php echo ($bread_crumb['class_info']['gc_1']['gc_name']); ?></a>
+                <?php if(!empty($bread_crumb[class_info][gc_2])): ?><span>></span><a href="<?php echo U('Shop/Search/index/gc_id/'.$bread_crumb['class_info']['gc_2']['gc_id']);?>"><?php echo ($bread_crumb['class_info']['gc_2']['gc_name']); ?></a><?php endif; ?>
+                <?php if(!empty($bread_crumb[class_info][gc_3])): ?><span>></span><a href="<?php echo U('Shop/Search/index/gc_id/'.$bread_crumb['class_info']['gc_3']['gc_id']);?>"><?php echo ($bread_crumb['class_info']['gc_3']['gc_name']); ?></a><?php endif; break;?>
+            <?php case "search": ?><a href="<?php echo U('Shop/Search/index');?>">全部商品</a><span>></span><span>搜索结果：<font style='color:red;'><?php echo ($bread_crumb['class_info']['gc_1']); ?></font></span><?php break; endswitch;?>
     </div>
 </div>
+<script>
+    console.log(<?php echo json_encode($bread_crumb);?>);
+</script>
 <?php if($goods_info[data] != ''): ?><div class="center-block">
     <div class='goods-scope'>
     </div>

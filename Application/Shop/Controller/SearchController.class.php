@@ -19,11 +19,15 @@ class SearchController extends CommonController{
         $order = ''; // 排序命令
         $pages = '4'; // 每页记录数
         
-        if(!empty(I("get.keywords"))){
+        if(!empty(I("get.keywords"))){ // 关键词的
             $keywords = '%'.preg_replace('/ /',"%",I("get.keywords")).'%';
             $where['goods_name'] = array('like',$keywords);
+            $classInfo['gc_1'] = I("get.keywords");
+            $breadCrumbInfo = array('bread_type'=>'search','class_info'=>$classInfo);
+            $this->assign("bread_crumb",$breadCrumbInfo);
         }
-        if(!empty(I("get.gc_id"))){
+        
+        if(!empty(I("get.gc_id"))){ // 分类的
             $gcId = I("get.gc_id");
             $GoodsClass = D('GoodsClass');
             $arr = $GoodsClass->getThirdGoodsClass($gcId);
@@ -33,6 +37,9 @@ class SearchController extends CommonController{
             }
             $gcIdStr = implode(",",$arrTmp);
             $where['gc_id'] = array('in',$gcIdStr);
+            $classInfo = $GoodsClass->getBreadCrumb($gcId);
+            $breadCrumbInfo = array('bread_type'=>'classify','class_info'=>$classInfo);
+            $this->assign("bread_crumb",$breadCrumbInfo);
         }
 
         if(!empty(I('get.sort'))){

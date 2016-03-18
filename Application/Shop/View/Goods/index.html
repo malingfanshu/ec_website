@@ -23,7 +23,11 @@
                     </div>
 		</div>
                 <div class="fn">
+                <if condition="$is_favorite eq 'true'">
+                    <div class="favorite"><img src="/Public/Image/icon/iconfont-shoucangyishoucang-copy.png" /><span style='color:red;'>已收藏</span></div>
+                <else />
                     <div class="favorite"><img src="/Public/Image/icon/iconfont-shoucangweishoucang-copy.png" /><span>收藏</span></div>
+                </if>
                     <div class="share"><a class="bshareDiv" href="http://www.bshare.cn/share"><img src="/Public/Image/icon/iconfont-fenxiang.png" /><span>分享</span></a></div>
                     <div style="clear:both;"></div>
                 </div>
@@ -157,8 +161,9 @@
     <div style="clear:both;"></div>
 </div>
 <!--页面隐藏值-->
-<input type="hidden" id="hidden_value" value={inventory:"3"} />
+<input type="hidden" id="hidden_value" value={inventory:"3",favorite_url:"{:U('Shop/Goods/ajaxFavoriteAction')}",goods_id:"{$goods_info[goods_id]}"} />
 <script>
+    var hidden_value = get_hidden_value(); // 获取页面的隐藏值
     // 商品图片展示
     $(".picFocus").slide({ mainCell:".bd ul",effect:"left",autoPlay:true });
     
@@ -205,5 +210,22 @@
         if(now_num-1 >= 1){
             ele_num.val(now_num-1);
         }
+    });
+    
+    // 收藏功能
+    $('div.show-pictures div.fn div.favorite').on("click",function(e){
+        var data = {
+            "action":"add",
+            "goods_id":hidden_value.goods_id,
+        };
+        $.ajax({
+            url:hidden_value.favorite_url,
+            type:"get",
+            data:data,
+            dataType:"json",
+            success:function(result){
+                layer.msg(result.info);
+            }
+        });
     });
 </script>

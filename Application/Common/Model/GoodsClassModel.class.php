@@ -95,15 +95,42 @@ class GoodsClassModel extends Model{
      */
     public function getSpecificGoodsClassStructure($goods_id){
         $Goods = D('Goods');
-        $field = 'gc_id';
+        $field = 'gc_id,goods_name';
         $result = $Goods->getGoodsInfo($goods_id,$field);
         $arrClassInfo = array();
+        $arrClassInfo['goods'] = $result;
         $arrClassInfo['gc_3'] = $this->getClass($result['gc_id']); 
         $arrClassInfo['gc_2'] = $this->getPrevClass($result['gc_id']);
         $arrClassInfo['gc_1'] = $this->getPrevClass($arrClassInfo['gc_2']['gc_id']);
         return $arrClassInfo;
     }
     
+    /**
+     * 根据传入的gc_id来返回一个分类层级（第三级返回三层、第二级返回两层、第一级返回一层）
+     * @param int/string $gc_id
+     * @return array
+     */
+    public function getBreadCrumb($gc_id){
+        $arrClassInfo = array();
+        $arrTmp = array();
+        $arrClassInfo['gc_1'] = $this->getClass($gc_id);
+        $arrTmp = $this->getPrevClass($gc_id);
+        if(!$arrTmp){
+            return $arrClassInfo;
+        }else{
+            $arrClassInfo['gc_2'] = $arrClassInfo['gc_1'];
+            $arrClassInfo['gc_1'] = $arrTmp;
+            $arrTmp = $this->getPrevClass($arrTmp['gc_id']);
+            if(!$arrTmp){
+                return $arrClassInfo;
+            }else{
+                $arrClassInfo['gc_3'] = $arrClassInfo['gc_2'];
+                $arrClassInfo['gc_2'] = $arrClassInfo['gc_1'];
+                $arrClassInfo['gc_1'] = $arrTmp;
+                return $arrClassInfo;
+            }
+        }
+    }
     
 }
 

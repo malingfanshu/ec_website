@@ -193,11 +193,16 @@
                 <script type="text/javascript" charset="utf-8" src="http://static.bshare.cn/b/buttonLite.js#uuid=&amp;style=10&amp;bgcolor=Orange&amp;ssc=false"></script>
 <div class="center-block">
     <div class='nav-breadcrumb'>
-        <?php if($class_info != ''): ?><a href="javascript:void(0);">首页</a><span>></span><a href="javascript:void(0);"><?php echo ($class_info['gc_1']['gc_name']); ?></a><span>></span><a href="javascript:void(0);"><?php echo ($class_info['gc_2']['gc_name']); ?></a><span>></span><a href="javascript:void(0);"><?php echo ($class_info['gc_3']['gc_name']); ?></a>
-        <?php else: ?>
-            <?php if($choose_info != ''): ?>首页>"<?php echo ($choose_info); ?>"全部结果<?php endif; endif; ?>
+        <?php switch($bread_crumb[bread_type]): case "goods": ?><a href="<?php echo U('Shop/Search/index');?>">全部商品</a><span>></span><a href="<?php echo U('Shop/Search/index/gc_id/'.$bread_crumb['class_info']['gc_1']['gc_id']);?>"><?php echo ($bread_crumb['class_info']['gc_1']['gc_name']); ?></a><span>></span><a href="<?php echo U('Shop/Search/index/gc_id/'.$bread_crumb['class_info']['gc_2']['gc_id']);?>"><?php echo ($bread_crumb['class_info']['gc_2']['gc_name']); ?></a><span>></span><a href="<?php echo U('Shop/Search/index/gc_id/'.$bread_crumb['class_info']['gc_3']['gc_id']);?>"><?php echo ($bread_crumb['class_info']['gc_3']['gc_name']); ?></a><span>></span><span><?php echo ($bread_crumb['class_info']['goods']['goods_name']); ?></span><?php break;?>
+            <?php case "classify": ?><a href="<?php echo U('Shop/Search/index');?>">全部商品</a><span>></span><a href="<?php echo U('Shop/Search/index/gc_id/'.$bread_crumb['class_info']['gc_1']['gc_id']);?>"><?php echo ($bread_crumb['class_info']['gc_1']['gc_name']); ?></a>
+                <?php if(!empty($bread_crumb[class_info][gc_2])): ?><span>></span><a href="<?php echo U('Shop/Search/index/gc_id/'.$bread_crumb['class_info']['gc_2']['gc_id']);?>"><?php echo ($bread_crumb['class_info']['gc_2']['gc_name']); ?></a><?php endif; ?>
+                <?php if(!empty($bread_crumb[class_info][gc_3])): ?><span>></span><a href="<?php echo U('Shop/Search/index/gc_id/'.$bread_crumb['class_info']['gc_3']['gc_id']);?>"><?php echo ($bread_crumb['class_info']['gc_3']['gc_name']); ?></a><?php endif; break;?>
+            <?php case "search": ?><a href="<?php echo U('Shop/Search/index');?>">全部商品</a><span>></span><span>搜索结果：<font style='color:red;'><?php echo ($bread_crumb['class_info']['gc_1']); ?></font></span><?php break; endswitch;?>
     </div>
 </div>
+<script>
+    console.log(<?php echo json_encode($bread_crumb);?>);
+</script>
 <div class="center-block goods-body">
     <div class="left-block">
         <div class="up-block">
@@ -217,7 +222,9 @@
                     </div>
 		</div>
                 <div class="fn">
-                    <div class="favorite"><img src="/Public/Image/icon/iconfont-shoucangweishoucang-copy.png" /><span>收藏</span></div>
+                <?php if($is_favorite == 'true'): ?><div class="favorite"><img src="/Public/Image/icon/iconfont-shoucangyishoucang-copy.png" /><span style='color:red;'>已收藏</span></div>
+                <?php else: ?>
+                    <div class="favorite"><img src="/Public/Image/icon/iconfont-shoucangweishoucang-copy.png" /><span>收藏</span></div><?php endif; ?>
                     <div class="share"><a class="bshareDiv" href="http://www.bshare.cn/share"><img src="/Public/Image/icon/iconfont-fenxiang.png" /><span>分享</span></a></div>
                     <div style="clear:both;"></div>
                 </div>
@@ -351,8 +358,9 @@
     <div style="clear:both;"></div>
 </div>
 <!--页面隐藏值-->
-<input type="hidden" id="hidden_value" value={inventory:"3"} />
+<input type="hidden" id="hidden_value" value={inventory:"3",favorite_url:"<?php echo U('Shop/Goods/ajaxFavoriteAction');?>",goods_id:"<?php echo ($goods_info[goods_id]); ?>"} />
 <script>
+    var hidden_value = get_hidden_value(); // 获取页面的隐藏值
     // 商品图片展示
     $(".picFocus").slide({ mainCell:".bd ul",effect:"left",autoPlay:true });
     
@@ -399,6 +407,23 @@
         if(now_num-1 >= 1){
             ele_num.val(now_num-1);
         }
+    });
+    
+    // 收藏功能
+    $('div.show-pictures div.fn div.favorite').on("click",function(e){
+        var data = {
+            "action":"add",
+            "goods_id":hidden_value.goods_id,
+        };
+        $.ajax({
+            url:hidden_value.favorite_url,
+            type:"get",
+            data:data,
+            dataType:"json",
+            success:function(result){
+                layer.msg(result.info);
+            }
+        });
     });
 </script>  
             <div class="bottom-bar"></div>
